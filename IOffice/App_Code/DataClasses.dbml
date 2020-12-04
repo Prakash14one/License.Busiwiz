@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="jobcenter.INTMSGDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.1.219\C3SERVERMASTER,30000;Initial Catalog=jobcenter.INTMSGDB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="jobcenter_INTMSGDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MsgDetail" Member="MsgDetails">
+    <Type Name="MsgDetail">
+      <Column Name="MsgDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MsgId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ToPartyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MsgStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsgFileAttachDetail" Member="MsgFileAttachDetails">
+    <Type Name="MsgFileAttachDetail">
+      <Column Name="MsgFileId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MsgId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsgMaster" Member="MsgMasters">
+    <Type Name="MsgMaster">
+      <Column Name="MsgId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromPartyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MsgDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MsgSubject" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MsgDetail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MsgStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Picture" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Signature" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MsgStatusMaster" Member="MsgStatusMasters">
+    <Type Name="MsgStatusMaster">
+      <Column Name="MsgStatusId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MsgStatusName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Party_master" Member="Party_masters">
+    <Type Name="Party_master">
+      <Column Name="PartyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Account" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Compname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Contactperson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GSTno" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Incometaxno" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Phoneno" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DataopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PartyTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssignedAccountManagerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssignedRecevingDepartmentInchargeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssignedPurchaseDepartmentInchargeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssignedShippingDepartmentInchargeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AssignedSalesDepartmentIncharge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusMasterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountnameID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AccountBalanceLimitId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Whid" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartyTypeCategoryNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

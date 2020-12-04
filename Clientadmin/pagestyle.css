@@ -1,0 +1,577 @@
+﻿/* CSS Document */
+
+@import url("scripts/slidemenu/jqueryslidemenu.css");
+
+
+
+body {
+	padding:0;
+	margin:0;
+	background:#FFFFFF url(images/bg.jpg) repeat-x;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color:#333333;
+}
+ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.spacer {
+	clear:both;
+	font-size:0;
+	line-height:0;
+}
+#content p a {
+	color:#003366;
+	text-decoration:underline
+}
+#content p a:hover {
+	text-decoration:none
+}
+
+/*------------------------------------------------main--------------------*/
+
+/*------------------------------------------------header--------------------*/
+#header {
+	width:960px;
+	height:93px;
+	position:relative;
+	margin:0 auto;
+	padding-bottom:20px;
+	 
+}
+#header ul.topLink {
+	width:280px;
+	height:15px;
+	float:right;
+}
+#header ul.topLink li {
+	float:left;
+	line-height:0;
+	padding:0 25px 0 0;
+}
+#header ul.topLink li a {
+	display:block;
+	font:normal 10px/17px Verdana, Arial, Helvetica, sans-serif;
+	color:#4bbfff;
+	text-decoration:none;
+}
+#header ul.topLink li a:hover {
+	color:#fff;
+	
+}
+#header ul.topLink li a.login {
+	display:block;
+	background:url(images/login_bg.gif) 0 0 no-repeat;
+	width:47px;
+	height:15px;
+	margin:2px 0;
+}
+#header ul.topLink li a.login:hover {
+	background:url(images/login_bg_hover.gif) 0 0 no-repeat;
+}
+#header img.logo {
+	display:block;
+	font-size:0;
+	line-height:0;
+	margin:53px 41px 0 20px;
+	float:left;
+	
+}
+/*------------------------------------------------header--------------------*/
+
+/*------------------------------------------------body--------------------*/
+#body {
+	width:960px;
+	margin:0 auto;
+	color:#333333;
+}
+
+#body p.navLeft {
+	display:block;
+	background:url(images/nav_left.png) 0 0 no-repeat;
+	width:32px;
+	height:37px;
+	float:left;
+	margin:3px 0;
+}
+#body p.navRight {
+	display:block;
+	background:url(images/nav_right.png) 0 0 no-repeat;
+	width:32px;
+	height:37px;
+	float:left;
+	margin:3px 0;
+}
+#body ul.nav {
+	width:470px;
+	height:37px;
+	background:url(images/nav_bg.gif) 0 0 repeat-x;
+	float:left;
+	margin:3px 0 6px 0;
+}
+#body ul.nav li {
+	float:left;
+	height:37px;
+	margin:auto;
+	padding:0 50px 0 0;
+}
+#body ul.nav li a {
+	display:block;
+	font:normal 11px/34px Verdana, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	color:#FFF;
+	background-color:inherit;
+	text-decoration:none;
+	text-align:center;
+}
+#body ul.nav li.button {
+	float:left;
+	height:37px;
+	margin:auto;
+	padding:0 50px 0 0;
+}
+
+/*------------------------------------------------content--------------------*/
+
+/*------------------------------------------------blockquote--------------------*/
+.source {
+	display: block;
+	font-weight: bold;
+}
+.jquote_left {
+	float: left;
+	border:#dedede solid 5px;
+	font:italic 14px/20px Georgia, "Times New Roman", Times, serif;
+	background: url(images/quote.gif) no-repeat;
+	padding-left: 65px;
+	margin:10px;
+}
+.jquote_right {
+	float: right;
+	border:#dedede solid 5px;
+	font:italic 14px/20px Georgia, "Times New Roman", Times, serif;
+	background: url(images/quote.gif) no-repeat;
+	padding-left: 65px;
+	margin:10px;
+}
+/*------------------------------------------------blockquote--------------------*/
+.pic_up12 {
+	margin: -2px 0 0 20px;
+	padding: 0;
+	display: block;
+}
+.pic_up121 {
+	margin: 0 0 0 20px;
+	padding: 0;
+	display: block;
+}
+
+.pic_up {
+	margin: 0 0 0 0;
+	padding: 0;
+	display: block;
+}
+.pic_ctr_ab {
+	margin-bottom:10px;
+	border:1px solid #ccc;
+	padding:2px;
+	/*-moz-border-radius:4px;
+	-webkit-border-radius:4px;*/
+}
+#content {
+	padding: 0 15px;
+	background: #FFFFFF;
+	font: normal 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #003366;
+	min-height: 500px; /* for modern browsers */;
+	height: auto !important; /* for modern browsers */;
+	height: 500px;
+	font-size: 20px;
+}
+#content1 {
+	margin:0px 65px 0px 20px;
+	background: #FFFFFF;
+	font: normal 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #003366;
+	min-height: 112px; /* for modern browsers */;
+	height: auto !important; /* for modern browsers */;
+	
+	font-size: 20px;
+	
+}
+
+#content p {
+	font-size: 12px;
+	line-height: 18px;
+	top: auto;
+}
+#content p span {
+	color:#003366;
+	font-weight:bold;
+	background-color:inherit;
+	font-style:normal;
+}
+#content p img.office_pic {
+	display:block;
+	margin:0 5px;
+	border:1px solid #ccc;
+	padding:2px;
+	/*-moz-border-radius:4px;
+	-webkit-border-radius:4px;*/
+}
+#content p.block {
+	display:block;
+	background:#e9edf1;
+	font-style:italic;
+	color:#333333;
+	font-size:12px;
+	line-height:18px;
+	padding:5px 15px;
+	margin-bottom:10px;
+}
+#content p.box {
+	display:block;
+	background:#e9edf1;
+	width:550px;
+	height:85px;
+	color:#333333;
+	font-size:12px;
+	line-height:18px;
+	float:right;
+	padding:0px 10px;
+}
+#content p.box span {
+	font-size:14px;
+	font-weight:bold;
+	color:#003366;
+}
+#content p.box1 {
+	display:block;
+	background:#e9edf1;
+	width:550px;
+	height:85px;
+	color:#333333;
+	font-size:12px;
+	line-height:18px;
+	float:right;
+	padding:0px 10px;
+}
+#content p.box1 span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #336699;
+}
+
+#content div.thumb {
+	display:block;
+	margin:0 15px 15px 0px;
+	float:left;
+	width:175px;
+	border:1px solid #ccc;
+	padding:2px;
+	/*-moz-border-radius:4px;
+	-webkit-border-radius:4px;*/
+}
+#content span.title {
+	display:block;
+	background-color:#FFFEC2;
+	color:#333333;
+	font:bold 12px/34px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	margin:0 0 10px 0;
+	padding:0 0 0 11px;
+}
+#content ol#orderlist {
+	display:block;
+	padding-left:20px;
+	margin:0;
+	list-style-position:inside;
+	font:normal 12px/30px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color:#1F1F1F;
+}
+#content a.rm {
+	display:block;
+	background:url(images/rm.gif) 0 0 no-repeat;
+	width:71px;
+	height:17px;
+	margin:10px 0 5px 0px;
+}
+#content a.rm:hover {
+	background:url(images/rm_hover.gif) 0 0 no-repeat;
+}
+
+/*------------------------------------------------table--------------------*/
+
+
+/*------------------------------------------------table--------------------*/
+
+/*------------------------------------------------left contact--------------------*/
+#left_contact {
+	width:490px;
+	float:left;
+	padding:15px 0px 15px 5px;
+	margin-left:30px;
+}
+/*------------------------------------------------left contact--------------------*/
+
+/*------------------------------------------------right contact--------------------*/
+#right_contact {
+	float:right;
+	padding:0 8px 0 0;
+	margin:40px 30px 0 10px;
+}
+/*------------------------------------------------right contact--------------------*/
+
+/*------------------------------------------------body--------------------*/
+
+
+/*------------------------------------------------footer--------------------*/
+#footer_line {
+	background:#336699;
+	height:10px;
+}
+#footer_line1{
+	
+	background: #336699;
+	height: 15px;
+	
+}
+
+#footer_out {
+	background:#6699cc;
+	clear:both;
+	
+	height:auto;
+}
+#footer {
+	font:normal 10px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color:#FFF;
+	width:960px;
+	height:60px;
+	padding:10px 0 0 0;
+	margin:auto;
+	line-height:15px;
+}
+/*#footer img.logo_ft {
+	margin:5px 10px 5px 15px;
+	display:inline-block;
+	float:left; 
+}*/
+#footer p.copyright {
+	display:block;
+	margin-left:173px;
+	color:#FFF;
+	background-color:inherit;
+}
+#footer p.tos {
+	display:block;
+	float: right;
+	margin:15px 0 10px 0;
+}
+#footer p.tos a.link {
+	color:#FFF;
+	text-decoration:none;
+	padding:2px;
+}
+#footer p.tos a.link:hover {
+	text-decoration:underline;
+}
+#footer .address {
+	display: block;
+	color: #C0C0C0;
+	float: left;
+	margin-top: 5px;
+	width: 400px;
+}
+/*------------------------------------------------footer--------------------*/
+
+/*------------------------------------------------blog--------------------*/
+
+/*------------------------------------------------ left blog--------------------*/
+
+#left_blog {
+	float:left;
+	padding:15px 0px 15px 5px;
+	width:695px;
+	font-size:12px;
+}
+#left_blog .blog-entry {
+	margin-bottom:20px;
+}
+#left_blog .blog-entry h2 a {
+	color:#003366;
+	padding:5px;
+	text-decoration:none;
+}
+#left_blog .blog-entry h2 a:hover {
+	text-decoration:underline;
+	padding:5px;
+}
+.post_row {
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	float:left;
+	font-size:11px;
+	line-height:22px;
+	margin-bottom:10px;
+	padding:3px 1px;
+	width:100%;
+}
+.post_row a {
+	color:#003366;
+	text-decoration:underline
+}
+.post_row a:hover {
+	text-decoration:none
+}
+/*------------------------------------------------ comment form--------------------*/
+.comment {
+	margin:12px 0 0;
+	border-top:1px solid #ccc;
+	padding:10px 0 0;
+}
+#cm_form #submitbutton {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	background-attachment: scroll;
+	background-image: url(images/submit_button.gif);
+	background-position: center center;
+	border: 1px solid #FFF;
+	height: 23px;
+	width: 89px;
+	padding-left:5px;
+}
+#cm_form #submitbutton:hover {
+	background:url(images/submit_button_hover.gif);
+	background-position: center center;
+	color: #003366;
+	height: 23px;
+	width: 89px;
+	padding-left:5px;
+}
+#cm_form p {
+	margin-bottom:10px;
+}
+.cm-input {
+	padding:2px;
+	width:210px;
+}
+/*------------------------------------------------ end comment form--------------------*/
+
+/*------------------------------------------------ pagination--------------------*/
+.pagination {
+	border-top:1px solid #ccc;
+}
+.pagination span, .pagination a {
+	display:block;
+	color:#003366;
+	float:left;
+	font-size:11px;
+	line-height:13px;
+	margin:2px 2px 2px 0;
+	padding:3px 6px;
+	text-decoration:none;
+	width:auto;
+}
+.pagination .current {
+	background:#666666;
+	color:#FFFFFF;
+}
+.pagination .current {
+	font-size:11px;
+	padding:3px 6px;
+}
+.pagination a:hover {
+	color:#FF0000;
+	background:#ccc;
+}
+.pagination span, .pagination a {
+
+	
+}
+/*------------------------------------------------ end pagination--------------------*/
+
+/*------------------------------------------------ end left--------------------*/
+
+/*------------------------------------------------ right blog--------------------*/
+#right_blog {
+	float:right;
+	width:200px;
+	padding:0 8px 0 0;
+}
+#right_blog h3 {
+	margin-left:10px;
+}
+.blog-categ {
+	border-left:8px solid #EFEFEF;
+	padding-bottom:14px;
+	margin-top:14px;
+}
+.blog-categ ul {
+	list-style-type: none;
+	padding-bottom:14px;
+	margin-top:14px;
+}
+.blog-categ ul li {
+	border-bottom:1px solid #ccc;}
+
+.blog-categ ul li a {
+	display: block;
+	font: normal 12px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: #003366;
+	text-decoration: none;
+	padding: 5px 0;
+	padding-left: 15px;
+}
+.blog-categ ul li a:hover {
+	color:#FF0000;
+	text-decoration:none;
+	background:#ededed none repeat scroll 0 0;
+}
+/*------------------------------------------------ right blog--------------------*/
+/*------------------------------------------------blog--------------------*/
+
+/*------------------------------------------------content about us two column--------------------*/
+.left_content {
+	float:left;
+	width:200px;
+	padding:0 8px 0 0;
+	font-size:12px;
+}
+.right_content {
+	float:right;
+	padding:15px 0px 15px 5px;
+	width:715px;
+	font-size:12px;
+}
+.left-menu {
+
+}
+.left-menu ul {
+	list-style-type: none;
+	padding-bottom:14px;
+	margin-top:14px;
+	
+}
+.left-menu ul li {
+	border-bottom:1px solid #ccc;
+}
+
+.left-menu ul li a {
+	display: block;
+	font: normal 12px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: #003366;
+	text-decoration: none;
+	padding: 5px 0;
+	padding-left: 10px;
+}
+.left-menu ul li a:hover {
+	color:#FF0000;
+	text-decoration:none;
+	background:#ededed none repeat scroll 0 0;
+}
+/*------------------------------------------------content about us two column--------------------*/
+
+/*------------------------------------------------accordion menu--------------------*/
+-------------------------------end accordion menu--------------------*/

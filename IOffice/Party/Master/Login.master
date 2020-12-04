@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Master_Login" %>
+
+<%@ Register Src="~/UserControls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserControls/UC_Navigation.ascx" TagPrefix="UC" TagName="MENU" %>
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin Login</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/style.css" />
+</head>
+<body>
+    <div>
+        <div id="admin_wrapper">
+            <%--<UC:HEADER runat="server" ID="ucHeader" />--%>
+            <div id="Div1">
+        <div id="admin_header">
+        <div id="headerInfo">
+                <span>
+                    <%--<asp:Label runat="server" ID="lblCompanyName" Text="Company Name :"></asp:Label>--%><asp:Label
+                        runat="server" ID="lblcompanyname" Text="Capman Ltd."></asp:Label></span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <%--<asp:Label runat="server" ID="Label2" Text="Address :"></asp:Label>--%><asp:Label
+                        runat="server" ID="lbladdress" Text="510-24thStreet, PORT HURON, MI 48060, USA"></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <%--<asp:Label runat="server" ID="Label3" Text="Phone no :"></asp:Label>--%>
+                    <asp:Label runat="server" ID="lblcontactno" Text="810-320-6715"></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <%--<asp:Label runat="server" ID="Label4" Text="Email :"></asp:Label>--%>
+                    <asp:Label runat="server" ID="lblemail" Text="support@busiwiz.com "></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <%--<asp:Label runat="server" ID="Label5" Text="Website :"></asp:Label>--%>
+                    <%--<asp:Label runat="server" ID="Label10" Text="www.busiwiz.com"></asp:Label>--%>
+                </span>
+                <div style="clear: both;">
+                </div>
+            </div>
+            <div id="site_title">
+            
+                <h1>
+              <%--  <img src="images/logo.gif" />--%>
+              <%--<asp:ImageButton runat="server" ID="mainloginlogo" Width="210px" Height="106px" 
+                                        ImageUrl="~/images/oa1.png" />--%>
+                    <asp:Image ID="mainloginlogo" ImageUrl="~/images/itimekeeper.jpg" Width="200" Height="75" runat="server"  />     
+                    <a href="#" target="_parent">ADMIN LAYOUT</a></h1>
+            </div>
+        </div>
+            <div id="admin_menu_container">
+            </div>
+            <!-- end of admin_menu_container -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <!--admin_main_ends-->
+            <div class="cleaner">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

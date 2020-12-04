@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="License.Busiwiz" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.1.219,2810;Initial Catalog=License.Busiwiz;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LicenseBusiwizConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_PageHelp" Member="tbl_PageHelps">
+    <Type Name="tbl_PageHelp">
+      <Column Name="PageHelpID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImageTitle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ScreenShotPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoTitle" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PdfTitle" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="PdfPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Menu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubMenu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Product" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageMasterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VersionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Member="MasterPageID" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

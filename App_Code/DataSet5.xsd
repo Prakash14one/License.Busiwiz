@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet5" targetNamespace="http://tempuri.org/DataSet5.xsd" xmlns:mstns="http://tempuri.org/DataSet5.xsd" xmlns="http://tempuri.org/DataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     InventoryCategoryMaster.InventoryCatName, InventorySubCategoryMaster.InventorySubCatName, InventoruSubSubCategory.InventorySubSubName, 
+                      InventoryMaster.Name, InventoryMaster.ProductNo, InventoryLocationTbl.InventortyRackID, InventoryLocationTbl.ShelfNumber, InventoryLocationTbl.Position, 
+                      InventoryDetails.Weight, InventorySizeMaster.length, InventorySizeMaster.Width, InventorySizeMaster.Height, InventoryDetails.QtyOnHand, InventoryDetails.Rate, 
+                      InventoryMaster.InventorySubSubId
+FROM         InventorySubCategoryMaster INNER JOIN
+                      InventoryCategoryMaster ON InventorySubCategoryMaster.InventoryCategoryMasterId = InventoryCategoryMaster.InventeroyCatId INNER JOIN
+                      InventoryMaster INNER JOIN
+                      InventoruSubSubCategory ON InventoryMaster.InventorySubSubId = InventoruSubSubCategory.InventorySubSubId INNER JOIN
+                      InventoryLocationTbl ON InventoryMaster.InventoryMasterId = InventoryLocationTbl.InventoryMasterID INNER JOIN
+                      InventoryDetails ON InventoryMaster.InventoryDetailsId = InventoryDetails.Inventory_Details_Id ON 
+                      InventorySubCategoryMaster.InventorySubCatId = InventoruSubSubCategory.InventorySubCatID INNER JOIN
+                      InventorySizeMaster ON InventoryMaster.InventoryMasterId = InventorySizeMaster.InventoryMasterId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="InventoryCatName" DataSetColumn="InventoryCatName" />
+              <Mapping SourceColumn="InventorySubCatName" DataSetColumn="InventorySubCatName" />
+              <Mapping SourceColumn="InventorySubSubName" DataSetColumn="InventorySubSubName" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="ProductNo" DataSetColumn="ProductNo" />
+              <Mapping SourceColumn="ShelfNumber" DataSetColumn="ShelfNumber" />
+              <Mapping SourceColumn="Position" DataSetColumn="Position" />
+              <Mapping SourceColumn="Weight" DataSetColumn="Weight" />
+              <Mapping SourceColumn="length" DataSetColumn="length" />
+              <Mapping SourceColumn="Width" DataSetColumn="Width" />
+              <Mapping SourceColumn="Height" DataSetColumn="Height" />
+              <Mapping SourceColumn="QtyOnHand" DataSetColumn="QtyOnHand" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="InventorySubSubId" DataSetColumn="InventorySubSubId" />
+              <Mapping SourceColumn="InventortyRackID" DataSetColumn="InventortyRackID1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet5" msprop:Generator_DataSetName="DataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InventoryCatName" msprop:Generator_UserColumnName="InventoryCatName" msprop:Generator_ColumnVarNameInTable="columnInventoryCatName" msprop:Generator_ColumnPropNameInRow="InventoryCatName" msprop:Generator_ColumnPropNameInTable="InventoryCatNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventorySubCatName" msprop:Generator_UserColumnName="InventorySubCatName" msprop:Generator_ColumnVarNameInTable="columnInventorySubCatName" msprop:Generator_ColumnPropNameInRow="InventorySubCatName" msprop:Generator_ColumnPropNameInTable="InventorySubCatNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventorySubSubName" msprop:Generator_UserColumnName="InventorySubSubName" msprop:Generator_ColumnVarNameInTable="columnInventorySubSubName" msprop:Generator_ColumnPropNameInRow="InventorySubSubName" msprop:Generator_ColumnPropNameInTable="InventorySubSubNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductNo" msprop:Generator_UserColumnName="ProductNo" msprop:Generator_ColumnVarNameInTable="columnProductNo" msprop:Generator_ColumnPropNameInRow="ProductNo" msprop:Generator_ColumnPropNameInTable="ProductNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventortyRackID" msprop:Generator_UserColumnName="InventortyRackID" msprop:Generator_ColumnVarNameInTable="columnInventortyRackID" msprop:Generator_ColumnPropNameInRow="InventortyRackID" msprop:Generator_ColumnPropNameInTable="InventortyRackIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ShelfNumber" msprop:Generator_UserColumnName="ShelfNumber" msprop:Generator_ColumnVarNameInTable="columnShelfNumber" msprop:Generator_ColumnPropNameInRow="ShelfNumber" msprop:Generator_ColumnPropNameInTable="ShelfNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Position" msprop:Generator_UserColumnName="Position" msprop:Generator_ColumnVarNameInTable="columnPosition" msprop:Generator_ColumnPropNameInRow="Position" msprop:Generator_ColumnPropNameInTable="PositionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Weight" msprop:Generator_UserColumnName="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length" msprop:Generator_UserColumnName="length" msprop:Generator_ColumnVarNameInTable="columnlength" msprop:Generator_ColumnPropNameInRow="length" msprop:Generator_ColumnPropNameInTable="lengthColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Width" msprop:Generator_UserColumnName="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_UserColumnName="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="QtyOnHand" msprop:Generator_UserColumnName="QtyOnHand" msprop:Generator_ColumnVarNameInTable="columnQtyOnHand" msprop:Generator_ColumnPropNameInRow="QtyOnHand" msprop:Generator_ColumnPropNameInTable="QtyOnHandColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_UserColumnName="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="InventorySubSubId" msprop:Generator_UserColumnName="InventorySubSubId" msprop:Generator_ColumnVarNameInTable="columnInventorySubSubId" msprop:Generator_ColumnPropNameInRow="InventorySubSubId" msprop:Generator_ColumnPropNameInTable="InventorySubSubIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="InventortyRackID1" msdata:Caption="InventortyRackID" msprop:Generator_UserColumnName="InventortyRackID1" msprop:Generator_ColumnPropNameInRow="InventortyRackID1" msprop:Generator_ColumnVarNameInTable="columnInventortyRackID1" msprop:Generator_ColumnPropNameInTable="InventortyRackID1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

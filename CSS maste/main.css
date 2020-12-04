@@ -1,0 +1,579 @@
+﻿.accordion a.menuitem {
+	font: normal 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+	color: #003366;
+	display: block;
+	position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
+	text-decoration: none;
+	padding:5px 0;
+	border-bottom:1px solid #ccc;
+	border-top:2px solid #fff;
+	background:#ededed;
+}
+.accordion div.submenu { /*DIV that contains each sub menu*/
+	background: white;
+}
+Body
+{
+	background-color:#e2e1dd;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;	
+}
+HTML
+{
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+A
+{
+	color: #41506e;
+	text-decoration: none;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+}
+A:hover
+{
+	color:#667f2e;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+}
+LABEL
+{
+	color: #41506e;
+	text-decoration: none;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+}
+LABEL:hover
+{
+	color:#667f2e;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration: none;
+}
+IMG
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+INPUT
+{
+	font-size: 11px;
+	color: #333;
+	font-family: Arial;
+	border: solid 1px #666;
+	height: 20px;
+}
+SELECT
+{
+	font-size: 11px;
+	color: #333;
+	font-family: Arial;
+	border: solid 1px #333;
+}
+#maintable
+{
+	background-color:white;
+	width:900px;
+	height:600px;
+	padding:0px 0px 0px 0px;
+	table-layout:fixed;
+}
+#mt
+{
+	
+	
+	background-image:url("../images/bg.png");
+	background-repeat:repeat;
+	height:70px;
+	width:900px;
+	padding:0px 0px 0px 0px;
+	table-layout:fixed;
+
+}
+#maintable td
+{
+	text-align:left;
+	vertical-align:top;
+}
+#maintable .leftpnl
+{
+	width:232px;
+	background-color:#79943c;
+}
+#leftpnltable
+{
+	width:100%;
+	table-layout:fixed;
+}
+#leftpnltable .navtd
+{
+	padding: 10px 25px 0 25px;
+	text-align:center;
+	vertical-align:middle;
+}
+.navrightdiv
+{
+	width:150px;
+	height:10px;
+	table-layout:fixed;
+	float:right;
+	text-align:left;
+	padding-left:4px;
+	padding-top:4px;
+	margin-right: 0px;
+}
+.navleftdiv
+{
+	width:20px;
+	height:10px;
+	table-layout:fixed;
+	float:left;
+	padding-top:4px;
+}
+.navdiv
+{
+	width:190px;
+	height:10px;
+	table-layout:fixed;
+	font-family:Arial;
+	font-size:12px;
+	color:White;
+	padding-top:5px;
+	padding-bottom:5px;
+	vertical-align:top;
+	float:left;
+}
+#leftpnltable .newstd
+{
+	padding: 30px 40px 5px 15px;
+}
+#newstbl
+{
+	width:199px;
+	height:257px;
+	table-layout:fixed;
+	background-image:url("../images/newsbg.png");
+	background-repeat:no-repeat;
+}
+#newstbl td
+{
+	padding:40px 10px;
+}
+.newsdiv
+{
+	width:178px;
+	height:200px;
+	table-layout:fixed;
+	overflow:auto;
+	font-family:Arial;
+	font-size:11px;
+	color:#333;
+	font-weight:normal;
+}
+#leftpnltable .btmtd
+{
+	padding: 0px 40px 5px 15px;
+}
+.btmdiv
+{
+	width:199px;
+	height:10px;
+	float:left;
+	font-family:Arial;
+	font-size:12px;
+	color:#2d3b56;
+	font-weight:bold;
+	text-align:left;
+	vertical-align:middle;
+}
+.btmdotdiv
+{
+	width:199px;
+	height:10px;
+	float:left;
+	font-family:Arial;
+	font-size:12px;
+	color:#fff;
+	font-weight:bold;
+	text-align:left;
+	vertical-align:middle;
+}
+.btmcontentdiv
+{
+	width:199px;
+	height:132px;
+	float:left;
+	font-family:Arial;
+	font-size:12px;
+	color:#000;
+	font-weight:normal;
+	text-align:left;
+	vertical-align:middle;
+	overflow:auto;
+	padding:5px 5px;
+}
+#subtable
+{
+	width:668px;
+	table-layout:fixed;
+}
+#subtable .bnrpnl
+{
+	background-image:url("../images/banner.png");
+	background-repeat:no-repeat;
+	width:668px;
+	height:196px;
+}
+#subtable .hdngpnl
+{
+	padding:4px 4px;
+}
+#subtable .hdngdiv
+{
+	background-color:#336699;
+	width:705px;
+	height:30px;
+	table-layout:fixed;
+}
+#hdngdivtbl
+{
+	width:100%;
+	table-layout:fixed;
+}
+#hdngdivtbl .leftcolum
+{
+	padding: 7px 30px 0 5px;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	color:White;
+	text-align:left;
+}
+
+#hdngdivtbl .leftcolum label
+{
+	font-family:Arial;
+	font-size:155px;
+	font-weight:bold;
+	color:White;
+}
+#hdngdivtbl .rightcolum
+{
+	padding: 7px 5px 0 0;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	color:White;
+	text-align:right;
+}
+#subtable .ftrdiv
+{
+	background-color:#41506e;
+	width:660px;
+	height:23px;
+	table-layout:fixed;
+	text-align:center;
+	vertical-align:middle;
+	font-family:Arial;
+	font-size:11px;
+	color:White;
+	font-weight:normal;
+	padding:7px 0 0 0;
+}
+#subtable .contentpnl
+{
+	padding:4px 4px;
+}
+#subtable .contentdiv
+{
+	width:660px;
+	height:360px;
+	overflow:auto;
+	table-layout:fixed;
+}
+
+/* content page start*/
+
+#pagetbl
+{
+		}
+{
+		}
+ .hdng
+{
+	font-family:Arial;
+	font-size:15px;
+	color:#993399;
+	font-weight:bold;
+	
+	text-decoration:underline;
+}
+#pagetbl .dothdng
+{
+	font-family:Calibri;
+	font-size:13px;
+	color:#000;
+	font-weight:bold;
+	padding:0px 0px 0px 10px;
+}
+#pagetbl .column1
+{
+	width:132px;
+	
+	font-family:"Calibri Rounded MT Bold";
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	height:15px;
+	padding:3px 3px;
+}
+#pagetbl .column2
+{
+	width:172px;
+	table-layout:fixed;
+	font-family:Calibri;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	height:15px;
+	padding:3px 3px;
+}
+#pagetbl a:link
+{
+	color: #41506e;
+	text-decoration: none;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+}
+#pagetbl a:hover
+{
+	color: #667f2e;
+	text-decoration: none;
+	font-family:Calibri;
+	font-size:11px;
+	font-weight:bold;
+}
+#pagetbl .column3
+{
+	font-family:Calibri;
+	font-size:12px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	width:25%;
+	padding: 2px 15px;
+}
+#pagelogintbl
+{
+	width:100%;
+	
+	
+	
+}
+#pagelogintbl td
+{
+	text-align:center;
+	vertical-align:middle;
+}
+#pagelogintbl #logintbl
+{
+	width:382px;
+	
+	margin: 100px 0px 100px 310px;
+	border:solid 1px #ccc;
+	background-color:white;
+	
+}
+#logintbl .hdr
+{
+	background-color:#336699;
+	text-align:center;
+	padding:2px 10px;
+	text-align:left;
+	vertical-align:middle;
+	font-family:Arial;
+	font-size:11px;
+	color:white;
+	font-weight:bold;
+	height:26px;
+}
+#logintbl .col1
+{
+	
+	
+	width:132px;
+	
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	height:15px;
+	padding:3px 3px;
+	
+}
+#logintbl .col2
+{
+	
+	
+	width:172px;
+	table-layout:fixed;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	height:15px;
+	padding:3px 3px;
+}
+#logintbl .col3
+{
+	width:72px;
+	table-layout:fixed;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+	vertical-align:top;
+	height:15px;
+	padding:3px 3px;
+	
+	
+	
+}
+.GridBack
+{
+	background-color: #F2F2F1;
+	text-align: left;
+	font-family: Arial;
+	font-size: 14px;
+	border: solid 1px #d5c495;
+	width: 645px;
+	margin-right: 0px;
+}
+.GridBack1
+{
+	background-color: #F2F2F1;
+	text-align: left;
+	font-family: Arial;
+	font-size: 14px;
+	border: solid 1px #d5c495;
+	width: 645px;
+}
+.GridBack tr td
+{
+	border:solid 1px #d5c495;
+	line-height:30px;
+}
+
+.GridBack a:link
+{
+	color:#adaa89;
+	text-decoration:Underline;
+}
+.GridBack a:hover
+{
+	color:Navy;
+	text-decoration:Underline;
+}
+.GridBack a:visited
+{
+	color:Red;
+	text-decoration:Underline;
+}
+.GridRowStyle
+{
+	width: 653px;
+	height: 25px;
+	background-color: #F2F2F1;
+}
+.GridAlternateRow
+{
+	height: 25px;
+	background-color: #C0C0C0;
+	text-align: left;
+	font-family: Arial;
+	font-size: 14px;
+}
+.GridFooter
+{
+	background-color: #336699;
+	height: 20px;
+}
+.GridHeader
+{
+	color: #fff;
+	background-color: #8BB1D8;
+	text-align: left;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	height: 25px;
+}
+.GridHeader th
+{
+padding:0 0 2px 8px;
+text-align:left;
+}
+.GridHeader a
+{
+	color: #336699;
+	padding-left: 25px;
+}
+.GridHeader a:hover
+{
+	color: #336699;
+}
+.GridHeader a:visited
+{
+	color: #336699;
+}
+.GridPager
+{
+	background-color: #336699;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+.GridPager a
+{
+color:#adaa89;
+text-decoration:none;
+	
+}
+.GridPager a:visited
+{
+color:Red;
+text-decoration: none;
+}
+.GridPager a:hover
+{
+color:Green;
+text-decoration: underline;
+}
+
+
+

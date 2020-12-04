@@ -1,0 +1,14 @@
+﻿body {
+}
+#subinnertbl .tr
+{
+	background-color:#8F8FC9;
+	padding-left: 11px;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	text-align: left;
+	height: 10px;
+	
+}

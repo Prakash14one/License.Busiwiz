@@ -1,0 +1,113 @@
+﻿body 
+{
+    margin: 0px 0px 0px 0px;
+    text-align:center;
+}
+
+#mainbody
+{
+    margin: 0px 0px 0px 0px;
+    width: 1002px;
+}
+
+#top
+{
+    margin: 0px 26px 10px 26px;
+    width:950px;
+}
+
+#logo
+{
+    width: 196px;
+    height: 120px;
+    background-image: url(./images/logo.jpg);
+    background-repeat:no-repeat;
+}
+
+
+
+#content
+{
+    margin-top:22px;
+    margin-bottom:22px;
+    width:950px;
+}
+
+#feature
+{
+    width:230px;
+    height:190px;
+    background-color: #cadabd;
+}
+
+#feature .hding
+{
+    padding: 10px 10px 10px 10px;
+    color:#2e6203;
+    font-family: Tahoma;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#feature .txt
+{
+    padding: 0px 10px 0px 10px;
+    color:#1b1b1a;
+    font-family: Tahoma;
+    font-size:12px;
+    line-height: 18px;
+}
+
+
+#centertxt
+{
+    margin-left:100px;
+    margin-right:100px;
+    width:360px;
+    height: 200px;
+    font-family:Arial;
+    text-align:center;
+}
+
+#centertxt .txt
+{
+    padding: 0px 0px 0px 0px;
+    padding-left:10px;
+    padding-right:10px;
+    background-color: #cadabd;
+    text-align:justify;
+    color:#000000;
+    font-size:11px;
+}
+
+#centertxt .hdlin
+{
+    background-color:#2e6203;
+    color: #FFFFFF;
+    font-family:Tahoma;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+#centertxt A
+{
+    color: #000000;
+    text-decoration:none;
+}
+
+#centertxt A:hover
+{
+    color: #000000;
+    text-decoration:underline;
+}
+
+#copyright
+{
+    padding-right:10px;
+    width:950px;
+    background-color:#585858;
+    line-height: 20px;
+    color:#FFFFFF;
+    font-family: Tahoma;
+    font-size: 10px;
+}

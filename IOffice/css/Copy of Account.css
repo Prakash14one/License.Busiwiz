@@ -1,0 +1,133 @@
+﻿body 
+{
+    margin: 0px 0px 0px 0px;
+    text-align:left;
+}
+
+#mainbody
+{
+    margin: 0px 0px 0px 0px;
+    width: 1002px;
+}
+
+#top
+{
+    margin: 0px 26px 10px 26px;
+    width:950px;
+    height: 100px;
+}
+
+#menu
+{
+    width:1002px;
+    height:24px;
+    color:#FFFFFF;
+    background-color:#0c5282;
+    font-family:Tahoma;
+    font-size:12px;
+    text-align:left;
+}
+
+#menu A
+{
+    padding-left:10px;
+    padding-right:10px;
+    padding: 10px 10px 10px 10px;
+    color:#FFFFFF;
+    text-decoration:none;
+    background-color:#0c5282;
+    line-height:24px;
+}
+
+#menu A:hover
+{
+    color:#FFFFFF;
+    text-decoration:none;
+    background-color:#4589b8;
+}
+
+#centerbody
+{
+    margin: 20px 0px 20px 0px;
+    width:1002px;
+    height: 27px;
+}
+
+#cenlft
+{
+    margin: 0px 10px 0px 10px;
+    width:1002px;
+}
+#cenlft .headtopic
+{
+    height:22px;
+    background-color:#0c5282;
+    color:#FFFFFF;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight:bold;
+}
+#cenlft .txt
+{
+    color: #444444;
+    text-align: left;
+    font-family: Tahoma;
+    font-size: 11px;
+    line-height:20px;
+}
+#cenlft A
+{
+    color: #0c5282;
+    text-align: right;
+    font-family: Tahoma;
+    font-size: 11px;
+    line-height:18px;
+    text-decoration: none;
+}
+#cenlft A:hover
+{
+    text-decoration: underline;
+}
+
+#cenrgt
+{
+    width:270px;
+    border-left: solid 1px #0c5282;
+    border-bottom: solid 1px #0c5282;
+    border-right:solid 1px #0c5282;
+}
+
+#cenrgt .headtopic
+{
+    height:22px;
+    background-color:#0c5282;
+    color:#FFFFFF;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight:bold;
+}
+#cenrgt .inner
+{
+    padding-top:10px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom:10px;
+    width: 248px;
+    color:#0c5282;
+    font-family: Tahoma;
+    font-size: 11px;
+    text-align:left;
+    line-height:20px;
+}
+
+#btm
+{
+    padding-right:10px;
+    background-color: #3b3a37;
+    height:24px;
+    color:#FFFFFF;
+    font-family:Tahoma;
+    font-size:11px;
+    line-height:24px;
+    text-align:right;   
+}

@@ -1,0 +1,351 @@
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.IO;
+using System.Data.SqlClient;
+using System.Text;
+using System.DirectoryServices;
+using System.IO.Compression;
+using Ionic.Zip;
+using System.Security.Cryptography;
+using Microsoft.Win32;
+using System.Diagnostics;
+using System.Net.NetworkInformation;
+using System.Xml;
+using System.Net;
+using System.Net.Mail;
+public partial class Login : System.Web.UI.Page
+{
+    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LicenseBusiwizConnectionString"].ConnectionString);
+    SqlConnection conn;
+    public static string encstr = "";
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        lblmsg.Text = "All Table Record Inserted Successfully";       
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["sid"] != null && Request.QueryString["1"] != null)
+            {
+                ViewState["ServerID"] = Request.QueryString["sid"].ToString();              
+                //Insert At Log2 Table
+                GetSync_Create_Serv_List___InsertAtLog2(ViewState["ServerID"].ToString());
+            }
+            if (Request.QueryString["sid"] != null && Request.QueryString["job"] == "yes")
+            {
+                string sid = BZ_Common.BZ_Decrypted(Request.QueryString["sid"].ToString());
+                DataTable id = MyCommonfile.selectBZ("Select Rcordid as Rcordid From Sync_Need_Logs_AtServer Where sid='" + sid + "'");
+                Log2_To_CreateJob1_Job2_Job3(sid);
+            }
+            if (Request.QueryString["sid"] != null && Request.QueryString["Temp"] != "")
+            {
+                ViewState["sid"] = BZ_Common.BZ_Decrypted(Request.QueryString["sid"].ToString());
+                FillFrid();
+            }
+        }
+    }
+    protected void GetSync_Create_Serv_List___InsertAtLog2(string ServerID)
+    {    
+        DataTable DTTable = MyCommonfile.selectBZ(@" SELECT DISTINCT dbo.ClientProductTableMaster.Id AS TableId, dbo.ClientProductTableMaster.TableName, dbo.SatelliteSyncronisationrequiringTablesMaster_SerWhere.PKTableName, dbo.SatelliteSyncronisationrequiringTablesMaster_SerWhere.PKIdName, dbo.SatelliteSyncronisationrequiringTablesMaster_SerWhere.Select_Query FROM dbo.ClientProductTableMaster INNER JOIN dbo.SatelliteSyncronisationrequiringTablesMaster ON dbo.SatelliteSyncronisationrequiringTablesMaster.TableID = dbo.ClientProductTableMaster.Id INNER JOIN dbo.SatelliteSyncronisationrequiringTablesMaster_SerWhere ON dbo.SatelliteSyncronisationrequiringTablesMaster.TableID = dbo.SatelliteSyncronisationrequiringTablesMaster_SerWhere.TableId ");
+        for (int iicouts = 0; iicouts < DTTable.Rows.Count; iicouts++)
+        {
+            Int64 RecordInserted = Table_DatabaseSQL.All_Table_All_Record__InsertAtLog2(DTTable.Rows[iicouts]["TableName"].ToString(), DTTable.Rows[iicouts]["TableId"].ToString(), ServerID, DTTable.Rows[iicouts]["PKTableName"].ToString(), DTTable.Rows[iicouts]["PKIdName"].ToString(), DTTable.Rows[iicouts]["Select_Query"].ToString());
+            lblmsg.Text = "Total " + RecordInserted + " Record Are Inseted In " + DTTable.Rows[iicouts]["TableName"].ToString() + " Table";
+            //pnl_loading.Visible = true;
+            //Timer1.Enabled = true;
+        }
+        lblmsg.Text = "All Table Record Inserted Successfully";
+        Response.Redirect("Silent_Synchronoze.aspx?sid=" + ServerID + "&job=yes");  
+    }
+    protected void Log2_To_CreateJob1_Job2_Job3(string SId)
+    {
+        Int64 sateserver = 0;
+        Int64 tablename = 0;
+        Int64 recordid = 0;
+        DataTable DTServerID = MyCommonfile.selectBZ(" SELECT DISTINCT dbo.ServerMasterTbl.Id,dbo.ServerMasterTbl.ServerName FROM dbo.CompanyMaster INNER JOIN dbo.PricePlanMaster ON dbo.PricePlanMaster.PricePlanId = dbo.CompanyMaster.PricePlanId INNER JOIN dbo.PortalMasterTbl ON dbo.PricePlanMaster.PortalMasterId1 = dbo.PortalMasterTbl.Id INNER JOIN dbo.VersionInfoMaster ON dbo.PricePlanMaster.VersionInfoMasterId = dbo.VersionInfoMaster.VersionInfoId INNER JOIN dbo.ProductMaster ON dbo.VersionInfoMaster.ProductId = dbo.ProductMaster.ProductId INNER JOIN dbo.ClientMaster ON dbo.ProductMaster.ClientMasterId = dbo.ClientMaster.ClientMasterId INNER JOIN dbo.ServerMasterTbl ON dbo.CompanyMaster.ServerId = dbo.ServerMasterTbl.Id Where  dbo.ServerMasterTbl.Status=1 and dbo.CompanyMaster.Active=1 and dbo.ServerMasterTbl.Id=" + SId + " ");//
+        for (int iicout = 0; iicout < DTServerID.Rows.Count; iicout++)
+        {
+            sateserver++;
+            Int64 Job1RecordID = Syncro_Tables.InsertJob1___Satelitte_Server_Sync_Job_Master(DTServerID.Rows[iicout]["id"].ToString(), "Updation " + DTServerID.Rows[iicout]["ServerName"].ToString() + " on " + Convert.ToString(DateTime.Now), DateTime.Now, false);
+            tablename = 0;
+            DataTable dsfst = MyCommonfile.selectBZ(" Select DISTINCT TAbleId From Sync_Need_Logs_AtServer where sid='" + DTServerID.Rows[iicout]["id"].ToString() + "' Order By TAbleId ");
+            for (int ii = 0; ii < dsfst.Rows.Count; ii++)
+            {
+                tablename++;
+                Int64 Job2RecordID = Syncro_Tables.InsertJob2___Satellite_Server_Sync_Job_Details(Convert.ToString(Job1RecordID), dsfst.Rows[ii]["TAbleId"].ToString(), false, false, DateTime.Now, true);
+            }
+            recordid = 0;
+            DataTable dstbl = MyCommonfile.selectBZ(" Select DISTINCT TableID,ID From Satellite_Server_Sync_Job_Details where Satelitte_Server_Sync_Job_Master_ID='" + Job1RecordID + "' Order By TableID  ");
+            for (int ii = 0; ii < dstbl.Rows.Count; ii++)
+            {
+                DataTable ds = MyCommonfile.selectBZ(" Select * From Sync_Need_Logs_AtServer where sid='" + DTServerID.Rows[iicout]["id"].ToString() + "' and TAbleId='" + dstbl.Rows[ii]["TableID"].ToString() + "' Order By LogId  ");
+                for (int iii = 0; iii < ds.Rows.Count; iii++)
+                {
+                    recordid++;
+                    string ID = ds.Rows[iii]["ID"].ToString();
+                    string LogId = ds.Rows[iii]["LogId"].ToString();
+                    string Rcordid = ds.Rows[iii]["Rcordid"].ToString();
+                    string TableId = ds.Rows[iii]["TAbleId"].ToString();
+                    string action = "1";
+                    if (ds.Rows[iii]["ACTION"].ToString() == "INSERT")
+                    {
+                        action = "1";
+                    }
+                    else if (ds.Rows[iii]["ACTION"].ToString() == "Updated")
+                    {
+                        action = "2";
+                    }
+                    else if (ds.Rows[iii]["ACTION"].ToString() == "Deleted")
+                    {
+                        action = "3";
+                    }                    
+                    Int64 Job3ReturnID = Syncro_Tables.InsertJob3___Satelite_Server_Sync_Log_Deatils(dstbl.Rows[ii]["ID"].ToString(), Rcordid, DateTime.Now, action, "", false);
+                                                                                        
+                    Syncro_Tables.DELETE___Sync_Need_Logs_AtServer(ID);
+                }           
+            }           
+        }
+        lblmsg1.Text = "In " + Convert.ToString(sateserver) + " server " + Convert.ToString(tablename) + " table's  " + recordid + " records updated for job ";
+    }
+
+
+    //Add At Temp Table
+    protected void FillFrid()
+    {
+        DataTable dtfindtab = MyCommonfile.selectBZ(@" SELECT TOP(500) dbo.ClientProductTableMaster.Id AS TableId, dbo.ServerMasterTbl.ServerName,  dbo.ServerMasterTbl.serverloction , dbo.ClientProductTableMaster.TableName,  dbo.ServerMasterTbl.serverloction, dbo.Satellite_Server_Sync_Job_Details.ID,dbo.Satelitte_Server_Sync_Job_Master.JobDateTime,   dbo.Satelitte_Server_Sync_Job_Master.SatelliteServerID, dbo.Satellite_Server_Sync_Job_Details.JobFinishFinishStatus, dbo.Satellite_Server_Sync_Job_Details.SyncedStatus, dbo.Satellite_Server_Sync_Job_Details.CheckingStatus ,  dbo.Satelite_Server_Sync_Log_Deatils.TypeOfOperationDone, dbo.Satelite_Server_Sync_Log_Deatils.ID AS JobReordTableID,dbo.Satelite_Server_Sync_Log_Deatils.RecordID,dbo.Satelite_Server_Sync_Log_Deatils.TypeOfOperationDone, dbo.SyncActionMaster.ActionName
+                                                        From    dbo.Satellite_Server_Sync_Job_Details INNER JOIN dbo.ClientProductTableMaster INNER JOIN dbo.SatelliteSyncronisationrequiringTablesMaster ON dbo.SatelliteSyncronisationrequiringTablesMaster.TableID = dbo.ClientProductTableMaster.Id ON  dbo.Satellite_Server_Sync_Job_Details.TableID = dbo.SatelliteSyncronisationrequiringTablesMaster.TableID AND dbo.Satellite_Server_Sync_Job_Details.TableID = dbo.ClientProductTableMaster.Id INNER JOIN dbo.Satelitte_Server_Sync_Job_Master ON  dbo.Satellite_Server_Sync_Job_Details.Satelitte_Server_Sync_Job_Master_ID = dbo.Satelitte_Server_Sync_Job_Master.Id INNER JOIN dbo.ServerMasterTbl ON dbo.Satelitte_Server_Sync_Job_Master.SatelliteServerID = dbo.ServerMasterTbl.Id INNER JOIN dbo.Satelite_Server_Sync_Log_Deatils ON dbo.Satellite_Server_Sync_Job_Details.ID = dbo.Satelite_Server_Sync_Log_Deatils.Satellite_Server_Sync_Job_Details_ID INNER JOIN dbo.SyncActionMaster ON dbo.Satelite_Server_Sync_Log_Deatils.TypeOfOperationDone = dbo.SyncActionMaster.ID
+                                                        Where  dbo.Satellite_Server_Sync_Job_Details.SyncedStatus=0  and ServerMasterTbl.Id='" + ViewState["sid"] + "' ");//  and dbo.Satelitte_Server_Sync_Job_Master.Id='" + ViewState["JobID"] + "' and        grdserver.DataSource = dtfindtab;
+        grdserver.DataSource = dtfindtab;
+        grdserver.DataBind();
+        ViewState["DT"] = dtfindtab;
+        if (dtfindtab.Rows.Count == 0)
+        {
+            // Boolean status2 = Update_Satelitte_Server_Sync_Job_Masters(Convert.ToString(ViewState["JobID"]), true, DateTime.Now);                     
+            lblmsg.Text = "Synchronization successfully";
+            Timer1.Enabled = false;
+            pnl_loading.Visible = false;
+        }
+        else
+        {
+            Timer1.Enabled = true;
+            pnl_loading.Visible = true;
+        }
+    }
+    protected void Timer1_Tick(object sender, EventArgs e)
+    {
+        if (ViewState["sid"] != null)
+        {            
+            Timer1.Enabled = true;
+            ViewState["sid"] = ViewState["sid"];
+            Int64 counter = Convert.ToInt64(lbl_Counter.Text);          
+            FillFrid();
+            SeprateDatabase();          
+            counter++;
+            lbl_Counter.Text = Convert.ToString(counter);
+        }
+        else
+        {
+            Timer1.Enabled = false;
+            pnl_loading.Visible = false;
+        }
+    }   
+    protected void btnsync_Click(object sender, EventArgs e)
+    {
+        FillFrid();       
+    }
+    protected void SeprateDatabase()
+    {
+        Boolean connnection = false;
+        string Delete_From = "";
+        string PKname = "";
+        conn = new SqlConnection();
+        try
+        {
+            //conn = ServerWizard.ServerDefaultInstanceConnetionTCP_Serverid(ViewState["sid"].ToString());
+            conn = new SqlConnection(ConfigurationManager.ConnectionStrings["LicenseBusiwizConnectionString"].ConnectionString);
+            if (conn.State.ToString() != "Open")
+            {
+                conn.Open();
+            }
+            conn.Close();
+            connnection = true;
+        }
+        catch (Exception ex)
+        {
+        }
+        if (connnection == true)
+        {
+            int totalrec = 0;
+            string pcateid = "";
+            string seridstatus = "";          
+            DataTable dtcln = new DataTable();
+            foreach (GridViewRow item in grdserver.Rows)
+            {
+                string syncreqid = grdserver.DataKeys[item.RowIndex].Value.ToString();
+                Label lbltabname = (Label)item.FindControl("lbltabname");
+                Label lblseid = (Label)item.FindControl("lblseid");
+                Label lblattempt = (Label)item.FindControl("lblattempt");
+                CheckBox cbItem = (CheckBox)item.FindControl("cbItem");
+                Label lbl_TableId = (Label)item.FindControl("lbl_TableId");
+                Label lbl_jobdetail = (Label)item.FindControl("lbl_jobdetail");
+                Label lbl_typeoperation = (Label)item.FindControl("lbl_typeoperation");
+                Label lbl_JobReordTableID = (Label)item.FindControl("lbl_JobReordTableID");
+                Label lbl_RecordID = (Label)item.FindControl("lbl_RecordID");
+                Label lblname = (Label)item.FindControl("lblname");
+                Boolean serconn = true;
+               // conn = ServerWizard.ServerDefaultInstanceConnetionTCP_Serverid(lblseid.Text);
+               
+                if (cbItem.Checked == true)
+                {
+                    if (lblseid.Text != seridstatus)
+                    {
+                        try
+                        {
+                            encstr = ServerWizard.ServerEncrDecriKEY(lblseid.Text);
+                            string tablenameMain =lbltabname.Text;
+                            string tablenameTemp = "Temp_" + lbltabname.Text;
+                            if (lbl_typeoperation.Text == "2" || lbl_typeoperation.Text == "3")
+                            {                               
+                                //((((((((((--Need To  Delete Column))))))))))))))))))))
+                                //Delete_From = " Delete From " + tablenameTemp + " Where ";
+                                //string Temp3val = "";
+                                //DataTable dts1 = MyCommonfile.selectBZ(" select column_name,data_type,CHARACTER_MAXIMUM_LENGTH from INFORMATION_SCHEMA.COLUMNS where table_name='" + tablenameMain + "'");
+                                //if (dts1.Rows.Count > 0)
+                                //{
+                                //    PKname = TableRelated.SatelliteSyncronisationrequiringTablesMaster_WherePKIDName(lbl_TableId.Text);
+                                //    if (PKname.Length > 0)
+                                //    {
+                                //        Delete_From += "" + PKname + "=" + "'" + Encrypted(lbl_RecordID.Text) + "' ";
+                                //    }
+                                //    else
+                                //    {
+                                //        Delete_From += "" + dts1.Rows[0]["column_name"] + "=" + "'" + Encrypted(lbl_RecordID.Text) + "' ";
+                                //    }
+                                //}                              
+                                //"""""""""""""--CLOSE Need To  Delete Column"""""""""""""""""
+                            }
+                            if (lbl_typeoperation.Text == "1" || lbl_typeoperation.Text == "2")
+                            {                              
+                                //((((((((((--Need To  Insert Column))))))))))))))))))))
+                                string Insert_Into = " INSERT INTO " + tablenameTemp + "(  ";
+                                string Temp3val = "";
+                                DataTable dts1 = MyCommonfile.selectBZ(" select column_name,data_type,CHARACTER_MAXIMUM_LENGTH from INFORMATION_SCHEMA.COLUMNS where table_name='" + tablenameMain + "'");
+                                if (dts1.Rows.Count > 0)
+                                {
+                                    for (int k = 0; k < dts1.Rows.Count; k++)
+                                    {
+                                        Insert_Into += ("" + dts1.Rows[k]["column_name"] + " ,");
+                                    }
+                                    Insert_Into = Insert_Into.Remove(Insert_Into.Length - 1);
+                                    Insert_Into += ") Values ";
+                                    DataTable maxiddesid = MyCommonfile.selectBZ(" select column_name,data_type,CHARACTER_MAXIMUM_LENGTH from INFORMATION_SCHEMA.COLUMNS where table_name='" + tablenameMain + "'");
+                                    PKname = TableRelated.SatelliteSyncronisationrequiringTablesMaster_WherePKIDName(lbl_TableId.Text);
+                                    if (PKname.Length > 0)
+                                    {
+                                    }
+                                    else
+                                    {
+                                        PKname = dts1.Rows[0]["column_name"].ToString();
+                                    }
+                                    DataTable dtr = MyCommonfile.selectBZ(" Select * From " + tablenameMain + " where " + PKname + "=" + lbl_RecordID.Text + " ");
+                                    if (dtr.Rows.Count > 0)
+                                    {
+                                        foreach (DataRow itm in dtr.Rows)
+                                        {
+                                            int c = 0;
+                                            Insert_Into += " (";
+                                            DataTable dtsccc = MyCommonfile.selectBZ("select column_name,data_type,CHARACTER_MAXIMUM_LENGTH from INFORMATION_SCHEMA.COLUMNS where table_name='" + tablenameMain + "'");
+                                            for (int k = 0; k < dtsccc.Rows.Count; k++)
+                                            {
+                                                Insert_Into += "'" + Encrypted(Convert.ToString(itm["" + dtsccc.Rows[k]["column_name"] + ""])) + "' ,";
+                                            }
+                                            Insert_Into = Insert_Into.Remove(Insert_Into.Length - 1);
+                                            Insert_Into += " )";
+                                        }
+                                        if (Insert_Into.Length > 0)
+                                        {
+                                            SqlCommand ccm = new SqlCommand(Insert_Into, conn);
+                                            if (conn.State.ToString() != "Open")
+                                            {
+                                                conn.Open();
+                                            }
+                                            ccm.ExecuteNonQuery();
+                                            conn.Close();
+                                            lblmsg.Text = "";
+                                        }
+                                        //"""""""""""""--CLOSE Need To  Insert Column"""""""""""""""""
+                                    }
+                                }
+                            }
+                            totalrec++;
+                            // Boolean statuss = Update_Satellite_Server_Sync_Job_Details(lbl_jobdetail.Text, true, true, DateTime.Now, true, DateTime.Now);
+                            try
+                            {
+                                //DataTable Satallite_Server_Sync_RecordsMasterTblID = MyCommonfile.selectBZ(" Select Id as SatalliteServerSyncTblTecordStatusID From Satallite_Server_Sync_RecordsMasterTbl Where TableId='" + lbl_TableId.Text + "' and ServerID='" + lblseid.Text + "' ");
+                                //if (lbl_typeoperation.Text == "1")
+                                //{
+                                //    Insert___Satallite_Server_Sync_RecordsDetailTbl(Satallite_Server_Sync_RecordsMasterTblID.Rows[0]["Satallite_Server_Sync_RecordsMasterTblID"].ToString(), lbl_RecordID.Text, DateTime.Now, lbl_typeoperation.Text, lbl_typeoperation.Text);
+                                //}
+                                //if (lbl_typeoperation.Text == "3")
+                                //{
+                                //    Delete___Satallite_Server_Sync_RecordsDetailTbl(Satallite_Server_Sync_RecordsMasterTblID.Rows[0]["Satallite_Server_Sync_RecordsMasterTblID"].ToString(), lbl_RecordID.Text);
+                                //}
+                            }
+                            catch
+                            {
+                            }
+                            // lblmsg.Text = " Successfully synchronization ";//" + totalrec + " records for " + lblname.Text + " server record " + lbl_RecordID.Text + "<br><br>";
+                        }
+                        catch
+                        {
+                            seridstatus = lblseid.Text;
+                            lblmsg.Text = " Some problem when synchronization with " + lblname.Text + " server <br><br>";//e1.ToString()+"<br>";
+                        }
+                        Boolean Deletestatus =Syncro_Tables.DeleteJob3____Satelite_Server_Sync_Log_Deatils(lbl_JobReordTableID.Text);
+                    }
+                }
+                else
+                {
+                }
+            }
+        }
+        else
+        {
+            lblmsg.Text = " No connection possible with server <br> you are tying to connect database with this connection string ( " + conn.ConnectionString + " )";//e1.ToString()+"<br>";
+        }
+    }
+
+    public static string Encrypted(string strText)
+    {
+        return Encrypt(strText, encstr);
+    }
+    private static string Encrypt(string strtxt, string strtoencrypt)
+    {
+        byte[] bykey = new byte[20];
+        byte[] dv = { 0x12, 0x34, 0x56, 0x78, 0x90, 0xAB, 0xCD, 0xEF };
+        try
+        {
+            bykey = System.Text.Encoding.UTF8.GetBytes(strtoencrypt.Substring(0, 8));
+            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
+            byte[] inputArray = System.Text.Encoding.UTF8.GetBytes(strtxt);
+            MemoryStream ms = new MemoryStream();
+            CryptoStream cs = new CryptoStream(ms, des.CreateEncryptor(bykey, dv), CryptoStreamMode.Write);
+            cs.Write(inputArray, 0, inputArray.Length);
+            cs.FlushFinalBlock();
+            return Convert.ToBase64String(ms.ToArray());
+        }
+        catch (Exception ex)
+        {
+            return strtxt;
+            //  throw ex;
+        }
+    }
+}

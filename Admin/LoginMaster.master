@@ -1,0 +1,758 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMaster.master.cs" Inherits="LoginMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Register Src="~/UserContorls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserContorls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+
+<style type="text/css">
+   
+	
+     body
+{
+	background-color: #ebebeb;
+	margin: 0px;
+	padding: 0px;
+	font: 10px verdana, arial, helvetica;
+	color: #416271;
+}
+h1
+{
+	padding: 5px 0 5px 0;
+	margin: 0px;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+h2
+{
+	padding: 2px 0 5px 15px;
+	margin: 0px;
+	font-size: 18px;
+	color: White;
+	background-color: #416271;
+}
+
+h3
+{
+	padding: 0 0 5px 0;
+	margin: 0px;
+	font-size: 12px;
+	color: #59cef9;
+}
+h4
+{
+	padding: 0 0 10px 0;
+	margin: 0px;
+	font-size: 14px;
+	color: #7ea743;
+}
+p
+{
+	text-align: justify;
+	padding: 2px 0 2px 0;
+	margin: 0px;
+	line-height: 15px;
+}
+p.white
+{
+	color: #FFFFFF;
+}
+p.green
+{
+	color: #d4f0ba;
+}
+p.clear
+{
+	clear: both;
+	padding: 10px 0 0 0;
+}
+img.left_img
+{
+	border: 1px #cae6c6 solid;
+	float: left;
+	margin: 0 10px 0 0;
+}
+img.box_img
+{
+	float: left;
+	padding: 0 5% 0 0;
+}
+#main_container
+{
+	width: 80%;
+	height: auto;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+#header
+{
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+#logo
+{
+	padding: 2% 0 0 0;
+	float: left;
+	margin-bottom: 2%;
+}
+#headerInfo
+{
+	padding: 2% 0 0 0;
+	float: right;
+	margin-top: 5%;
+	
+}
+#headerInfo span
+{
+	float: right;
+	font-weight: bold;
+	font-size: 5%;
+}
+/*----------------------menu-------------------------*/
+#menu
+{
+	width: 1024px;
+	height: 15px;
+	padding: 0px;
+	clear: both;
+	background-color: #416271;
+}
+#menu ul
+{
+	list-style: none;
+	padding: 0 0 0 230px;
+	margin: auto;
+	display: block;
+}
+#menu ul li
+{
+	list-style: none;
+	display: inline;
+	float: left;
+	width: auto;
+	height: 42px;
+	padding: 0px;
+	line-height: 42px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+#menu ul li a
+{
+	height: 42px;
+	width: auto;
+	float: left;
+	text-decoration: none;
+	padding: 0 0 0 25px;
+	margin: 0px 3px 0px 3px;
+	color: #fff;
+	text-align: center;
+}
+#menu ul li a:hover
+{
+	height: 42px;
+	width: auto;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 0 0 25px;
+	background: url(images/menu_arrow.gif) no-repeat left;
+}
+#menu ul li a.current
+{
+	height: 42px;
+	width: auto;
+	float: left;
+	text-decoration: none;
+	padding: 0px;
+	color: #fff;
+	padding: 0 0 0 25px;
+	background: url(images/menu_arrow.gif) no-repeat left;
+}
+
+/*----------------middle green box-----------*/
+.green_box
+{
+	width: 1024px;
+	height: 265px;
+	clear: both;
+	background: url(images/green_box_bg.gif) no-repeat left #50a842;
+	background-position: 50px 0px;
+}
+.clock
+{
+	float: left;
+	padding: 0px;
+}
+.text_content
+{
+	width: 350px;
+	float: left;
+	padding: 20px 0 0 0;
+}
+.read_more
+{
+	width: 101px;
+	height: 29px;
+	float: right;
+	padding: 10px;
+	background: url(images/read_more_bg.gif) no-repeat center;
+	line-height: 29px;
+	text-align: center;
+}
+.read_more a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.read_more_link
+{
+	width: auto;
+	float: right;
+	padding: 3px 25px 3px 0;
+	background: url(images/orange_bullet.gif) no-repeat right;
+}
+.read_more_link a
+{
+	text-decoration: none;
+	color: #f7941d;
+}
+/*----------------------left navigation-------------------------*/
+#left_nav
+{
+	width: 280px;
+	height: auto;
+	padding: 5px 0 0 0;
+	float: left;
+}
+#left_nav ul
+{
+	list-style: none;
+	margin: auto;
+	display: block;
+	padding: 0px;
+}
+#left_nav ul li
+{
+	list-style: none;
+	display: block;
+	width: auto;
+	height: 29px;
+	padding: 0px;
+	line-height: 29px;
+}
+#left_nav ul li a
+{
+	height: 29px;
+	display: block;
+	width: 280px;
+	text-decoration: none;
+	padding: 0 0 0 35px;
+	margin: 7px 0 7px 0;
+	color: #6898ac;
+	background: url(images/left_nav_arrow.gif) no-repeat left;
+	border-bottom: 1px #bedf77 dashed;
+	background-position: 0px 0px;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+/*--------------------------main_content-------------------*/
+#main_content
+{
+	width: auto;
+	clear: both;
+}
+#left_content
+{
+	width: 320px;
+	height: auto;
+	margin: 10px;
+	float: left;
+	padding: 10px;
+	background: url(images/left_content_bg.gif) repeat-x top;
+}
+#right_content
+{
+	width: 1000px;
+	margin: 3px 0 0 0;
+	float: left;
+	padding: 3px;
+}
+/*----------------------top right navigation-------------------------*/
+#right_nav
+{
+	width: 263px;
+	height: auto;
+	padding: 20px 0 0 50px;
+	float: left;
+}
+#right_nav ul
+{
+	list-style: none;
+	margin: auto;
+	display: block;
+	padding: 0px;
+}
+#right_nav ul li
+{
+	list-style: none;
+	display: block;
+	width: auto;
+	height: 29px;
+	padding: 0px;
+	line-height: 29px;
+}
+#right_nav ul li a
+{
+	height: 29px;
+	display: block;
+	width: 263px;
+	text-decoration: none;
+	padding: 0 0 0 35px;
+	margin: 7px 0 7px 0;
+	color: #d4f0ba;
+	background: url(images/right_nav.gif) no-repeat center;
+	background-position: 0px 0px;
+}
+#right_nav ul li a:hover
+{
+	height: 29px;
+	display: block;
+	width: 263px;
+	text-decoration: none;
+	color: #d4f0ba;
+	padding: 0 0 0 35px;
+	margin: 7px 0 7px 0;
+	background: url(images/right_nav_a.gif) no-repeat center;
+	background-position: 0px 0px;
+}
+#right_nav ul li a.current
+{
+	height: 29px;
+	display: block;
+	width: 263px;
+	text-decoration: none;
+	padding: 0px;
+	color: #d4f0ba;
+	padding: 0 0 0 35px;
+	margin: 7px 0 7px 0;
+	background: url(images/right_nav_a.gif) no-repeat center;
+	background-position: 0px 0px;
+}
+
+.products_box
+{
+	padding: 10px 0 5px 0;
+	border-bottom: 1px #a7ef6e dashed;
+}
+.search_box
+{
+	width: 267px;
+	height: 124px;
+	float: left;
+	margin: 15px 10px 10px 0;
+	background: url(images/search_box_bg.gif) no-repeat center;
+	background-position: 0px 0px;
+}
+.search_title
+{
+	font-size: 14px;
+	color: #7ea743;
+	padding: 10px 0 0 15px;
+	float: left;
+	font-weight: bold;
+}
+input.search_input
+{
+	width: 170px;
+	height: 20px;
+	background-color: #FFFFFF;
+	border: 1px #c0c485 solid;
+	float: left;
+	margin: 15px 0 0 15px;
+}
+input.submit
+{
+	float: left;
+	padding: 0 0 0 10px;
+}
+.subsearch
+{
+	width: 200px;
+	float: left;
+	color: #8b8e5d;
+	padding: 0 0 0 15px;
+}
+.contact_information
+{
+	width: 200px;
+	float: left;
+	padding: 10px 0 0 10px;
+}
+.news
+{
+	width: 310px;
+	clear: both;
+	padding: 10px 0 10px 0;
+}
+.news_icon
+{
+	width: 30px;
+	float: left;
+	padding: 0 10px 0 0;
+}
+.news_content
+{
+	width: 260px;
+	float: left;
+	padding: 0 0 0 10px;
+	text-align: justify;
+	line-height: 13px;
+}
+.news_content span
+{
+	color: #4ab7e8;
+}
+.services_box
+{
+	height: 120px;
+	padding: 10px 0 5px 0;
+	margin: 0px 0px 10px 0;
+	border-bottom: 1px #a7ef6e dashed;
+}
+.best_sol_box
+{
+	width: 277px;
+	float: left;
+}
+/*----------------------news_archive list-------------------------*/
+.news_archive
+{
+	width: 190px;
+	height: auto;
+	padding: 10px 0 0 10px;
+	float: left;
+}
+.news_archive ul
+{
+	list-style: none;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+	width: 190px;
+	float: left;
+}
+.news_archive ul li
+{
+	list-style: none;
+	width: 180px;
+	height: auto;
+	padding: 0px;
+	line-height: 26px;
+}
+.news_archive ul li a
+{
+	width: 180px;
+	text-decoration: none;
+	padding: 0 0 0 20px;
+	margin: 6px 0px 6px 0px;
+	color: #000;
+	text-align: left;
+	background: url(images/bullet.gif) no-repeat left;
+	background-position: 0px 0px;
+}
+.news_archive ul li a:hover
+{
+	width: 180px;
+	text-decoration: underline;
+	color: #000;
+}
+
+.contact_info_box
+{
+	width: 481px;
+	height: 116px;
+	margin: 5px;
+	background: url(images/contact_info_bg.gif) no-repeat center;
+}
+.contact_info_title
+{
+	font-size: 14px;
+	color: #7ea743;
+	padding: 10px 0 0 15px;
+	font-weight: bold;
+}
+.contact_info
+{
+	float: left;
+	padding: 15px 10px 5px 13px;
+}
+.adress
+{
+	clear: both;
+	padding: 10px 0 0 20px;
+}
+
+
+/*--------------wide_content-----------*/
+#wide_content
+{
+	width: auto;
+	padding: 10px 20px 10px 20px;
+}
+
+
+/*-----------------------------footer------------------*/
+.add
+{
+    float:left;
+    margin-top: 1%;
+    margin-left: 1%;
+    
+}
+.url
+{
+    margin-top: 2%;
+    float:right;
+    margin-right: 1%;
+}
+#footer
+{
+	clear: both;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 6px;
+	height: 20%;
+	color: #fff;
+	background-color: #416271;
+}
+.copyright
+{
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.footer_links
+{
+	float: left;
+	padding-right: 15px;
+	padding-top: 13px;
+}
+.footer_links a
+{
+	text-decoration: none;
+	color: #fff;
+	padding-left: 10px;
+}
+.footer_links a:hover
+{
+	text-decoration: underline;
+	color: #fff;
+}
+.mGridcss
+{
+	width: 100%;
+	background-color: #fff;
+	margin: 5px 0 10px 0;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+	font-size: 13px !important;
+}
+.mGridcss a
+{
+	font-size: 15px !important;
+	color: White;
+}
+.mGridcss a:hover
+{
+	font-size: 15px !important;
+	color: White;
+	text-decoration: underline;
+}
+.mGridcss td
+{
+	padding: 0px;
+	border: solid 1px #c1c1c1;
+	color: #717171;
+}
+.mGridcss th
+{
+	padding: 4px 2px;
+	color: #fff;
+	background-color:  #416271;
+	border-left: solid 1px #525252;
+	font-size: 14px !important;
+}
+.mGridcss .alt
+{
+	background: #fcfcfc url(grd_alt.png) repeat-x top;
+}
+.mGridcss .pgr
+{
+	background-color: #416271;
+}
+.mGridcss .ftr
+{
+	background-color: #416271;
+	font-size: 15px !important;
+	color: White;
+	border: solid 1px #525252;
+}
+.mGridcss .pgr table
+{
+	margin: 5px 0;
+}
+.mGridcss .pgr td
+{
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #666;
+	font-weight: bold;
+	color: #fff;
+	line-height: 12px;
+}
+.mGridcss .pgr a
+{
+	color: Gray;
+	text-decoration: none;
+}
+.mGridcss .pgr a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+.mGridcss input[type="checkbox"]
+{
+	margin-top: 5px !important;
+	width: 10px !important;
+	float: left !important;
+}
+.mGridcss input[type="radio"]
+{
+	margin-top: 5px !important;
+	width: 100px !important;
+	float: left !important;
+}
+.btnSubmitm
+{
+	width: auto !important;
+	font-size: 12px;
+	height: 30px;
+    background-color: #416271;
+    color:White;
+    
+}
+#admin_menu_container
+{
+	background-color: #416271;
+	width: 100%;
+	margin-left: 0px;
+	left: auto;
+	right: auto;
+	padding-top: 4px;
+	padding-bottom: 16px;
+	height: 40%;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: -32px;
+}
+
+
+    
+</style>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-translate-customization" content="9cb0fcf0a227ef43-740593521db70c96-g9b19dd259561e7d3-16" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="CSS/forms.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="CSS/fieldsets.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="CSS/info.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="CSS/main.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="CSS/customeradmin_style.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="CSS/Login.css" />
+     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="CSS/menu.css" />
+      <script src="Scripts/menu.js" type="text/javascript"></script>
+      <script src="Scripts/menu.js" type="text/javascript"></script>
+
+</head>
+<body>
+   <form id="horizontalForm" runat="server" class="horizontalForm">
+        <div id="main_container">
+            <div id="header">
+                <div id="headerInfo">
+                    <div>
+                            <asp:ImageButton ID="ImageButton2" ImageUrl="~/Images/busiwiz2.png"  runat="server" Width="100%" />
+                     </div>
+                
+                
+                </div>
+            <div id="logo">
+                <asp:ImageButton ID="ImageButton1" ImageUrl="~/Images/e1.PNG"  runat="server" Width="100%" />
+            </div>
+        </div>
+        <!--end of green box-->
+         
+        <div id="main_content">
+        
+            <div id="admin_menu_container">
+                    <asp:Label ID="lblclientname" runat="server"></asp:Label>
+            </div>
+             </div>
+           <%--<div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li class='has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>--%>
+
+              <!--end of left content-- Roshan Coding>
+            <asp:ContentPlaceHolder runat="server" ID="cphMain">
+            </asp:ContentPlaceHolder>
+            <!--end of main content-->
+            <asp:ContentPlaceHolder runat="server" ID="admin">
+            </asp:ContentPlaceHolder>
+            <div id="footer">
+                <%--<UC:FOOTER runat="server" ID="ucFooter" />--%>
+                <div>
+                    <p class="add" style="color: #FFFFFF">Capman Ltd., 510-24thStreet, PORT HURON, MI 48060, USA.                    
+                    <br />Phone: 810-320-6715, Fax: 810-320-0296. Email: support@busiwiz.com 
+                    <br />Copyright © 2011, busiwiz.com. All Rights Reserved.</p>
+                    <p class="url">
+                    <a href="termofuse.aspx" class="link">» Terms of Use</a>&nbsp;|&nbsp;<a href="privacypolicy.aspx" class="link">» Privacy Policy</a>
+                    </p>
+              </div>
+                
+              
+                <label>  <asp:LinkButton ID="LinkButton1" ForeColor="White" Visible="false" runat="server" ></asp:LinkButton>
+                  <%--  <asp:LinkButton ID="LinkButton1" ForeColor="#0080ff" runat="server" OnClick="LinkButton1_Click"></asp:LinkButton>--%>
+                </label>
+                <div style="clear: both;">
+                </div>
+                
+                
+            </div>
+        </div>
+   
+    </form>
+</body>
+</html>

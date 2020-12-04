@@ -1,0 +1,90 @@
+﻿/* Division Side */
+#serviceBox
+{
+    width:100%;
+    margin: 0 auto;
+    margin-top:75px;
+    height:250px;
+    border:1px solid black;
+}
+.serviceBox1, .serviceBox2 {
+    float:left;
+    width:20%;
+    height: 250px;
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px #bdbdbd;
+    -webkit-box-shadow: 0 0 10px #bdbdbd;
+    box-shadow: 0 0 10px #bdbdbd;
+}
+
+
+
+
+/* End */
+
+
+
+.glossymenu, .glossymenu li ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 100%; /*WIDTH OF MAIN MENU ITEMS*/
+border: 2px solid white;
+}
+
+.glossymenu li{
+position: relative;
+}
+
+.glossymenu li a
+{
+background-color: #416271;
+/*background: white url(Images/busiwiz.png) repeat-x bottom left;*/
+font: bold 11px Verdana, Helvetica, sans-serif;
+color: White;
+display: block;
+width: auto;
+padding: 8px 0;
+padding-left: 10px;
+text-decoration: none;
+
+}
+
+.glossymenu li ul{ /*SUB MENU STYLE*/
+position: absolute;
+width: 190px; /*WIDTH OF SUB MENU ITEMS*/
+left: 0;
+top: 0;
+display: none;
+}
+
+.glossymenu li ul li{
+float: left;
+}
+
+.glossymenu li ul a{
+width: 180px; /*WIDTH OF SUB MENU ITEMS - 10px padding-left for A elements */
+}
+
+.glossymenu .arrowdiv{
+position: absolute;
+right: 2px;
+background: transparent url(Images/arrow.gif) no-repeat center right;
+}
+
+.glossymenu li a:visited, .glossymenu li a:active{
+color: White;
+}
+
+.glossymenu li a:hover{
+background-color: Black;
+background-image: url(Images/glossyback2.gif);
+}
+
+/* Holly Hack for IE \*/
+* html .glossymenu li { float: left; height: 1%; }
+* html .glossymenu li a { height: 1%; }
+/* End */

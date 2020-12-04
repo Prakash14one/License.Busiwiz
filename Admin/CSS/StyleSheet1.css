@@ -1,0 +1,241 @@
+﻿body 
+{
+    margin: 0px 0px 0px 0px;
+    text-align:center;
+}
+
+#mainbody
+{
+    margin: 0px 0px 0px 0px;
+    width: 1002px;
+}
+
+#top
+{
+    margin: 0px 26px 10px 26px;
+    width:950px;
+}
+
+#logo
+{
+    width: 196px;
+    height: 120px;
+    background-image:url(../images/logo.jpg);
+    background-repeat:no-repeat;
+}
+
+#banner
+{
+    width:950px;
+    height:308px;
+    background-repeat:no-repeat;
+}
+
+#menu
+{
+    margin-top: 1px;
+    width:950px;
+    height:24px;
+    color:#454545;
+    background-color:#b8cda7;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:12px;
+    text-align:left;
+}
+
+#menu A
+{
+    padding-left:10px;
+    padding-right:10px;
+    color:#454545;
+    text-decoration:none;
+}
+
+#menu A:hover
+{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+#content
+{
+    margin-top:22px;
+    margin-bottom:22px;
+    width:950px;
+}
+
+#news
+{
+    width:224px;
+}
+
+#news .date
+{
+    color:#47718e;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:bold;
+}
+
+#news A
+{
+    margin-right:25px;
+    color:#b64d4d;
+    font-family:Arial;
+    font-size:10px;
+    font-weight:bold;
+    text-decoration:none;
+    line-height:16px;   
+}
+
+#news A:hover
+{
+    color:#b64d4d;
+    text-decoration:underline;
+}
+
+#news .hdline
+{
+    color:#3e3e3e;
+    font-family:Arial;
+    font-size:11px;
+    font-weight:bold;
+    line-height:20px;
+}
+
+#news .para
+{
+    color:#3e3e3e;
+    font-family:Arial;
+    font-size:11px;
+    line-height:16px;   
+}
+
+#sidelinks
+{
+    width:206px;
+}
+
+#centertxt
+{
+    margin-left:25px;
+    margin-right:25px;
+    width:510px;
+    height: 200px;
+    border-right: solid 1px #81a5bd;
+    border-left: solid 1px #81a5bd;
+    font-family:Arial;
+}
+
+#centertxt .txt
+{
+    padding-left:10px;
+    padding-right:10px;
+    text-align:justify;
+    color:#4c4c4c;
+    font-size:11px;
+    line-height:16px;   
+
+}
+
+#centertxt .hdlin
+{
+    padding-left:10px;
+    padding-right:10px;
+    color: #2f6084;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+#centertxt A
+{
+    color: #2f6084;
+    font-family: Arial;
+    font-size: 10px;
+    text-decoration:none;
+}
+
+#centertxt A:hover
+{
+    color: #2f6084;
+    text-decoration:underline;
+}
+
+#copyright
+{
+    padding-right:10px;
+    padding-left:10px;
+    width:950px;
+    background-color:#585858;
+    line-height: 20px;
+    color:#FFFFFF;
+    font-family: Tahoma;
+    font-size: 10px;
+}
+
+#demohd
+{
+    padding-left: 15px;
+    width:950px;
+    height: 36px;
+    background-color:#607d48;
+    color:#FFFFFF;
+    font-style:italic;
+    font-size: 24px;
+    font-family: Times New Roman;
+    text-align:left;
+}
+
+#mgmt
+{
+    background-color:#e1b8b8;
+    color:#b31010;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:14px;
+}
+.blocktxt
+{
+    height:200px;
+    padding: 0px 10px 0px 10px;
+    color:#1b1b1a;
+    font-family:Tahoma;
+    font-size:11px;
+    line-height:20px;    
+    text-align:left;
+    font-weight:normal;
+}
+#customer
+{
+    background-color:#cadabd;
+    color:#2e6203;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:14px;
+}
+#vendor
+{
+    background-color:#bed2e0;
+    color:#0c5282;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:14px;
+}
+#employee
+{
+    background-color:#c4c4c4;
+    color:#3b3a37;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:14px;
+}
+#acct
+{
+    background-color:#e7dfcd;
+    color:#946702;
+    font-family:Tahoma;
+    font-weight:bold;
+    font-size:14px;
+}

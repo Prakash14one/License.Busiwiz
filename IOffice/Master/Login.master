@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Master_Login" %>
+
+<%@ Register Src="~/UserControls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserControls/UC_Navigation.ascx" TagPrefix="UC" TagName="MENU" %>
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin Login</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/style.css" />
+    <style type="text/css">
+        .style1 {
+            height: 130px;
+        }
+
+        .style2 {
+            width: 50%;
+            height: 130px;
+        }
+    </style>
+    <style type="text/css">
+        .btnsignup {
+width:250px;
+
+background:  rgb(61, 157, 179); /*the colour of the button*/
+padding: 8px 5px; /*apply some padding inside the button*/
+border:1px solid rgb(28, 108, 122); /*required or the default border for the browser will appear*/
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+/*style the text*/
+font-size :24px;
+border: 1px solid rgb(28, 108, 122);
+font-family:'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+letter-spacing:.1em;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+color: #fff;
+/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+        .btnsignup:hover, input#btnsignup:focus {
+color:#dfe7ea;
+/*reduce the size of the shadow to give a pushed effect*/
+-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+}
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="admin_wrapper">
+
+        <div>
+
+            <table width="100%" style="margin-top: 5px; height: 140px;">
+                <tr>
+                    <td  valign="top">
+                        <asp:Image ID="mainloginlogo" Width="250px" Height="100px"
+                            runat="server" />
+                    </td>
+                    <td align="right"  valign="top">
+                        <table cellpadding="0" cellspacing="0" width="100%" style="height: 140px;">
+                           
+                            <tr>
+                              <td align="right" valign="top" style="height:40px; padding-right: 10px;" >
+                    
+                     <a href="http://license.busiwiz.com/Priceplancomparision.aspx?Id=2056&PN=JobCenter.com"> 
+                     <button type="button" style="width:125px;" class="btnsignup" >Sign Up</button>
+                     </a> 
+                        
+                     
+                     
+                    </td>
+                    </tr>
+                            <tr>
+
+                                <td align="right"  valign="top">
+                                    <asp:Image ID="imgsitel" Height ="50px" 
+                                        runat="server" /><br />
+                                </td>
+                            </tr><br />
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div id="admin_menu_container">
+        </div>
+        <!-- end of admin_menu_container -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <UC:FOOTER runat="server" ID="ucFooter" />
+        <div class="cleaner">
+        </div>
+    </div>
+
+    <div style="clear: both;">
+    </div>
+    <div id="admin_menu_container">
+        <asp:Label ID="lbladdr" runat="server" Text="" ForeColor="White"></asp:Label>
+    </div>
+</body>
+</html>

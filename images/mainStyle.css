@@ -1,0 +1,39 @@
+TD {
+	FONT-SIZE: 11px; COLOR: #636567; LINE-HEIGHT: 15px; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+BODY {
+	FONT-SIZE: 11px; COLOR: #636567; LINE-HEIGHT: 15px; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+A {
+	COLOR: #f28321
+}
+A:hover {
+	COLOR: black
+}
+INPUT {
+	FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: verdana; BACKGROUND-COLOR: #f7f8f9
+}
+TEXTAREA {
+	FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: verdana; BACKGROUND-COLOR: #f7f8f9
+}
+SELECT {
+	FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: verdana; BACKGROUND-COLOR: #f7f8f9
+}
+BUTTON {
+	FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: verdana; BACKGROUND-COLOR: #f7f8f9
+}
+.bottomlinks {
+	FONT-SIZE: 10px; COLOR: #fbdbbf
+}
+.NEWSNAV {
+	FONT-SIZE: 11px; COLOR: white; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.NEWSNAV:hover {
+	FONT-SIZE: 11px; COLOR: #cccccc; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.bordertable {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+HR {
+	BORDER-TOP: 1px solid; BACKGROUND: #cccccc; COLOR: #cccccc; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; HEIGHT: 0px; BORDER-BOTTOM-STYLE: solid
+}

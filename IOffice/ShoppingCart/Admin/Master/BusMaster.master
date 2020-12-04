@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BusMaster.master.cs" Inherits="BusMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Online Account Admin</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/info.css" media="screen" />
+
+    <script type="text/javascript" language="javascript">
+        function pri() {
+
+
+
+            var w = window.open('');
+
+
+
+            w.document.write("<html><head><style type='text/css' media='print'>.test{display:none}</style>");
+            w.document.write("<script language='javascript' type='text/javascript'>function printS(){window.print();}");
+            w.document.write("<\/script> <link href='../../css/main.css' rel='stylesheet' type='text/css' /><link href='../css/main.css' rel='stylesheet' type='text/css' />");
+            w.document.write("</head><body>");
+            w.document.write(test123.innerHTML);
+            w.document.write("<a href='abcpqr'></body></html>");
+        }
+
+    </script>
+
+</head>
+<body id="Body" runat="server">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                    <ProgressTemplate>
+                        <div id="IMGDIV" runat="server" align="center" style="border: 0px solid black; left: 42%;
+                            visibility: visible; vertical-align: middle; position: fixed; top: 50%; height: 33px;
+                            background-color: White" valign="middle">
+                            <div id="Div3" runat="server">
+                                <asp:Image ID="Image11234" runat="server" Height="32px" ImageUrl="~/ShoppingCart/images/loading1.gif" />
+                            </div>
+                        </div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <div style="height: 175px">
+                                <table width="100%">
+                                    <tr>
+                                        <td style="width: 35%; height: 135px;">
+                                            <asp:ImageButton ID="buslogo" runat="server" ImageUrl="~/images/itimekeeper.jpg"
+                                                Width="95%" Height="95%" />
+                                        </td>
+                                        <td style="width: 40%; height: 135px;">
+                                            <asp:ImageButton ID="maslog" runat="server" ImageUrl="~/images/itimekeeper.jpg" Width="95%"
+                                                Height="95%" />
+                                        </td>
+                                        <td style="width: 25%;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="admin_menu_container" style="float: left">
+                                <table width="100%">
+                                    <tr>
+                                        <td style="width: 10%;">
+                                            <asp:Menu ID="mnhome" runat="server" Font-Bold="true" Orientation="Horizontal" Font-Size="12px"
+                                                Font-Names="Verdana" Width="10%">
+                                                <StaticMenuItemStyle Font-Size="12px" Height="35px" />
+                                                <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="40px" HorizontalPadding="10px" />
+                                                <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                                                <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                                                <Items>
+                                                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                                                </Items>
+                                            </asp:Menu>
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <asp:Menu ID="Menu1" runat="server" Font-Bold="true" Orientation="Horizontal" Font-Size="12px"
+                                                Font-Names="Verdana" ForeColor="White" Width="10%" 
+                                                >
+                                                <StaticMenuItemStyle Font-Size="12px" Height="35px" />
+                                                <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="40px" HorizontalPadding="10px" />
+                                                <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                                                <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                                            </asp:Menu>
+                                        </td>
+                                        <td style="width: 40%;">
+                                            <asp:TextBox ID="txtsearch" runat="server" Width="95%"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 5%;">
+                                            <asp:Button ID="btnsearchgo" runat="server" Text="Go" 
+                                                onclick="btnsearchgo_Click" />
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <asp:DropDownList ID="ddlcountry" runat="server" Width="95%" AutoPostBack="true"
+                                                OnSelectedIndexChanged="ddlcountry_SelectedIndexChanged" />
+                                        </td>
+                                        <td style="width: 15%;">
+                                            <asp:DropDownList ID="ddlstatecity" runat="server" Width="95%" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="admin_main">
+                                <br />
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>

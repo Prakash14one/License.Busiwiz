@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="~/ioffice/AttendenceUserContorls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/ioffice/AttendenceUserContorls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-translate-customization" content="9cb0fcf0a227ef43-740593521db70c96-g9b19dd259561e7d3-16">
+    </meta>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Attendencestyle.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Attendancecss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Attendancecss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Attendancecss/info.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Attendancecss/formulaire-css3.css" media="screen"
+</head>
+<body>
+    <form id="horizontalForm" runat="server" class="horizontalForm">
+    <div id="main_container">
+        <div id="header">
+            <UC:HEADER runat="server" ID="ucHeader" />
+            <%--<div id="menu">
+            </div>--%>
+        </div>
+        <!--end of green box-->
+        <div id="main_content">
+            <!--end of left content-->
+            <asp:ContentPlaceHolder runat="server" ID="cphMain">
+            </asp:ContentPlaceHolder>
+            <!--end of main content-->
+            <div id="footer">
+                <UC:FOOTER runat="server" ID="ucFooter" />
+            </div>
+        </div>
+    </div>
+    </form>
+    <!--end of main container-->
+</body>
+</html>

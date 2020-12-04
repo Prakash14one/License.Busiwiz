@@ -1,0 +1,1984 @@
+﻿
+HTML
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	overflow: auto;
+	position: absolute;
+}
+ 
+BODY
+{
+	background: #fff7e5;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+	  
+}
+DIV
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+A
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+FORM
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+IMG
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-top-style: none;
+	padding-top: 0px;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+TABLE
+{
+	border-style: none;
+    vertical-align: top;
+	    padding: 0 0 0 0;
+    
+}
+OPTION
+{
+	font-size: 10px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #f7f8f9;
+	border: solid 1px #FFFFFF;
+}
+
+input
+{
+	font-size: 10px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #f7f8f9;
+	border: solid 1px #946702;
+	
+}
+Label
+{
+	height: 15px;
+	width: 40px;
+	font-size: 11px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #f7f8f9;
+	border: 1px #946702 solid;
+}
+TEXTAREA
+{
+	font-size: 10px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #f7f8f9;
+	border: 1px #946702 solid;
+}
+SELECT
+{
+	font-size: 10px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #f7f8f9;
+	border: 1px #946702 solid;
+	width: 130px;
+	height: 20px;
+    margin-left: 0px;
+}
+A
+{
+	color: #de9b04;
+	text-decoration: none;
+}
+A:hover
+{
+	color: #6a4a01;
+	text-decoration: none;
+}
+
+
+/*---------MASTERPAGE MENU STYLE-------*/
+
+.hMenu
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: normal;
+	vertical-align: middle;
+	text-align: left;
+}
+.hMenu tr td
+{
+	border: none;
+	padding: 0 0 0 1px;
+	font-family: Arial;
+	text-align:left;
+	color: #fff;
+	background: url(    "../Account/Employee/Images/BottomStrip.jpg" ) repeat-x;
+	height: 25px;
+
+}
+
+.hMenu tr td:hover
+{
+	background: url(    "../Account/Employee/Images/BottomStripSelected.jpg" ) repeat-x;
+}
+.hMenu tr td td
+{
+	padding: 0 6px 0 0;
+	border: none;
+	color: #fff;
+	text-align:left;
+}
+
+/*---------MASTERPAGE MENU STYLE END-------*/
+/*------MASTERPAGE-----*/
+#Header
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+#LeftMenuPanel
+{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	height:100%;
+}
+#LeftMenuPanel tr td
+{
+	vertical-align: top;
+}
+
+#ButtonHolder
+{
+}
+#ButtonHolder tr td
+{
+	vertical-align: top;
+	text-align: left;
+}
+.trfc
+{
+}
+.secondrow
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	padding-right:5px ;
+}
+#ContentPlaceHolder
+{
+	width: 100%;
+}
+#StartTaskTable
+{
+}
+#StartTaskTable td
+{
+	vertical-align: top;
+	text-align: left;
+}
+/*ThirdRowFirstColumn*/
+
+/*-----thirdRowSecondColumn------*/
+.trsc
+{
+	text-align: left;
+	vertical-align: top;
+	background: #fff7e5;
+}
+#CenterContent
+{
+	text-align: left;
+	vertical-align: top;
+	background: #fff7e5;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	
+	
+}
+.centertext
+{
+	text-align: left;
+}
+/*-----FirstRowSecondTable-----*/
+.fcsm
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #573c09;
+	font-weight: bold;
+	padding: 8px 0 0 18px;
+	width: 154px;
+	height: 33px;
+	background: url(   "../Account/images/fcstStrip.png" ) repeat-x;
+	
+}
+.fcSubMenuTitle
+{
+	text-align: left;
+	color: White;
+	font-weight: normal;
+	font-size: 11px;
+	font-family: Arial;
+	height: 13px;
+	background: #a67302;
+}
+.fcSubMenuContent
+{
+	font-family: Arial;
+	font-size: 10px;
+	padding: 0 0 0 18px;
+	color: #a67302;
+	font-weight: normal;
+	background: #fff4da;
+	text-decoration: none;
+}
+.fcSubMenuContentLinkButton
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #946702;
+	font-weight: normal;
+	background: #fff7e5;
+	text-decoration: none;
+}
+
+.LinkButton
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #946702;
+	font-weight: normal;
+	background: #fff7e5;
+	text-decoration: underline;
+}
+
+/*ForthRowThirdCell*/
+
+
+
+.td
+{
+	width: 53px;
+	padding: 0 0 0 0;
+	text-align: center;
+	background-image: url(../account/images/Home.png);
+	background-repeat: no-repeat;
+}
+
+.td :link
+{
+	width: 53px;
+	padding: 0 0 0 0;
+	text-align: center;
+	background-image: url(../account/images/Home.png);
+	background-repeat: no-repeat;
+	font-family: Century Gothic;
+	font-size: 10px;
+	color: Black;
+	text-decoration: none;
+}
+.td :select
+{
+	width: 53px;
+	padding: 0 0 0 0;
+	text-align: center;
+	background-image: url(../account/images/Home.png);
+	background-repeat: no-repeat;
+}
+.td :hover
+{
+	background-image: url(../account/images/HomeOver.png);
+	background-repeat: no-repeat;
+}
+.td :visited
+{
+	width: 53px;
+	padding: 0 0 0 0;
+	text-align: center;
+	background-image: url(../account/images/Home.png);
+	background-repeat: no-repeat;
+}
+
+.frtc
+{
+	font-family: Arial;
+	height: 35px;
+	width: 384px;
+	font-size: 11px;
+	text-align: right;
+	vertical-align: middle;
+	background-position: right;
+	background-image: url("../Account/images/footerangle.png" );
+	background-repeat: no-repeat;
+	background-color: #fff7e5;
+}
+#footer
+{
+	width: 100%;
+}
+#footer td
+{
+	color: Black;
+	text-align: right;
+	font: normal 10px Arial;
+	height: 23px;
+	background: url("../Account/Employee/Images/BottomStrip.jpg" ) repeat-x #a67302;
+}
+
+/*end of master page*/
+
+
+/*-----default2.aspx-----*/
+/*
+#menu {
+	float: right;
+}
+
+#menu ul {
+	margin: 0;
+	padding-top: 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	width: 123px;
+	height: 72px;
+	margin-left: 2px;
+	padding-top: 10px;
+	background: url(../account/images/CustomerSubPage/AddCustomer.PNG) no-repeat;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+}
+
+#menu a:hover {
+	background-image: url(../acount/images/CustomerSubPage/AddCustomerSel.png);
+}
+
+*/
+
+.customer
+{
+	background: #fff7e5;
+	font-family: Arial;
+	font-size: 15px;
+	color: #946702;
+	font-weight: bold;
+}
+.pxLine
+{
+	height: 1px;
+	background: #a67302;
+}
+.hdr
+{
+	color: #5a3e00;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+}
+.moreTask
+{
+	font-family: Arial;
+	font-size: 11px;
+	color: #946702;
+	font-weight: bold;
+	background: #fff7e5;
+	text-align: center;
+	text-decoration: none;
+}
+.moreTask :hover
+{
+	font-family: Arial;
+	font-size: 11px;
+	color: #946702;
+	font-weight: bold;
+	background: #fff7e5;
+	text-align: center;
+	text-decoration: underline;
+}
+
+
+/*-------for form-------*/
+.tblform
+{
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 11px;
+	color: #333333;
+	font-weight: normal;
+	border-bottom: #333333 solid 1px;
+	border-left: #333333 solid 1px;
+	border-right: #333333 solid 1px;
+}
+#firsttbl
+{
+	background-color: #ebe0c7;
+	width: 97%;
+}
+#secondtbl
+{
+	background-color: #ebe0c7;
+	margin-top: 0px;
+	width: 100%;
+}
+.secondtblfc
+{
+	background-color: #ebe0c7;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+}
+.subsecondtblfc
+{
+	background-color: #ebe0c7;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	padding: 1px 0px 1px 5px;
+}
+#secondtbl td
+{
+	vertical-align: top;
+}
+#secondtbl #innertbl1
+{
+	background-color: #fff4da;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+#innertbl1 a
+{
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	color:#946702;
+	text-decoration:none;
+}
+#innertbl1 a
+{
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	color:#946702;
+	text-decoration:underline;
+}
+#innertbl1 #subinnertbl1
+{
+	background-color:Transparent;
+	padding: 0 0 0 0;
+	width: 100%;
+	
+}
+
+
+#innertbl1 #subinnertbl1
+{
+	background-color:Transparent;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+#innertbl1 .border
+{
+	vertical-align: top;
+	text-align: left;
+	width: 34%;
+	height: 2%;
+	background-color: #ffe29f;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 5px;
+	padding-top: 5px;
+	border:solid 1px #960;
+	padding-left:5px;
+	padding-bottom:5px;
+}
+#subinnertbl1 .imgbox
+{
+	width:2%;
+	text-align:left;
+	height:24px;
+}
+#subinnertbl1 .c1
+{
+	vertical-align: top;
+	text-align: right;
+	width: 25%;
+	height: 15px;
+	padding-left:2px;
+	padding-right:2px;
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+#subinnertbl1 .c2
+{
+	vertical-align: top;
+	text-align: left;
+	width: 25%;
+	height: 15px;
+	padding-left:2px;
+	padding-right:2px;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+#subinnertbl1 .secondtblfc1
+{
+	background-color: #ffe29f;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	border-bottom:solid 1px #960;
+	padding-left:5px;
+	
+}
+#subinnertbl1 .secondtblfc3
+{
+	background-color: #ffe29f;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	border-bottom:solid 1px #960;
+	padding-left:5px;
+	
+}
+#innertbl1 .secondtblfc2
+{
+	vertical-align: top;
+	text-align: left;
+	width: 50%;
+	height: 2%;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 0px;
+	padding-top: 0px;
+	border:solid 1px #960;
+	padding-left:0px;
+	padding-bottom:5px;
+	
+	
+}
+#subinnertbl1 .linkbtn
+{
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#946702;
+	text-decoration:underline;
+}
+#subinnertbl1 .linkbtn:hover
+{
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#946702;
+	text-decoration:none;
+}
+#subinnertbl1 .link
+{
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;
+	color:#000;
+	text-decoration:underline;
+	
+}
+#subinnertbl1 .link:hover
+{
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;
+	color:#000;
+	text-decoration:none;
+	
+}
+
+
+#innertbl1 .border
+{
+	vertical-align: top;
+	text-align: left;
+	width: 34%;
+	height: 2%;
+	background-color: #ffe29f;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 2px;
+	padding-top: 5px;
+	border:solid 1px #960;
+}
+#subinnertbl1 .imgbox
+{
+	width:2%;
+	text-align:left;
+	height:24px;
+}
+#subinnertbl1 .c1
+{
+	vertical-align: top;
+	text-align: right;
+	width: 24.25%;
+	height: 15px;
+	
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+#subinnertbl1 .c2
+{
+	vertical-align: top;
+	text-align: left;
+	width: 24.25%;
+	height: 15px;
+	
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+
+#innertbl1 .column2
+{
+	vertical-align: top;
+	text-align: left;
+	width: 25%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+#innertbl1 .column1
+{
+	vertical-align: top;
+	text-align: right;
+	width: 25%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 3px;
+	padding-top: 3px;
+}
+#innertbl2 .subcol1
+{
+	vertical-align: top;
+	text-align: right;
+	width: 16.6%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 3px;
+	padding-top: 3px;
+}
+#innertbl2 .subcol2
+{
+	vertical-align: top;
+	text-align: left;
+	width: 16.6%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+
+ .txtbox
+{width:160px}
+
+#innertbl1 select
+{width:164px}
+
+.secondtblsc
+{
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	text-align: right;
+}
+.secondtbltc
+{
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: small;
+	text-align: left;
+}
+.grid
+{
+	vertical-align: top;
+	text-align: left;
+}
+
+/*---------*/
+.lblpnl
+{
+	background-image: url(../Account/images/pannelbg.jpg);
+	height: 25px;
+	background-repeat: repeat-x;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.ftrtxt
+{
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: middle;
+	color: White;
+}
+/*#gridpanel
+{
+	table-layout:fixed;
+	width:97%;
+}
+#gridpanel tr td
+{
+	text-align:center;
+}
+#gridtbl
+{background-color:#ebe0c7;
+	width:97%;
+}*/
+/*-----Message--------*/
+
+#msgboxtbl
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #573c09;
+	font-weight: bold;
+	background-color: #fff0cb;
+	text-align: left;
+	width: 100%;
+	height: 450px;
+}
+#msgboxhdtbl
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #573c09;
+	font-weight: bold;
+	background-color: #ffe5ae;
+	text-align: left;
+	width: 100%;
+}
+#msgboxtbl td
+{
+	vertical-align: top;
+}
+
+#msgboxhdtbl .hd
+{
+	text-align: center;
+	vertical-align: middle;
+	width: 100px;
+}
+#msgboxhdtbl td
+{
+	vertical-align:middle;
+}
+#msgboxtbl .submenupnl
+{
+	background-color: #fff0cb;
+	width: 100px;
+	text-align:left;
+	border-right:solid 2px #ffe5ae;
+}
+#msgboxtbl #tomsg
+{
+	font-family: Arial;
+	font-size: 11px;
+	color: #a67302;
+	font-weight: bold;
+	background: #fff0cb;
+	text-decoration: none;
+	text-align: left;
+	width: 100%;
+}
+#tomsg .to
+{
+	text-align: left;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	padding-right: 2px;
+	padding-top: 2px;
+	color: #333333;
+	width:21px;
+	
+
+}
+#tomsg .msg
+{
+	text-align: left;
+	font-family: Arial;
+	font-size: 11px;
+	padding-right: 2px;
+	padding-top: 2px;
+	color: #333333;
+	font-weight: normal;
+}
+#tomsg .GridPnl
+{
+	width: 100%;
+	overflow: Auto;
+	height: 100px;
+	table-layout: fixed;
+}
+#msgboxtbl #lftpnl
+{
+	font-family: Arial;
+	font-size: 11px;
+	color: #a67302;
+	font-weight: bold;
+	background: #fff0cb;
+	text-decoration: none;
+	text-align: left;
+	width: 100%;
+}
+#lftpnl .col1
+{
+	text-align: right;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	padding-right: 2px;
+	padding-top: 2px;
+	color: #333333;
+	width:172px;
+	
+
+}
+#lftpnl .col2
+{
+	text-align: left;
+	height: 20px;
+	font-family: Arial;
+	font-size: 11px;
+	padding-right: 2px;
+	padding-top: 2px;
+	color: #333333;
+	font-weight: normal;
+}
+#msgboxtbl #msgboxcontent
+{
+	font-family: Arial;
+	font-size: 11px;
+	color: #a67302;
+	font-weight: bold;
+	background: #fff0cb;
+	text-decoration: none;
+	text-align: left;
+	width: 100%;
+	height: 100%;
+}
+#cmdbtn td
+{
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+#msgridpnl
+{
+	table-layout: fixed;
+	width: 100%;
+	background-color: #fff0cb;
+	text-align: left;
+	text-decoration:none;
+	color:#333;
+	font-weight:normal;
+}
+#msgridpnl a
+{
+	color:#333;
+	font-weight:normal;
+}
+/*-----MessageEnd--------*/
+/*-----GRID STYLE------*/
+#GridTbl
+{
+	width: 100%;
+	table-layout: fixed;
+	
+}
+
+.GridPanel20
+{
+	width: 100%;
+	overflow: Auto;
+	height: 20px;
+	table-layout: fixed;
+     
+}
+.GridPanel50
+{
+	width: 100%;
+	overflow: Auto;
+	height: 50px;
+	table-layout: fixed;
+     
+}
+.GridPanel75
+{
+	width: 100%;
+	overflow: Auto;
+	height: 75px;
+	table-layout: fixed;
+}
+.GridPanel100
+{
+	width: 100%;
+	overflow: Auto;
+	height: 100px;
+	table-layout: fixed;
+     
+}
+.GridPanel125
+{
+	width: 100%;
+	overflow: Auto;
+	height: 125px;
+	table-layout: fixed;
+}
+.GridPanel150
+{
+	width: 100%;
+	overflow: Auto;
+	height: 150px;
+	table-layout: fixed;
+     
+}
+
+.GridPanel175
+{
+	width: 100%;
+	overflow: Auto;
+	height: 175px;
+	table-layout: fixed;
+}
+
+
+.GridPanel200
+{
+	width: 100%;
+	overflow: Auto;
+	height: 200px;
+	table-layout: fixed;
+}
+.GridPanel225
+{
+	width: 100%;
+	overflow: Auto;
+	height: 225px;
+	table-layout: fixed;
+}
+.GridPanel235
+{
+	width: 100%;
+	overflow: Auto;
+	height: 235px;
+	table-layout: fixed;
+}
+.GridPanel250
+{
+	width: 100%;
+	overflow: Auto;
+	height: 250px;
+	table-layout: fixed;
+}
+.GridPanel275
+{
+	width: 100%;
+	overflow: Auto;
+	height: 275px;
+	table-layout: fixed;
+}
+
+.GridPanel
+{
+	width: 100%;
+	overflow: Auto;
+	height: 300px;
+	table-layout: fixed;
+	
+}
+.GridPanel325
+{
+	width: 100%;
+	overflow: Auto;
+	height: 325px;
+	table-layout: fixed;
+     
+}
+.GridPanel350
+{
+	width: 100%;
+	overflow: Auto;
+	height: 350px;
+	table-layout: fixed;
+}
+
+.GridPanel375
+{
+	width: 100%;
+	overflow: Auto;
+	height: 350px;
+	table-layout: fixed;
+     
+}
+.GridPanel400
+{
+	width: 100%;
+	overflow: Auto;
+	height: 400px;
+	table-layout: fixed;
+     
+}
+.GridPanel425
+{
+	width: 100%;
+	overflow: Auto;
+	height: 425px;
+	table-layout: fixed;
+     
+}
+.GridPanel450
+{
+	width: 100%;
+	overflow: Auto;
+	height: 450px;
+	table-layout: fixed;
+     
+}
+.GridPanel475
+{
+	width: 100%;
+	overflow: Auto;
+	height: 475px;
+	table-layout: fixed;
+     
+}
+#grid
+{
+}
+#grid th
+{
+}
+#grid td
+{
+}
+.GridBack
+{
+	background-color: #ffe29f;
+	text-align: left;
+	font-family: Arial;
+	font-size: 10px;
+	border: solid 1px #946702;
+	width: 100%;
+	padding:0px 5px 0px 5px;
+	
+}
+.GridBack tr td
+{
+	border:solid 1px #fff;
+	padding:0px 5px 0px 5px;
+}
+}
+.GridBack tr:hover
+{
+	background-color: #fc6;
+	padding:0px 5px 0px 5px;
+}
+.GridBack td:hover
+{
+	border:solid 1px #999;
+	background-color:#fc6;
+	padding:0px 5px 0px 5px;
+}
+.GridBack a:link
+{
+	color: #946702;
+	text-decoration: Underline;
+	padding:0px 5px 0px 5px;
+}
+.GridBack a:hover
+{
+	color: Navy;
+	text-decoration: Underline;
+	padding:0px 5px 0px 5px;
+}
+.GridBack a:visited
+{
+	color: Red;
+	text-decoration: Underline;
+	padding:0px 5px 0px 5px;
+}
+.GridRowStyle
+{
+	height: 25px;
+	padding:0px 5px 0px 5px;
+}
+.GridAlternateRow
+{
+	height: 25px;
+	background-color: #ffebbf;
+	text-align: left;
+	font-family: Arial;
+	font-size: 10px;
+	padding:0px 5px 0px 5px;
+}
+.GridFooter
+{
+	background-color: #999;
+	height: 25px;
+}
+.GridHeader
+{
+	color: Black;
+	height: 25px;
+	background-color: #999;
+	text-align: left;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	padding:0px 5px 0px 5px;
+	
+}
+.GridHeader th
+{
+
+padding:0px 5px 0px 5px;
+text-align:left;
+}
+.GridHeader th:hover
+{
+background-color: #999;
+}
+
+.GridHeader a
+{
+	color: Black;
+	padding:0px 5px 0px 5px;
+}
+.GridHeader a:hover
+{
+	color: Black;
+	padding:0px 5px 0px 5px;
+}
+.GridHeader a:visited
+{
+	color: Black;
+	padding:0px 5px 0px 5px;
+}
+.GridPager
+{
+	background-color: #ffebbf;
+	text-align: left;
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	
+}
+.GridPager a
+{
+	color: #946702;
+	text-decoration: none;
+	
+}
+.GridPager a:visited
+{
+	color: Red;
+	text-decoration: none;
+}
+.GridPager a:hover
+{
+	color: black;
+	text-decoration: underline;
+}
+.theHeader
+{
+	width: 20px;
+	padding:0px 5px 0px 5px;
+	
+}
+.wideColumn
+{
+	width: 20%;
+	padding:0px 5px 0px 5px;
+}
+/*----GRID STYLE END----*/
+/*----ADMIN-EMPLOYEE-SECTION----*/
+.Button
+{
+	background: #cc9900;
+	font: arial;
+	font-size: 11px;
+	color: White;
+	width: 60px;
+	border: 1px #946702;
+	cursor: pointer;
+}
+/*----ADMIN-EMPLOYEE-SECTION----*/
+
+/*DOCUMENT CABINET start*/
+.cabinetPanel
+{
+	width:100%;
+	height:170px;
+	overflow:auto;
+	border-bottom:solid 1px #946702;
+	table-layout:fixed;
+	position:relative;
+}
+#documentCabinet
+{
+	width:100%;
+}
+#documentCabinet .heading
+{
+	font:bold 12px arial;
+	color:#946702;
+	text-align:left;
+}
+#documentCabinet .cabinetContent
+{
+	font-size:12px;
+	font-family:Arial;
+
+}
+#drawermaintbl
+{
+	width:60%;
+	background-color:#fff4da;
+}
+#drawermaintbl .brdr1
+{
+	border-top:solid 1px #e3b44a;
+}
+#drawermaintbl .brdr2
+{
+	border-bottom:solid 1px #e3b44a;
+}
+#drawermaintbl .brdr3
+{
+	border-left:solid 1px #e3b44a;
+}
+#drawermaintbl .brdr4
+{
+	border-right:solid 1px #e3b44a;
+}
+#drawermaintbl .toplftcorner
+{
+	background-image:url("../Account/images/toplftcorner.png");
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	background-position:left top;
+}
+#drawermaintbl .btmlftcorner
+{
+	background-image:url("../Account/images/btmlftcorner.jpg");
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	background-position:left bottom;
+}
+#drawermaintbl .toprightcorner
+{
+	background-image:url("../Account/images/toprightcorner.png");
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	background-position:right top;
+}
+#drawermaintbl .btmrightcorner
+{
+	background-image:url("../Account/images/btmrightcorner.jpg");
+	background-repeat:no-repeat;
+	width:16px;
+	height:16px;
+	background-position:right bottom;
+}
+#drawertbl .drawers
+{
+	background:#ffe5ae;
+
+}
+#drawertbl .drawers tr td
+{
+	padding:0 3px 0 3px;
+}
+#documentCabinet .drawer
+{
+	text-align:left;
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+#documentCabinet .drawer tr td
+{
+	text-align:center;
+	font-size:12px;
+	font-family:Arial;
+	
+}
+#documentCabinet .drawer tr td table tr td
+{
+	border:solid 1px #e3b44a;
+}
+#documentCabinet .drawer tr td table tr td:hover
+{
+	border:solid 1px #946702;
+}
+
+#dcabMain
+{
+	text-decoration:none;
+	width:100%;
+}
+#dcabMain .content
+{
+	background: #e3b44a;
+	text-decoration:none;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: normal;
+	
+	text-align:left;
+	padding:5px 5px 5px 5px;
+}
+
+#dcab
+{
+	background: #e3b44a;
+	
+}
+
+#dcab .middle a:link
+{
+	
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color:Black;
+	text-align:center;
+	padding-top:3px;
+	height: 19px;
+}
+#dcab .middle a:hover
+{
+	text-decoration:underline;
+	color:Black;
+}
+
+
+#dcab .rightCorner
+{
+	background: url(../Account/images/tabCornerRight.jpg) no-repeat;
+	width: 20px;
+	height: 22px;
+}
+#dcab .leftCorner
+{
+	background: url(../Account/images/tabCornerleft.jpg) no-repeat;
+	width: 20px;
+	height: 22px;
+}
+/*DOCUMENT CABINET end*/
+
+/* LoginPageStart*/
+#loginMain
+{
+	width:300px;
+	margin-top:40px;
+	font-family:Arial;
+}
+#loginMain tr td
+{
+	vertical-align:top;
+
+
+}
+#loginFeatures
+{
+	width:200px;
+	
+	margin:20px 20px 20px 20px;
+}
+.topLeft
+{
+	width:8px;
+	height:8px;
+	background:url(../Account/images/loginTopLeft.jpg) no-repeat left top;
+}
+.topRight
+{
+	width:8px;
+	height:8px;
+	background:url(../Account/images/loginTopRight.jpg) no-repeat right top;
+}
+.bottomLeft
+{
+	width:8px;
+	height:8px;
+	background:url(../Account/images/loginBottomLeft.jpg) no-repeat left bottom;
+}
+.bottomRight
+{
+	width:8px;
+	height:8px;
+	background:url(../Account/images/loginBottomRight.jpg) no-repeat right bottom;
+}
+.topMiddle
+{
+	width:200px;
+	height:8px;
+	background:url(../Account/images/loginTopStrip.jpg) repeat-x top left;
+}
+.topMiddle1
+{
+	width:284px;
+	height:8px;
+	background:url(../Account/images/loginTopStrip.jpg) repeat-x top left;
+}
+.bottomMiddle
+{
+	height:8px;
+	background:url(../Account/images/loginBottomStrip.jpg) repeat-x bottom left;
+}
+
+.header
+{
+	padding:5px 5px 5px 15px;
+	background:#946702;
+	border-left:solid 2px #946702;
+	border-right:solid 2px #946702;
+	color:#fff;
+	
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+}
+.header1
+{
+	
+	background:#946702;
+	color:#fff;
+}
+.content
+{
+	padding:5px 5px 5px 15px;
+	background:#e3b44a;
+	border-left:solid 2px #946702;
+	border-right:solid 2px #946702;
+	color:#fff;
+	font-size:11px;
+	font-weight:normal;
+	text-align:left;
+}
+.content a
+{
+	font-weight:bold;
+	color:#fff;
+	text-decoration:underline;
+}
+.content a:hover
+{
+	font-weight:bold;
+	color:#fff;
+	text-decoration:none;
+}
+.orderNow
+{
+	height:43px;
+	background:url(../Account/images/orderNow.jpg) no-repeat left;
+	border-left:solid 2px #946702;
+	border-right:solid 2px #946702;
+}
+.readMore
+{
+	height:43px;
+	background:url(../Account/images/readMOre.jpg) no-repeat left;
+	border-left:solid 2px #946702;
+	border-right:solid 2px #946702;
+}
+.loginTableBack
+{
+	padding:0 0 0 0;
+	background:#e3b44a;
+	border-left:solid 2px #946702;
+	border-right:solid 2px #946702;
+	color:Black;
+
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+}
+.loginTable
+{
+	color:#fff;
+	text-decoration:none;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+}
+#loginTable
+{
+	width:300px;
+	margin:20px 20px 20px 20px;
+}
+#loginInnerTable tr td
+{
+	padding:5px;
+}
+.loginFooter
+{
+
+	height:25px;
+	background:#e3b44a;
+}
+#loginFooter
+{
+	width:100%;
+	height:25px;
+	background:#e3b44a;
+	border-bottom:solid 0px #946702;
+	position:absolute;
+	bottom:-1;
+	font-family:Arial;
+	font-size:10px;
+	font-style:normal;
+	text-align:right;
+	color:#fff;
+}
+/* LoginPageEnd*/
+/*email document*/
+#doctbl
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: #573c09;
+	font-weight: bold;
+	background-color: #fff0cb;
+	text-align: left;
+	width: 100%;
+}
+#doctbl td
+{
+	padding:5px 2px;
+}
+#doctbl .btnpnl
+{
+	background-color: #fff0cb;
+	width: 100px;
+}
+#doctbl .txtpnl
+{
+	background-color: #fff0cb;
+	width: 100px;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:right;
+	vertical-align:top;
+}
+#doctbl .formpnl
+{
+	background-color: #fff0cb;
+	font-family:Arial;
+	font-size:11px;
+	font-weight:normal;
+	color:#333;
+	text-align:left;
+}
+/*end of email doc */
+
+/* view document start*/
+#doctbl1
+{
+	position:absolute;
+	margin :0px 0px 0px 0px;
+	left:0px;
+}
+#doctbl1 .btnpanel
+{
+	background-color: #ffe5ae;
+	text-align:center;
+	vertical-align:middle;
+	padding:5px 0px 0px 0px;
+
+
+}
+/*when both sidepanel true*/
+.divpnl
+{
+	
+	width: 56%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	left:22%;
+	float:left;
+	right:22%;
+}
+/*when both sidepanel true*/
+.divpnlBoth
+{
+	
+	width: 100%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	left:0;
+	float:left;
+	right:0;
+}
+/*when left panel true*/
+.divpnlleft
+{
+	
+	width: 78%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	left:22%;
+	float:right;
+	right:0;
+}
+/*when right panel true*/
+.divpnlright
+{
+	
+	width: 78%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	left:0;
+	float:left;
+	right:22%;
+}
+.divpnl1
+{
+	width: 22%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	float:right;
+	right:0px;
+}
+.divpnl2
+{
+	width: 22%;
+	overflow: scroll;
+	height: 82%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:86px;
+	float:left;
+	left:0%;
+	right:78%
+}
+#divtbl
+{
+	background-color:#ffe5ae;
+	text-align:left;
+	font-family:Arial, Tahoma, Helvetica;
+	font-size:11px;
+	font-weight:bold;
+	color:#5a3e00;
+	width:82%;
+	
+	position:absolute;
+	left:18px;
+	overflow:auto;
+
+}
+#divtbl td
+{
+	padding:0px 0px 2px 3px;
+}
+#divtbl .text 
+{
+	background-color:#fff7e5;
+	text-align:left;
+	font-size:10px;
+	color:#333;
+}
+#divtbl .text a
+{
+	font-family:Arial;
+	font-weight:normal;
+	font-size:10px;
+	color:#333;
+}
+#divtbl .text a:hover
+{
+	font-family:Arial;
+	font-weight:normal;
+	font-size:10px;
+	color:#333;
+}
+ .divftr
+{
+	background-color: #ffe5ae;
+	text-align:center;
+	vertical-align:middle;
+	height:25px;
+	font-family:Arial, Tahoma, Helvetica;
+	font-size:11px;
+	color:#333;
+	font-weight:normal;
+	padding:5px 0px 0px 0px;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+}
+/*View Document End*/
+
+/*view & Edit Docs Start*/
+.divpnl3
+{
+	
+	width: 100%;
+	overflow: scroll;
+	height: 77%;
+	table-layout: fixed;
+	padding:5px 0px;
+	text-align:left;
+	vertical-align:text-top;
+	position:absolute;
+	top:0px;
+	left:0;
+	right:0;
+	table-layout:fixed;
+}
+#secondtbl1
+{
+	background-color: #ebe0c7;
+	margin-top: 0px;
+	width: 100%;
+	table-layout:fixed;
+	bottom:0px;
+	top:78%;
+	position:absolute;
+}
+#secondtbl1 #innertbl2
+{
+	background-color: #fff4da;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+#innertbl2 .column3
+{
+	vertical-align: top;
+	text-align: right;
+	width: 24.25%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-left: 2px;
+	padding-top: 2px;
+}
+#innertbl2 .column4
+{
+	vertical-align: top;
+	text-align: left;
+	width: 24.25%;
+	height: 15px;
+	background-color: #fff4da;
+	font-family: Arial;
+	font-size: 10px;
+	padding-right: 2px;
+	padding-top: 2px;
+}
+/*view & Edit Docs End*/
+#pan
+{
+	width:100%;
+	background-color:black;
+}
+.gridtd
+{
+	padding:5px 5px;
+}
+.tbltd
+{
+	padding: 5px 0px;
+}
+.Tree
+{
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;
+	color:#333;
+	width:100%;
+}
+.Tree a
+{
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;
+	color:#946702;
+	text-decoration:none;
+	padding-left:4px;
+	padding-top:7px;
+}
+.Tree a:hover
+{
+	font-family:Arial;
+	font-size:10px;
+	font-weight:normal;
+	color:#946702;
+	text-decoration:underline;
+	padding-left:4px;
+	padding-top:7px;
+}
+
+.modalBackground 
+{
+    background-color:Gray;
+    filter:alpha(opacity=60);
+    opacity:0.60;         
+}
+.closecabinet
+{
+	background-image:url("../images/closecabinet.png");
+	background-repeat:no-repeat;
+	width:102px;
+	height:121px;
+}
+.opencabinet
+{
+	background-image:url("../images/opencabinet.png");
+	background-repeat:no-repeat;
+	width:105px;
+	height:131px;
+}
+.floating_label {
+position:relative;
+top:-135px;
+left:35px;
+z-index:100;
+font-family:Arial;
+font-size:10px;
+color:White;
+
+}
+#Test1
+{
+	width:129px;
+	position:relative}

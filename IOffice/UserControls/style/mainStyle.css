@@ -1,0 +1,52 @@
+TD {
+	FONT-SIZE: 11px; COLOR: #800000; 
+LINE-HEIGHT: 15px; FONT-FAMILY: verdana; TEXT-DECORATION: none;
+	font-weight: 700;
+	text-align: left;
+}
+BODY {
+	FONT-SIZE: 11px; COLOR: #575653; LINE-HEIGHT: 15px; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+A {
+	COLOR: #c19d07;TEXT-DECORATION: none;
+	text-align: left;
+}
+A:hover {
+	COLOR: #012;TEXT-DECORATION: none
+}
+HR {
+	BORDER-TOP: 1px solid; BACKGROUND: #c19d07; COLOR: #c19d07; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; HEIGHT: 0px; BORDER-BOTTOM-STYLE: solid
+}
+INPUT {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: verdana;
+	text-align: left;
+}
+TEXTAREA {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: verdana;
+	text-align: left;
+}
+SELECT {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: verdana;
+	height: 19px;
+}
+BUTTON {
+	FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: verdana
+}
+.bordertable {
+	BORDER-RIGHT: #c9c7c0 1px solid; BORDER-TOP: #c9c7c0 1px solid; BORDER-LEFT: #c9c7c0 1px solid; BORDER-BOTTOM: #c9c7c0 1px solid
+}
+.bottomlinks {
+	FONT-SIZE: 11px; COLOR: #a7a7a5
+}
+.newslinks {
+	FONT-SIZE: 11px; COLOR: #c09e09; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.newslinks:hover {
+	FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.toplink {
+	FONT: bold 12px verdana; TEXT-DECORATION: underline
+}
+.toplink:hover {
+	
+}

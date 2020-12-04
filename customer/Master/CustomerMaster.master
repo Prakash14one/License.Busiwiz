@@ -1,0 +1,168 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CustomerMaster.master.cs"
+    Inherits="customer_CustomerMaster" %>
+
+
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+
+<%@ Register Src="~/ShoppingCart/Admin/UserControl/UcontrolHelpPanelForShoppingcart.ascx"
+    TagName="pnlhelp" TagPrefix="pnlhelp" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--%>
+    <title>Customer</title>
+    
+   
+    
+    <%--<link href="~/customer/customeradmin_style.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/style.css" media="screen" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customer/customercss/forms.css" media="screen" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customer/customercss/fieldsets.css" media="screen" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customer/customercss/info.css" media="screen" />--%>
+    
+    <link href="~/customer/customeradmin_style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" type="text/css" href="~/customer/customercss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customer/customercss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customer/customercss/info.css" media="screen" />
+   
+    
+   
+    
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+    <script language="javascript" type="text/javascript">
+
+        function my_onkeydown_handler() {
+
+            var sPath = window.location.pathname;
+            //var sPage = sPath.substring(sPath.lastIndexOf('\\') + 1);
+            var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+            //alert(sPage);
+
+            var d = document.URL.toString();
+
+
+            switch (event.keyCode) {
+
+                case 112: // 'F1'
+
+                    document.onhelp = function() { return (false); }
+                    window.onhelp = function() { return (false); }
+
+                    event.returnValue = true;
+
+                    window.open('../shoppingcart/HelpF1.aspx?PageName=' + sPage, 'mywin', 'left=0,top=0,width=700,height=600,toolbar=0,resizable=0,scrollbars=no, location=no, dependent=0, directories=no');
+                    event.keyCode = 1; //BRJ: required to disable stubborn key strokes
+                    window.status = "You have just disabled F1 - truly.";
+                    break;
+            }
+        }
+
+        document.attachEvent("onkeydown", my_onkeydown_handler);
+        function navigation_onclick() {
+
+        }
+
+    </script>
+
+    <browsers>
+    <browser refID="Safari1Plus">
+        <controlAdapters>
+                <adapter controlType="System.Web.UI.WebControls.Menu"
+                                 adapterType="" />
+        </controlAdapters>
+    </browser>
+    </browsers>
+</head>
+<body>
+    <form id="form1" runat="server" class="horizontalForm">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div id="admin_wrapper">
+            <div id="admin_header">
+                <div id="headerInfo">
+                    <span>
+                        <%--<asp:Label runat="server" ID="lblCompanyName" Text="Company Name :"></asp:Label>--%><asp:Label
+                            runat="server" ID="Label6" Text="Capman Ltd."></asp:Label></span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <%--<asp:Label runat="server" ID="Label2" Text="Address :"></asp:Label>--%><asp:Label
+                            runat="server" ID="Label7" Text="510-24thStreet, PORT HURON, MI 48060, USA"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <%--<asp:Label runat="server" ID="Label3" Text="Phone no :"></asp:Label>--%>
+                        <asp:Label runat="server" ID="Label8" Text="810-320-6715"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <%--<asp:Label runat="server" ID="Label4" Text="Email :"></asp:Label>--%>
+                        <asp:Label runat="server" ID="Label9" Text="support@busiwiz.com "></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <%--<asp:Label runat="server" ID="Label5" Text="Website :"></asp:Label>--%>
+                        <asp:Label runat="server" ID="Label10" Text="www.busiwiz.com"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                </div>
+                <div id="site_title">
+                    <h1>
+                        <asp:ImageButton runat="server" ID="mainloginlogo" Visible="false" Width="176px" Height="106px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl="~/images/home-icon.jpg"
+                            PostBackUrl="#" Height="40px" Width="40px" OnClick="ImageButton1_Click" Visible="false" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Visible="false" ImageUrl="~/images/contact-icon.jpg"
+                            Height="40px"  Width="40px" PostBackUrl="~/shoppingcart/default.aspx" />
+                        <img src="../ShoppingCart/images/poweredby.jpg" visible="false" />
+                        <asp:Label ID="Label1" runat="server" Visible="false"></asp:Label>
+                    </h1>
+                </div>
+            </div>
+            <!-- end of header -->
+            <div id="admin_menu_container">
+                <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" OnClick="LinkButton1_Click"
+                    Text="My Account Home"></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton2" runat="server" Font-Bold="True" OnClick="LinkButton2_Click"
+                    Text="Logout"></asp:LinkButton>
+                <asp:LinkButton ID="LinkButton3" runat="server" Font-Bold="True" OnClick="LinkButton2_Click"
+                    Text=" Site Home"> </asp:LinkButton>
+                <asp:Menu ID="Menu1" runat="server" Font-Bold="true" Orientation="Horizontal" CssClass="Menu"
+                    Font-Size="14px" Font-Names="Verdana" ForeColor="White" Width="100%" Visible="false">
+                    <StaticMenuItemStyle Font-Size="14px" Height="40px" />
+                    <DynamicMenuItemStyle Font-Size="14px" CssClass="DynamicMenu" Height="40px" HorizontalPadding="25px" />
+                    <DynamicHoverStyle Font-Size="14px" CssClass="menuhover" />
+                    <StaticHoverStyle Font-Size="14px" CssClass="menuhover" />
+                </asp:Menu>
+                <!--nav_container_ends-->
+            </div>
+            <!-- end of admin_menu_container -->
+            <div id="admin_main">
+                <asp:Panel ID="Panel1" runat="server" Visible="False">
+                    <input id="Button1" type="button" value="button" onclick="my_onkeydown_handler()" /></asp:Panel>
+                <pnlhelp:pnlhelp ID="pnlhelp" runat="server" Visible="false" />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <!--admin_main_ends-->
+            <div class="cleaner">
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

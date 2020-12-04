@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-translate-customization" content="9cb0fcf0a227ef43-740593521db70c96-g9b19dd259561e7d3-16">
+    </meta>
+    <title></title>
+    <script language="javascript">
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        // add a zero in front of numbers<10
+        m = checkTime(m);
+        s = checkTime(s);
+        //document.getElementById('ctl00_cphMain_lblTime').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () { startTime() }, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+</script>
+  <link rel="stylesheet" type="text/css" href="../css/Invoicecss/Logincss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Invoicecss/Logincss/style.css" />
+    <link rel="stylesheet" type="text/css" href="Invoicestyle.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/Invoicecss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/Invoicecss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/Invoicecss/info.css" media="screen" />
+   <link rel="stylesheet" type="text/css" href="css/Invoicecss/formulaire-css3.css" media="screen" />
+</head>
+<body  onload="startTime()">
+    <form id="horizontalForm" runat="server" class="horizontalForm">
+    <div id="main_container">
+        <div id="header">
+          <%--  <UC:HEADER runat="server" ID="ucHeader" />--%>
+           
+        </div>
+        <!--end of green box-->
+        <div id="main_content">
+            <!--end of left content-->
+            <asp:ContentPlaceHolder runat="server" ID="cphMain">
+            </asp:ContentPlaceHolder>
+            <!--end of main content-->
+            <div id="footer">
+               <div class="footer_links">
+                    <a href="#">Capman Ltd., 510-24thStreet, PORT HURON, MI 48060, USA. Phone: 810-320-6715,
+                        Fax: 810-320-0296. Email: support@busiwiz.com </a>
+                    <div style="clear: both;">
+                    </div>
+                    <a href="#">Copyright © 2011, busiwiz.com. All Rights Reserved.</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <!--end of main container-->
+</body>
+</html>

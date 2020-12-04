@@ -1,0 +1,283 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LicenseMaster.master.cs"
+    Inherits="customer_CustomerMaster" %>
+
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<%@ Register Src="~/UserControls/UcontrolHelpPanel.ascx" TagPrefix="UC" TagName="TITLE" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/customeradmin_style.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customercss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/info.css" media="screen" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <browsers>
+    <browser refID="Safari1Plus">
+        <controlAdapters>
+                <adapter controlType="System.Web.UI.WebControls.Menu"  adapterType="" />
+        </controlAdapters>
+    </browser>
+    </browsers>
+</head>
+<body>
+    <form id="form1" runat="server" class="horizontalForm">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div id="admin_wrapper">
+            <div id="admin_header">
+                <div id="headerInfo">
+                    <span>                        
+                        <asp:Label runat="server" ID="Label6" Text="Capman Ltd."></asp:Label>
+                        </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>                        
+                        <asp:Label  runat="server" ID="Label7" Text="510-24thStreet, PORT HURON, MI 48060, USA"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        
+                        <asp:Label runat="server" ID="Label8" Text="810-320-6715"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>                        
+                        <asp:Label runat="server" ID="Label9" Text="support@busiwiz.com "></asp:Label><br />
+                        <asp:Label runat="server" ID="Label10" Text="www.busiwiz.com"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>                       
+                        
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                </div>
+                <div id="site_title">
+                    <h1>
+                        <asp:ImageButton runat="server" ID="mainloginlogo" Visible="false" Width="176px"
+                            Height="106px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/home-icon.jpg"
+                            PostBackUrl="#" Height="40px" Width="40px" Visible="false" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Visible="false" ImageUrl="~/images/contact-icon.jpg"
+                            Height="40px" Width="40px" PostBackUrl="~/shoppingcart/default.aspx" />
+                        <img src="../ShoppingCart/images/poweredby.jpg" visible="false" />
+                        <asp:Label ID="Label1" runat="server" Visible="false"></asp:Label>
+                    </h1>
+                </div>
+            </div>
+            <div style=" margin-bottom: 12px;">
+              <table>
+               <tr>
+             <td>
+                 <asp:Label ID="Label2" runat="server" Text="Menu Category: " Font-Bold="True"></asp:Label>
+
+             </td>
+                    <td>
+                    <asp:DropDownList ID="ddlcategory" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMaster_SelectedIndexChanged"  >
+                      </asp:DropDownList>
+                    </td>
+                     <td style="width:20%;">
+                    
+                    </td>
+                    <td align="right">
+                     <label>
+                                <asp:Label ID="Label16N" runat="server" Text="Search" Visible="false"></asp:Label>
+                              
+                     </label>
+                   <label>
+                     <asp:TextBox ID="TextBox5" runat="server"   placeholder="Search" Visible="true"   Font-Bold="true" Width="250px" Height="20px" onKeyDown="submitButton(event)" ></asp:TextBox>
+                     </label>
+                    <label style="width:50px;">
+                    <asp:Button ID="Button5" CssClass="btnSubmit" runat="server" Text="Go" OnClick="BtnGo_Click" Visible="true" ValidationGroup="1" />
+                    </label> 
+                    </td>
+                    </tr>                   
+                   </table> 
+                <br /> 
+            </div>
+            <!-- end of header -->
+            <div id="admin_menu_container">
+                <asp:Label ID="lblclientname" runat="server" Visible ="false"></asp:Label>
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="Menu" Font-Size="12px"
+                    Font-Names="Verdana" ForeColor="White" Width="100%" StaticEnableDefaultPopOutImage="False">
+                    <StaticMenuItemStyle Font-Size="12px" Height="30px" />
+                    <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="30px" HorizontalPadding="12px" />
+                    <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                    <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                </asp:Menu>
+                <!--nav_container_ends-->
+            </div>
+            <!-- end of admin_menu_container -->
+            <div id="admin_main">
+             <UC:TITLE runat="server" ID="ucTitle" />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                            <ProgressTemplate >
+                                <div id="IMGDIV" runat="server" align="center" style="border: 0px solid blue; left: 52%;
+                                    visibility: visible; vertical-align: middle; width: 59px; position:absolute;
+                                    top: 50%; height: 50px; background-color: White" valign="middle" >
+                                    <div id="temp" runat="server">
+                                        <asp:Image ID="Image11234" runat="server" Height="32px" ImageUrl="~/images/loading1.gif" />
+                                    </div>
+                                    <span style="color: #3366cc; font-family: Tahoma"><strong><em>Please Wait...</em></strong></span>
+                                </div>
+                            </ProgressTemplate>
+                        </asp:UpdateProgress>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ContentTemplate>
+                    </asp:UpdatePanel>
+            </div>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <!--admin_main_ends-->
+            <div class="cleaner">
+            </div>
+            
+            <!--PAGE SEARCHING -->
+            <!-- -->
+              <asp:Panel ID="Panel1" runat="server" CssClass="modalPopup" Width="95%" Height="550px" style="display:none;">
+             <fieldset>
+                <legend>
+                    <asp:Label ID="Label12" runat="server" Text="Search of Pages"></asp:Label>
+                </legend>
+                <table width="100%">
+                    <tr>
+                        <td align="right">
+                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="width:200px">
+                                <asp:Label ID="Label13" runat="server" Text="Filter by Product"></asp:Label>
+                                 <asp:DropDownList ID="FilterProduct" Width="200px" runat="server" AutoPostBack="True" OnSelectedIndexChanged="FilterProduct_SelectedIndexChanged">
+                                </asp:DropDownList>
+                            </label>
+                            <label style="width:120px;">
+                                <asp:Label ID="Label38" runat="server" Text="Menu Category"></asp:Label>
+                                  <asp:DropDownList ID="DDLCategoryS" Width="120px"  runat="server" AutoPostBack="True" OnSelectedIndexChanged="FilterCategorysearch_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                            </label>  
+                             <label style="width:120px;">
+                                <asp:Label ID="Label14" runat="server" Text="Main Menu"></asp:Label>
+                           
+                                <asp:DropDownList ID="FilterMenu" runat="server" Width="120px" AutoPostBack="true" CausesValidation="True" OnSelectedIndexChanged="FilterMenu_SelectedIndexChanged">
+                                </asp:DropDownList>
+                            </label> 
+                              <label style="width:120px;">
+                                <asp:Label ID="Label15" runat="server" Text="Sub Menu"></asp:Label>
+                                  <asp:DropDownList ID="FilterSubMenu" runat="server" Width="120px" CausesValidation="True">
+                                </asp:DropDownList>
+                            </label> 
+                             <label style="width:80px;">
+                                <asp:Label ID="Label16" runat="server" Text="Active"></asp:Label>
+                                <asp:DropDownList ID="ddlAct" runat="server" Width="80px" CausesValidation="True">
+                                    <asp:ListItem Text="All" Value="2"></asp:ListItem>
+                                    <asp:ListItem Text="Active" Value="1"></asp:ListItem>
+                                    <asp:ListItem Text="Inactive" Value="0"></asp:ListItem>
+                                </asp:DropDownList>
+                            </label>  
+                             <label style="width:180px;">
+                            <asp:Label ID="Label13Fun" runat="server" Text="Functionality Title"></asp:Label>
+                             <asp:DropDownList ID="ddlfuncti" runat="server" AutoPostBack="True"  Width="180px" onselectedindexchanged="ddlfuncti_SelectedIndexChanged">
+                            </asp:DropDownList>
+                             </label>   
+                        </td>                      
+                    </tr>                    
+                   
+                      
+
+                    <tr>
+                    <td>
+                          <label style="width:80px;">
+                                <asp:Label ID="Label3" runat="server" Text="Search"></asp:Label>
+                            </label>
+                           <label style="width:350px;">
+                              <asp:TextBox ID="TextBox1" runat="server"   placeholder="Search"  Font-Bold="true"   Width="350px" Height="20px" onKeyDown="submitButton(event)"  ></asp:TextBox>
+                              </label>
+                            <label>
+                             <asp:Button ID="BtnGo" CssClass="btnSubmit" runat="server" Text="Go" OnClick="BtnGo_Click"  />
+                            </label> 
+                    </td>
+                   
+                    </tr>
+                  
+                    
+                    <tr>
+                        <td style="width:100%">
+                            <asp:Panel ID="pnlgrid" runat="server" ScrollBars="Vertical" Height="400px">
+                                <table width="100%">                                    
+                                    <tr>
+                                        <td align="left">
+                                            <asp:Panel ID="Panel2" runat="server" Height="400px" >
+                                                <asp:GridView ID="GridView1" Width="100%" Height="400px"  runat="server" DataKeyNames="PageId" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" EmptyDataText="There is no data." OnSorting="GridView1_Sorting"  AllowSorting="True" OnRowDeleting="GridView1_RowDeleting" CssClass="mGrid" PagerStyle-CssClass="pgr"   AlternatingRowStyle-CssClass="alt">
+                                                    <Columns>
+                                                        <asp:BoundField DataField="MainMenuCatName" HeaderStyle-HorizontalAlign="Left" HeaderText="Category"  SortExpression="MainMenuCatName" >
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>                                                        
+                                                        <asp:BoundField DataField="MainMenuName" HeaderStyle-HorizontalAlign="Left" HeaderText="Main Menu"  SortExpression="MainMenuName">
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="SubMenuName" HeaderText="Sub Menu" HeaderStyle-HorizontalAlign="Left" SortExpression="SubMenuName">
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>  
+                                                        <asp:BoundField DataField="PageTitle" HeaderText="Page_Title" HeaderStyle-HorizontalAlign="Left" SortExpression="PageTitle">
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="PageName" HeaderText="Page_Name" SortExpression="PageName"  HeaderStyle-HorizontalAlign="Left">
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>
+                                                        <asp:BoundField DataField="FolderName" HeaderText="Folder_Name" SortExpression="FolderName"  HeaderStyle-HorizontalAlign="Left" Visible="false">
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:BoundField>
+                                                        <asp:ButtonField ButtonType="Image" CommandName="edit1" HeaderText="Edit" ImageUrl="~/Account/images/edit.gif"   Text="Edit" HeaderImageUrl="~/Account/images/edit.gif" HeaderStyle-HorizontalAlign="Left"> <HeaderStyle HorizontalAlign="Left" />
+                                                        </asp:ButtonField>
+                                                        <%--<asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />--%>
+                                                        <asp:TemplateField HeaderText="Delete" HeaderImageUrl="~/images/trash.jpg" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" ItemStyle-Width="0%" Visible="false">
+                                                            <ItemTemplate>
+                                                                <asp:ImageButton ID="llinkbb" ToolTip="Delete" runat="server" CommandName="Delete" ImageUrl="~/Account/images/delete.gif" OnClientClick="return confirm('Do you wish to delete this record?');" CommandArgument='<%# Eval("PageId") %>'></asp:ImageButton>
+                                                            </ItemTemplate>
+                                                            <HeaderStyle HorizontalAlign="Left" />
+                                                            <ItemStyle HorizontalAlign="Left" Width="3%" />
+                                                        </asp:TemplateField>
+                                                    </Columns>
+                                                    <PagerStyle CssClass="pgr" />
+                                                    <AlternatingRowStyle CssClass="alt" />
+                                                </asp:GridView>
+                                            </asp:Panel>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+            <input id="PageId" name="PageId" runat="server" type="hidden" style="width: 1px" />
+            <input id="hdnsortExp" type="hidden" name="hdnsortExp" style="width: 3px" runat="Server" />
+            <input id="hdnsortDir" type="hidden" name="hdnsortDir" style="width: 3px" runat="Server" />
+        </asp:Panel>
+         <asp:Button ID="Button8" runat="server" Style="display: none" />
+                                <cc1:ModalPopupExtender ID="ModalPopupExtender3" runat="server" BackgroundCssClass="modalBackground"  PopupControlID="Panel1" TargetControlID="Button8" >
+                                </cc1:ModalPopupExtender>
+               
+          
+        <!-- -->
+             
+        </div>
+    </div>
+    </form>
+</body>
+</html>

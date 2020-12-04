@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Admin/LoginMaster.master" AutoEventWireup="true" CodeFile="AfterLogin.master.cs" Inherits="AfterLogin" %>
+
+<%--<link rel="stylesheet" type="text/css" href="cssverticalmenu.css" />
+<script type="text/javascript" src="cssverticalmenu.js">--%>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="admin" Runat="Server">
+ 
+ 
+            
+            
+ 
+                
+ 
+ <div id="serviceBox"> 
+    <div class="serviceBox1">
+        <ul id="verticalmenu" class="glossymenu">
+ <li><a href="#" >Manage Vault Device</a>
+    <ul>
+        <li><a href="">VaultDeviceType</a></li>
+        <li><a href="">VaultDeviceMaster</a></li>
+        <li><a href="">VaultDeviceUserTbl</a></li>
+        <li><a href="">VaultDeviceDetailTbl</a></li>
+    </ul>
+</li>
+<li><a href="#">Business Master</a>
+    <ul>
+    <li><a href="">Business Type</a></li>
+    <li><a href="">Business Category</a></li>
+    <li><a href="">Sub Business Category</a></li>
+    <li><a href="">Sub Sub Business Category</a></li>
+    </ul>
+</li>
+<li><a href="">Manage Client List</a></li>
+<li><a href="" >Manage Client's Product List</a></li>
+<li><a href="">Manage Client's Customer List</a></li>
+<li><a href="" >View Busicontroller Details</a></li>
+<li><a href="">Create Exe files</a></li>
+<li><a href="">Report of Exe files</a></li>
+<li><a href="">Manage Domain</a></li>
+<li><a href="">Manage Price Plan</a></li>
+<li><a href="">Asign License Key</a></li>
+<li><a href="">Busiwizi Master Info</a></li>
+<li><a href="">Make payment for Customer</a></li>
+<li><a href="">Logout</a></li>
+
+</ul>
+    </div>
+    <div class="serviceBox2">
+        <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+ 
+                </asp:ContentPlaceHolder>
+    </div>
+
+</div>
+</asp:Content>
+

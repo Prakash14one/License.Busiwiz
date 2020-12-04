@@ -1,0 +1,1393 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/ShoppingCart/Admin/UserControl/UcontrolHelpPanel.ascx" TagName="pnlhelp"
+    TagPrefix="pnlhelp" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript" src="../../javaScript/jquery.min.js"></script>
+
+<script type="text/javascript" src="../../javaScript/ddaccordion.js"></script>
+<head runat="server">
+
+<script type="text/javascript">
+
+
+    ddaccordion.init({
+        headerclass: "submenuheader", //Shared CSS class name of headers group
+        contentclass: "submenu", //Shared CSS class name of contents group
+        revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+        mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+        collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+        defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+        onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+        animatedefault: false, //Should contents open by default be animated into view?
+        persiststate: true, //persist state of opened contents within browser session?
+        toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+        //togglehtml: ["suffix", "<img src='../../Images/plus.gif' class='statusicon' />", "<img src='Images/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+        animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+        oninit: function(headers, expandedindices) { //custom code to run when headers have initalized
+            //do nothing
+        },
+        onopenclose: function(header, index, state, isuseractivated) { //custom code to run whenever a header is opened or closed
+            //do nothing
+        }
+    })
+
+
+</script>
+
+    <title>:: IWebShop ::</title>
+    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/AccountStyleSheet.css" rel="stylesheet" type="text/css" />
+    <%--    <script type="text/javascript" language="javascript">
+    function pri()
+    {
+      var w=window.open('');
+      w.document.write("<html><head><style type='text/css' media='print'>.test{display:none}</style>");
+      w.document.write("<script language='javascript' type='text/javascript'>function printS(){window.print();}");
+      w.document.write("<\/script>");
+      w.document.write("</head><body>");
+      w.document.write(test123.innerHTML);
+      w.document.write("<a href='abcpqr'></body></html>"); 31qa/    }
+    </script>--%>
+    <style type="text/css" media="print">
+        .test
+        {
+            display: none;
+        }
+    </style>
+    <%--  <script type="text/javascript" language="javascript">
+        var sPath = window.location.pathname;
+        var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+        window.open('?PageName='+sPage, "Demo", "toolbar=yes,status=yes,Scrollbars=Yes,Resizable=yes,directories=no,height=" + screen.height
++ ",Width=" + screen.width);
+ 
+ </script>--%>
+
+    <script type="text/javascript" language="javascript">
+        function pri() {
+
+
+
+            var w = window.open('');
+
+
+
+            w.document.write("<html><head><style type='text/css' media='print'>.test{display:none}</style>");
+            w.document.write("<script language='javascript' type='text/javascript'>function printS(){window.print();}");
+            w.document.write("<\/script> <link href='../../css/main.css' rel='stylesheet' type='text/css' /><link href='../css/main.css' rel='stylesheet' type='text/css' />");
+            w.document.write("</head><body>");
+            w.document.write(test123.innerHTML);
+            w.document.write("<a href='abcpqr'></body></html>");
+        }
+
+    </script>
+
+    <script language="javascript" type="text/javascript">
+
+        function my_onkeydown_handler() {
+
+            var sPath = window.location.pathname;
+            //var sPage = sPath.substring(sPath.lastIndexOf('\\') + 1);
+            var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+            //alert(sPage);
+
+            var d = document.URL.toString();
+
+
+            switch (event.keyCode) {
+
+                case 112: // 'F1'
+
+                    document.onhelp = function() { return (false); }
+                    window.onhelp = function() { return (false); }
+
+                    event.returnValue = true;
+
+                    window.open('../HelpF1.aspx?PageName=' + sPage, 'mywin', 'left=0,top=0,width=700,height=600,toolbar=0,resizable=0,scrollbars=no, location=no, dependent=0, directories=no');
+
+                    event.keyCode = 1; //BRJ: required to disable stubborn key strokes
+                    window.status = "You have just disabled F1 - truly.";
+                    break;
+            }
+        }
+
+        document.attachEvent("onkeydown", my_onkeydown_handler);
+        function navigation_onclick() {
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <%--<asp:UpdatePanel ID="UpdatePanelmain" runat="server">
+        <ContentTemplate>--%>
+            <div>
+                <div id="headerdiv">
+                    <%-- start sarita--%>
+                    <%-- <div style="background-color:Yellow">
+       
+       
+           <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+               <tr border="0">
+                   <td>
+                    <asp:ImageButton ID="ImageButton1" runat="server" Width="176px" Height="106px" /></td>
+                   <td rowspan="2" style="float:left;vertical-align: bottom">
+                   
+                      <asp:Image ID="Image13" runat="server" ImageUrl="~/images/bnrbtm_02.png" 
+                          BorderStyle=None  /></td>
+                   <td rowspan="2" style="vertical-align: bottom;float:left;">
+                       <asp:Image ID="Image14" runat="server" ImageUrl="~/images/bnrbtm_03.png" 
+                           BorderStyle=None /></td>
+               </tr>
+               <tr>
+                   <td style="float:left; vertical-align: bottom;">
+                       <asp:Image ID="Image12" runat="server" ImageUrl="~/images/bnrbtm_01.png"  
+                           BorderStyle=None Border="0"   /></td>
+               </tr>
+           </table>
+       
+       
+       </div>--%>
+                    <%-- <div style="background-color:Yellow;">
+       
+       
+           <asp:ImageButton ID="ImageButton1" runat="server" 
+               ImageUrl="~/images/bnrbg_full.png" Height="120px" />
+       
+       
+       </div>--%>
+                    <%-- end sarita--%>
+                    <table id="headertbl" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td colspan="4">
+                                <div style="color: #8A8AA6; float: right; font-family: Verdana; font-size: 12px;
+                                    font-weight: bold;">
+                                    Press "F1" For Help
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <%--<td rowspan="1" class="logo">
+                        <asp:ImageButton ID="mainloginlogo" runat="server" Width="176px" Height="106px" />
+                    </td>
+                    <td class="chat">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bnrbtm">
+                        <asp:Image ID="img1" runat="server" ImageUrl="~/images/bnrbtm.png" />
+                    </td>
+                    <td class="bnr">
+                    </td>--%>
+                            <td>
+                                <div style="position: absolute; top: 3px; left: 33px;">
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                    </asp:ScriptManager>
+                                    <asp:ImageButton ID="mainloginlogo" runat="server" Width="176px" Height="106px" />
+                                </div>
+                                <br />
+                                <div style="vertical-align: bottom;">
+                                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/bnrbg_full.png"
+                                        Height="120px" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menu" colspan="2">
+                                <table id="menutbl" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="img">
+                                            <asp:Image ID="Img2" runat="server" ImageUrl="~/images/home.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk1" runat="server" CssClass="linkbtn" PostBackUrl="~/ShoppingCart/Admin/AfterLogin.aspx">Home</asp:LinkButton>
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img8" runat="server" ImageUrl="~/images/seperat.png" />
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img3" runat="server" ImageUrl="~/images/createorder.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk2" runat="server" CssClass="linkbtn" PostBackUrl="~/ShoppingCart/Admin/SalesOrderAll.aspx">View Order</asp:LinkButton>
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img9" runat="server" ImageUrl="~/images/seperat.png" />
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img4" runat="server" ImageUrl="~/images/createdeliverychallan.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk3" runat="server" CssClass="linkbtn" PostBackUrl="~/ShoppingCart/Admin/CustomerDeliveryChallan3.aspx">Create Delivery Challans</asp:LinkButton>
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img10" runat="server" ImageUrl="~/images/seperat.png" />
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img5" runat="server" ImageUrl="~/images/createinvoice.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk4" runat="server" CssClass="linkbtn" PostBackUrl="~/ShoppingCart/Admin/PurchaseInvoice.aspx">Purchase Invoice</asp:LinkButton>
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img11" runat="server" ImageUrl="~/images/seperat.png" />
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img6" runat="server" ImageUrl="~/images/logout.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk5" runat="server" CssClass="linkbtn" OnClick="lnk5_Click">Log Out</asp:LinkButton>
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img12" runat="server" ImageUrl="~/images/seperat.png" />
+                                        </td>
+                                        <td class="img">
+                                            <asp:Image ID="img7" runat="server" ImageUrl="~/images/viewstorefront.png" />
+                                        </td>
+                                        <td class="btn">
+                                            <asp:LinkButton ID="lnk6" runat="server" CssClass="linkbtn">View Store Front</asp:LinkButton>
+                                        </td>
+                                        <td>
+                                            <%--<input id="navigation" class="test" onclick="pri();window.print();" 
+                                type="button" value="Print" onclick="return navigation_onclick()" />--%>
+                                            <input type="button" class="test" value="Print" id="navigation" onclick="pri();window.print();" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="contentdiv">
+                    <table id="contenttbl" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="td">
+                                <table id="navtbl">
+                                    <tr>
+                                        <td>
+                                           
+<div class="glossymenu">
+
+<a class="menuitem submenuheader"  href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign="middle">
+<td width="10%"><img src="../../images/master1.png" class="img" alt="Master Menu" /></td>
+<td>Master</td>
+</tr>
+</table>
+</a>
+<div class="submenu">
+<ul>
+	<li><a href="Wizardcompanyinformation.aspx">Setup Wizard</a></li>
+	<li><a href="FaqCategoryMaster.aspx">Faq Category</a></li>
+	<li><a href="CountryMaster.aspx">Country Master</a></li>
+	<li><a href="StateMaster.aspx">State Master</a></li>
+	<li><a href="citymaster.aspx">City Master</a></li>
+	<li><a href="AddressTypeMaster.aspx">Address Type</a></li>
+	
+	<li><a href="StatusCategoryAddManage.aspx">Status Category Entry-Add,manage</a></li>
+	<li><a href="StatusMasterAddManage.aspx">Status Master-Add,manage</a></li>
+	<li><a href="othercountrystatecitymaster.aspx">Other City-State-Country Management</a></li>
+	<li><a href="TaxMasterAndMoreInfo_New.aspx">Tax Master</a></li>
+	<li><a href="TaxMasterWithInv.aspx">Inventory Taxability</a></li>
+	<li><a href="accountmaster.aspx">Account Master-Add</a></li>
+	<li><a href="BalanceLimitType.aspx">Balance Limit Type</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader"  href="#"><table border=0 cellpadding=0 cellspacing=0>
+<tr valign="middle">
+<td width="10%"><img src="../../images/rolemgmt1.png" class="img" alt="Role Management" /></td>
+<td>Role Management</td>
+</tr>
+</table></a>
+<div class="submenu">
+	<ul>
+	<li><a href="RoleMaster.aspx">Role Master</a></li>
+	<li><a href="User_Role_Management.aspx">Userwise Role Management</a></li>
+	<li><a href="Page_role_Access.aspx">Rolewise Page Access - View</a></li>
+	<li><a href="Role_page_contrl_access.aspx">Controlwise Role Page Access</a></li>
+	<li><a href="PageControlManagement.aspx">Page Control Management</a></li>
+	<li><a href="PageControlMgmtByRole.aspx">Rolewise Page Control</a></li>
+	<li><a href="ControlTypeManagement.aspx">Control Type Management</a></li>
+	
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#"><table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/customer1.png" class="img" alt="Party" /></td>
+<td>Party</td>
+</tr>
+</table></a>
+<div class="submenu">
+	<ul>
+	<li><a href="Memberprofile.aspx">Party Profile</a></li>
+	<li><a href="PartyTypeCategoryMasterTbl.aspx">Party Type Category</a></li>
+	<li><a href="SendMail.aspx">Send Mails</a></li>
+	<li><a href="PartyTypeMaster.aspx">Party Type-Add, Manage</a></li>
+	<li><a href="PartyMaster.aspx">Party Master</a></li>
+	<li><a href="ApplyPartyCategory.aspx">Party Name,Cat Manage</a></li>
+	<li><a href="Departmentaddmanage.aspx">Department-Add,manage</a></li>
+	<li><a href="DesignationAddManage.aspx">Designation-Add, manage</a></li>
+	<li><a href="EmployeeType.aspx">Employee Type-Add, Manage</a></li>
+	<li><a href="EmployeeMaster.aspx">Employee Master</a></li>
+	<li><a href="PartyAutoAllocationofManagers.aspx">Party auto Allocation of Managers</a></li>
+	<li><a href="PartyRegister.aspx">Party Registe</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/inventory1.png" class="img" alt="Inventory Management" /></td>
+<td>Inventory</td>
+</tr>
+</table>
+</a>
+<div class="submenu">
+	<ul>
+	<li><a href="InventoryCategoryMaster.aspx">Inventory Main Category</a></li>
+	<li><a href="InventorySubCategoryMaster.aspx">Inventory  Sub Category</a></li>
+	<li><a href="InventoruSubSubCategory.aspx">Inventory Sub Sub Category</a></li>
+	<li><a href="InventoryMaster.aspx">Inventory Master</a></li>
+	<li><a href="InventoryMasterStorelocation.aspx">Inventory Master With Store Loc.</a></li>
+	<li><a href="ManageInventoryMaster.aspx">Manage Inventory</a></li>
+	<li><a href="InventoryUpdateWithWarehouse.aspx">Update Inventory Master</a></li>
+	<li><a href="ActiveInventoryMaster.aspx">Inventory Master Status Manage</a></li>
+	<li><a href="ChangingActiveStatusofItem.aspx">Store Active/Deactive</a></li>
+	<li><a href="InventorySiteMasterTbl.aspx">Inventory Site Master</a></li>
+	<li><a href="InventoryRoomMaster.aspx">Inventory Room Master</a></li>
+	<li><a href="InventortyRackMaster.aspx">Inventory Rack Master</a></li>
+	<li><a href="InventoryLocationMasterTbl.aspx">Inventory Location Master</a></li>
+	<li><a href="InventoryCountMaster.aspx">Inventory Count</a></li>
+	<li><a href="InventoryAdjustMaster.aspx">Inventory Adjust</a></li>
+	<li><a href="StockAdjustMaster.aspx">Stock Adjust</a></li>
+	<li><a href="InventoryMediaMaster.aspx">Inventory Media Master</a></li>
+	<li><a href="UpdateImageOfItem.aspx">Update Inventory Image</a></li>
+	<li><a href="InventoryImgMaster.aspx">Inventory Image master</a></li>
+	<li><a href="InventoryImageDetails.aspx">Inventory Image Detail</a></li>
+	<li><a href="InventoryStatement.aspx">Inventory Statement</a></li>
+	<li><a href="Register_Stock.aspx">Inventory Register</a></li>
+	
+	
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/salesmgmt1.png" class="img" alt="Sales Management" /></td>
+<td>Sales Management</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="PurchaseInvoice.aspx">Purchase Invoice</a></li>
+	<li><a href="CustomerDeliveryChallan3.aspx">Sales Delivery Challan</a></li>
+	<li><a href="RetailCustomerDeliveryChallan_new.aspx">Retail Delivery Challan</a></li>
+	<li><a href="CustomerDCEdit.aspx">Edit Delivery Challan</a></li>
+	<li><a href="Paypalpaymenttemp.aspx">PayPal Payment Temp</a></li>
+	<li><a href="CashReciept.aspx">Cash Reciept</a></li>
+	<li><a href="cashpaymentnew.aspx">Cash Payment New</a></li>
+	<li><a href="CrDrNoteAddByCompany.aspx">Cr/Dr Note Add By Company</a></li>
+	<li><a href="JournalEntryCrDrCompany.aspx">Journal Entry For Cr/Dr</a></li>
+	<li><a href="AccountGroupDetails.aspx">Group Balance</a></li>
+	<li><a href="Register_SalesOrderRestiction.aspx">Sales Order Restriction Register</a></li>
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/sales1.png" class="img" alt="Sales Price" /></td>
+<td>Sales Price</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="ApplyVolumeDiscount.aspx">Apply Volume Discount</a></li>
+	<li><a href="OrderValueDiscountMaster.aspx">Order Value Discount</a></li>
+	<li><a href="PackingHandlingChargesMaster.aspx">Packing Handling Charges</a></li>
+	<li><a href="PromotionDiscountDetail.aspx">Apply Promotion Discount</a></li>
+	<li><a href="FeatureProductsDiscountDetail.aspx">Apply Feature Prod. Discount</a></li>
+	<li><a href="SalesRateDeterminatation.aspx">Sales Rate Determination</a></li>
+	<li><a href="PaurchaseRateHistory.aspx">Purchase Rate History</a></li>
+	<li><a href="InventoryPriceList.aspx">Inventory Price List</a></li>
+	<li><a href="PriceDetermination.aspx">Price Determination</a></li>
+	<li><a href="OrderQtyRestrictionDetail.aspx">Apply Order Qty Restriction</a></li>
+	
+	</ul>
+</div>
+
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/contentmgmt1.png" class="img" alt="Content Management" /></td>
+<td>Content Management</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="FAQMaster.aspx">Faq</a></li>
+	<li><a href="WebContentEntry.aspx">Content Entry</a></li>
+	
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#">
+
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/siteconfig1.png" class="img" alt="Site Configuration" /></td>
+<td>Site Configuration</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="EmailTypeMaster.aspx">Email Type</a></li>
+	<li><a href="EmailContentMaster.aspx">Email Content</a></li>
+	
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#"><table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/shipping&payment1.png" class="img" alt="Shipping & Payments" /></td>
+<td>Shipping & Payments</td>
+</tr>
+</table></a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="ShippingMaster.aspx">Shipping Master</a></li>
+	<li><a href="ShippersMaster.aspx">Shippers Master</a></li>
+	<li><a href="ShippersShipOptionMaster.aspx">Shippers Ship Option Master</a></li>
+	<li><a href="FreeShippingRuleAddManage.aspx">Free Shipping Rule</a></li>
+	<li><a href="ShippingManager.aspx">Shipping Manager</a></li>
+	<li><a href="ShippingAccountInfo.aspx">Shipping Manager Acc Info</a></li>
+	<li><a href="ShippingMethod.aspx">Shipping Methods</a></li>
+	<li><a href="GeneralShipSetting.aspx">General Ship Settings</a></li>
+	
+	</ul>
+</div>
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/msgs11.png" class="img" alt="Messages" /></td>
+<td>Messages</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="MessageCompose.aspx">Compose</a></li>
+	<li><a href="MessageInbox.aspx">Inbox</a></li>
+	<li><a href="MessageSent.aspx">Sent</a></li>
+	<li><a href="MessageDrafts.aspx">Drafts</a></li>
+	<li><a href="MessageDeletedItems.aspx">Trash</a></li>
+	
+	</ul>
+</div>
+
+<a class="menuitem submenuheader" href="#">
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr valign="middle">
+<td width="10%"><img src="../../images/registers1.png" class="img" alt="Accounting Registers" /></td>
+<td>Registers</td>
+</tr>
+</table>
+</a>
+
+<div class="submenu">
+	<ul>
+	<li><a href="Register_purchase.aspx">Purchase</a></li>
+	<li><a href="Register_Sales.aspx">Sales</a></li>
+	<li><a href="Register_SalesOrder.aspx">Sales Order</a></li>
+	<li><a href="Register_DeliveryChallan.aspx">Delivery Challan</a></li>
+	<li><a href="Register_Stock.aspx">Inventory</a></li>
+	<%--<li><a href="Registerformpayment.aspx">Payment</a></li>--%>
+	<li><a href="LedgerCRDR.aspx">Cr/Dr</a></li>
+	<li><a href="LedgerJour_New.aspx">Journal</a></li>
+	<li><a href="CashAccountReport.aspx">Trial Balance</a></li>
+	<li><a href="AccountReport.aspx">Chart of Accounts</a></li>
+	<li><a href="Opening_Balance.aspx">Opening Balance</a></li>
+	<li><a href="CashRegister.aspx">Cash Register</a></li>
+	<li><a href="CashAndBankReport.aspx">General Ledger</a></li>
+	<li><a href="GroupIncomeStatement.aspx">Income Statement</a></li>
+	<li><a href="GroupRetainedEarning.aspx">Retained Earning</a></li>
+	<li><a href="GroupBalancesheet.aspx">Balance Sheet</a></li>
+	
+	</ul>
+</div>
+
+	
+</div>     
+
+
+
+
+
+                                                
+                                                 <%--   <cc1:Accordion ID="Accordion1" runat="server" FadeTransitions="true" SelectedIndex="0"
+                                                        TransitionDuration="300" HeaderCssClass="accordionHeader">
+                                                        <Panes>
+                                                            <cc1:AccordionPane ID="AccordionPane1" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image1" runat="server" AlternateText="Master" ImageUrl="~/images/master.png" />
+                                                                </Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <a href="~/ShoppingCart/Admin/Wizardcompanyinformation.aspx" id="Link1">Setup Wizard</a>
+                                                                                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ShoppingCart/Admin/Wizardcompanyinformation.aspx">Setup Wizard</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/ShoppingCart/Admin/FaqCategoryMaster.aspx">Faq Category</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/ShoppingCart/Admin/CountryMaster.aspx">Country Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/ShoppingCart/Admin/StateMaster.aspx">State Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="~/ShoppingCart/Admin/citymaster.aspx">City Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="~/ShoppingCart/Admin/AddressTypeMaster.aspx">Address Type</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton7" runat="server" PostBackUrl="~/ShoppingCart/Admin/PageManagement.aspx">Page Management</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--   <tr>
+                                                            <td>
+                                                                <asp:LinkButton ID="LinkButton654" runat="server" PostBackUrl="~/ShoppingCart/Admin/ClassType.aspx">Class Type - Add,Manage</asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <asp:LinkButton ID="LinkButtonh155" runat="server" PostBackUrl="~/ShoppingCart/Admin/ClassMaster.aspx">Class Master - Add, Manage</asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <asp:LinkButton ID="LinkButton8h" runat="server" PostBackUrl="~/ShoppingCart/Admin/GroupMaster.aspx">Group Master - Add,Manage</asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton8" runat="server" PostBackUrl="~/ShoppingCart/Admin/StatusCategoryAddManage.aspx">Status Category Entry-Add,manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton9" runat="server" PostBackUrl="~/ShoppingCart/Admin/StatusMasterAddManage.aspx">Status Master-Add,manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton10" runat="server" PostBackUrl="~/ShoppingCart/Admin/othercountrystatecitymaster.aspx">Other City-State-Country Management</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton11" runat="server" PostBackUrl="~/ShoppingCart/Admin/TaxMasterAndMoreInfo_New.aspx">Tax Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton12" runat="server" PostBackUrl="~/ShoppingCart/Admin/TaxMasterWithInv.aspx">Inventory Taxability</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton13" runat="server" PostBackUrl="~/ShoppingCart/Admin/accountmaster.aspx">Account Master-Add</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton14" runat="server" PostBackUrl="~/ShoppingCart/Admin/BalanceLimitType.aspx">Balance Limit Type</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane Visible="false" ID="AccordionPane10" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image10" runat="server" AlternateText="Role Management" ImageUrl="~/images/reports.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButtonjj" runat="server" PostBackUrl="~/ShoppingCart/Admin/RoleMaster.aspx">Role Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton16" runat="server" PostBackUrl="~/ShoppingCart/Admin/User_Role_Management.aspx">Userwise Role Management</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton17" runat="server" PostBackUrl="~/ShoppingCart/Admin/Page_role_Access.aspx">Rolewise Page Access - View</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton18" runat="server" PostBackUrl="~/ShoppingCart/Admin/Role_page_contrl_access.aspx">Controlwise Role Page Access</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton19" runat="server" PostBackUrl="~/ShoppingCart/Admin/PageControlManagement.aspx">Page Control Management</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton20" runat="server" PostBackUrl="~/ShoppingCart/Admin/PageControlMgmtByRole.aspx">Rolewise Page Control</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton21" runat="server" PostBackUrl="~/ShoppingCart/Admin/ControlTypeManagement.aspx">Control Type Management</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane2" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image2" runat="server" AlternateText="Party" ImageUrl="~/images/Party1.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="~/ShoppingCart/Admin/FaqCategoryMaster.aspx">New Customer</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton22" runat="server" PostBackUrl="~/ShoppingCart/Admin/Memberprofile.aspx">Party Profile</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton23" runat="server" PostBackUrl="~/ShoppingCart/Admin/PartyTypeCategoryMasterTbl.aspx">Party Type Category</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton24" runat="server" PostBackUrl="~/ShoppingCart/Admin/SendMail.aspx">Send Mails</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton25" runat="server" PostBackUrl="~/ShoppingCart/Admin/PartyTypeMaster.aspx">Party Type-Add, Manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton26" runat="server" PostBackUrl="~/ShoppingCart/Admin/PartyMaster.aspx">Party Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton27" runat="server" PostBackUrl="~/ShoppingCart/Admin/ApplyPartyCategory.aspx">Party Name,Cat Manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton28" runat="server" PostBackUrl="~/ShoppingCart/Admin/Departmentaddmanage.aspx">Department-Add,manage </asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton29" runat="server" PostBackUrl="~/ShoppingCart/Admin/DesignationAddManage.aspx">Designation-Add, manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton30" runat="server" PostBackUrl="~/ShoppingCart/Admin/EmployeeType.aspx">Employee Type-Add, Manage</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton31" runat="server" PostBackUrl="~/ShoppingCart/Admin/EmployeeMaster.aspx">Employee Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton32" runat="server" PostBackUrl="~/ShoppingCart/Admin/PartyAutoAllocationofManagers.aspx">Party auto Allocation of Managers</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton33" runat="server" PostBackUrl="~/ShoppingCart/Admin/PartyRegister.aspx">Party Register</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                                            <td>
+                                                                <asp:LinkButton ID="LinkButton113" runat="server" PostBackUrl="~/ShoppingCart/Admin/wizardpaymenttype.aspx">Wizard Payment Type </asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane3" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image3" runat="server" AlternateText="Inventory" ImageUrl="~/images/inventory.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton34" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryCategoryMaster.aspx">Inventory Main Category</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton35" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventorySubCategoryMaster.aspx">Inventory  Sub Category</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton36" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoruSubSubCategory.aspx">Inventory Sub Sub Category</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton37" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryMaster.aspx">Inventory Master</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton38" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryMasterStorelocation.aspx">Inventory Master With Store Loc.</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton39" runat="server" PostBackUrl="~/ShoppingCart/Admin/ManageInventoryMaster.aspx">Manage Inventory</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton40" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryUpdateWithWarehouse.aspx">Update Inventory Master</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton41" runat="server" PostBackUrl="~/ShoppingCart/Admin/ActiveInventoryMaster.aspx">Inventory Active/Deactive</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:LinkButton ID="LinkButton42" runat="server" PostBackUrl="~/ShoppingCart/Admin/ChangingActiveStatusofItem.aspx">Store Active/Deactive</asp:LinkButton>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <%--  <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton316" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryImgMaster.aspx">Inventory Image master</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton43" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventorySiteMasterTbl.aspx">Inventory Site Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton44" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryRoomMaster.aspx">Inventory Room Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton45" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventortyRackMaster.aspx">Inventory Rack Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton320" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryLocationMasterTbl.aspx">Inventory Location Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%-- <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton17" runat="server" PostBackUrl="~/ShoppingCart/Admin/SendMail.aspx">Inventory Position Master</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton321" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryCountMaster.aspx">Inventory Count</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton322" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryAdjustMaster.aspx">Inventory Adjust</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton323" runat="server" PostBackUrl="~/ShoppingCart/Admin/FindInventoryLocation.aspx">Find Inventory Location</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton324" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryListWithLocation.aspx">List Inventory Location</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                       
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton46" runat="server" PostBackUrl="~/ShoppingCart/Admin/StockAdjustMaster.aspx">Stock Adjust</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton47" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryMediaMaster.aspx">Inventory Media Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton48" runat="server" PostBackUrl="~/ShoppingCart/Admin/UpdateImageOfItem.aspx">Update Inventory Image</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton49" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryImgMaster.aspx">Inventory Image master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton50" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryImageDetails.aspx">Inventory Image Detail</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton51" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryStatement.aspx">Inventory Statement</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane4" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image4" runat="server" AlternateText="Sales Management" ImageUrl="~/images/salesmgmt.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <%--   <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton30" runat="server" PostBackUrl="~/ShoppingCart/Admin/SalesOrderAll.aspx">All Sales Order</asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton31" runat="server" PostBackUrl="~/ShoppingCart/Admin/ViewCustomerOrder.aspx">Sales Order By Customer</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton52" runat="server" PostBackUrl="~/ShoppingCart/Admin/PurchaseInvoice.aspx">Purchase Invoice</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton33" runat="server" PostBackUrl="~/ShoppingCart/Admin/EditPurchaseInvoice.aspx">Edit Purchase Invoice</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton53" runat="server" PostBackUrl="~/ShoppingCart/Admin/CustomerDeliveryChallan3.aspx">Sales Delivery Challan</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton54" runat="server" PostBackUrl="~/ShoppingCart/Admin/RetailCustomerDeliveryChallan_new.aspx">Retail Delivery Challan</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton55" runat="server" PostBackUrl="~/ShoppingCart/Admin/CustomerDCEdit.aspx">Edit Delivery Challan</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton56" runat="server" PostBackUrl="~/ShoppingCart/Admin/Paypalpaymenttemp.aspx">PayPal Payment Temp</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="Linkbutton57" runat="server" PostBackUrl="~/ShoppingCart/Admin/CashReciept.aspx">Cash Reciept</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="Linkbutton58" runat="server" PostBackUrl="~/ShoppingCart/Admin/cashpaymentnew.aspx">Cash Payment New</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="Linkbutton59" runat="server" PostBackUrl="~/ShoppingCart/Admin/CrDrNoteAddByCompany.aspx">Cr/Dr Note Add By Company</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="Linkbutton60" runat="server" PostBackUrl="~/ShoppingCart/Admin/JournalEntryCrDrCompany.aspx">Journal Entry For Cr/Dr</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton61" runat="server" PostBackUrl="~/ShoppingCart/Admin/AccountGroupDetails.aspx">Group Balance</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane5" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image5" runat="server" AlternateText="Sales Price" ImageUrl="~/images/salesprice.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <%-- <tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton36" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryDiscountMaster.aspx">Inventory Volume Discount</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton62" runat="server" PostBackUrl="~/ShoppingCart/Admin/ApplyVolumeDiscount.aspx">Apply Volume Discount</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton63" runat="server" PostBackUrl="~/ShoppingCart/Admin/OrderValueDiscountMaster.aspx">Order Value Discount</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton64" runat="server" PostBackUrl="~/ShoppingCart/Admin/PackingHandlingChargesMaster.aspx">Packing Handling Charges</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton40" runat="server" PostBackUrl="~/ShoppingCart/Admin/PromotionDiscountMaster.aspx">Promotion Discount</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton65" runat="server" PostBackUrl="~/ShoppingCart/Admin/PromotionDiscountDetail.aspx">Apply Promotion Discount</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton66" runat="server" PostBackUrl="~/ShoppingCart/Admin/FeatureProductsDiscountDetail.aspx">Apply Feature Prod. Discount</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton67" runat="server" PostBackUrl="~/ShoppingCart/Admin/SalesRateDeterminatation.aspx">Sales Rate Determination</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton68" runat="server" PostBackUrl="~/ShoppingCart/Admin/PaurchaseRateHistory.aspx">Purchase Rate History</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton69" runat="server" PostBackUrl="~/ShoppingCart/Admin/InventoryPriceList.aspx">Inventory Price List</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton70" runat="server" PostBackUrl="~/ShoppingCart/Admin/PriceDetermination.aspx">Price Determination</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton71" runat="server" PostBackUrl="~/ShoppingCart/Admin/OrderQtyRestrictionDetail.aspx">Apply Order Qty Restriction</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane6" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image6" runat="server" AlternateText="Content Management" ImageUrl="~/images/contentmgmt.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton72" runat="server" PostBackUrl="~/ShoppingCart/Admin/FAQMaster.aspx">Faq</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton47" runat="server" PostBackUrl="~/ShoppingCart/Admin/ChangeMenuURL.aspx">Manu Url Master</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton73" runat="server" PostBackUrl="~/ShoppingCart/Admin/WebContentEntry.aspx">Content Entry</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane7" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image7" runat="server" AlternateText="Configuration" ImageUrl="~/images/siteconfig.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton49" runat="server" PostBackUrl="~/ShoppingCart/Admin/OrderQtyRestrictionMaster.aspx">Order Qty Restriction</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton74" runat="server" PostBackUrl="~/ShoppingCart/Admin/EmailTypeMaster.aspx">Email Type</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton75" runat="server" PostBackUrl="~/ShoppingCart/Admin/EmailContentMaster.aspx">Email Content</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane8" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image8" runat="server" AlternateText="Shipping & Payments" ImageUrl="~/images/shipping&payment.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton76" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippingMaster.aspx">Shipping Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton77" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippersMaster.aspx">Shippers Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton78" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippersShipOptionMaster.aspx">Shippers Ship Option Master</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <%--<tr>
+                                            <td>
+                                                <asp:LinkButton ID="LinkButton56" runat="server" PostBackUrl="~/ShoppingCart/Admin/FreeShippingMaster.aspx ">Free Shipping Master</asp:LinkButton>
+                                            </td>
+                                        </tr>--
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton79" runat="server" PostBackUrl="~/ShoppingCart/Admin/FreeShippingRuleAddManage.aspx ">Free Shipping Rule</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton80" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippingManager.aspx ">Shipping Manager</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton81" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippingAccountInfo.aspx">Shipping Manager Acc Info</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton82" runat="server" PostBackUrl="~/ShoppingCart/Admin/ShippingMethod.aspx ">Shipping Methods</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton83" runat="server" PostBackUrl="~/ShoppingCart/Admin/GeneralShipSetting.aspx ">General Ship Settings</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane ID="AccordionPane9" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image9" runat="server" AlternateText="Messages" ImageUrl="~/images/msgs.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton84" PostBackUrl="~/ShoppingCart/Admin/MessageCompose.aspx"
+                                                                                    runat="server">Compose</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton85" PostBackUrl="~/ShoppingCart/Admin/MessageInbox.aspx"
+                                                                                    runat="server">Inbox</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton86" PostBackUrl="~/ShoppingCart/Admin/MessageSent.aspx"
+                                                                                    runat="server">Sent</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton87" runat="server" PostBackUrl="~/ShoppingCart/Admin/MessageDrafts.aspx">Drafts</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton88" runat="server" PostBackUrl="~/ShoppingCart/Admin/MessageDeletedItems.aspx">Trash</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                            <cc1:AccordionPane Visible="true" ID="AccordionPane11" runat="server">
+                                                                <Header>
+                                                                    <asp:Image ID="Image11" runat="server" AlternateText="Reports" ImageUrl="~/images/registers.png" /></Header>
+                                                                <Content>
+                                                                    <table id="subnavtbl">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <%--<a href="Register_purchase.aspx" id="A1">Purchase</a>--%
+                                                                                <asp:LinkButton ID="LinkButton89" PostBackUrl="~/ShoppingCart/Admin/Register_purchase.aspx"
+                                                                    runat="server" Text="Purchase"></asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <%--<a href="Register_Sales.aspx" id="A2">Sales</a>--%
+                                                                                <asp:LinkButton ID="LinkButton90" PostBackUrl="~/ShoppingCart/Admin/Register_Sales.aspx"
+                                                                    runat="server" Text="Sales"></asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton91" PostBackUrl="~/ShoppingCart/Admin/Register_SalesOrder.aspx"
+                                                                                    runat="server">Sales Order</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton92" runat="server" PostBackUrl="~/ShoppingCart/Admin/Register_DeliveryChallan.aspx">Delivery Challan</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton93" runat="server" PostBackUrl="~/ShoppingCart/Admin/Register_Stock.aspx">Stock</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton94" runat="server" PostBackUrl="~/ShoppingCart/Admin/Register_SalesOrderRestiction.aspx">Sales Order Restiction</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton95" PostBackUrl="~/ShoppingCart/Admin/Registerformpayment.aspx"
+                                                                                    runat="server">Payment</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton96" PostBackUrl="~/ShoppingCart/Admin/LedgerCRDR.aspx"
+                                                                                    runat="server">Cr/Dr</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton97" PostBackUrl="~/ShoppingCart/Admin/LedgerJour_New.aspx"
+                                                                                    runat="server">Journal</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton98" runat="server" PostBackUrl="~/ShoppingCart/Admin/CashAccountReport.aspx">Trial Balance</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton99" runat="server" PostBackUrl="~/ShoppingCart/Admin/AccountReport.aspx">Account Report</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton100" runat="server" PostBackUrl="~/ShoppingCart/Admin/Opening_Balance.aspx">Opening Balance</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton101" runat="server" PostBackUrl="~/ShoppingCart/Admin/CashRegister.aspx">Cash Register</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton102" runat="server" PostBackUrl="~/ShoppingCart/Admin/CashAndBankReport.aspx">General Ledger</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton103" runat="server" PostBackUrl="~/ShoppingCart/Admin/GroupIncomeStatement.aspx">Income Statement</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton104" runat="server" PostBackUrl="~/ShoppingCart/Admin/GroupRetainedEarning.aspx">Retained Earning</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <asp:LinkButton ID="LinkButton105" runat="server" PostBackUrl="~/ShoppingCart/Admin/GroupBalancesheet.aspx">Balance Sheet</asp:LinkButton>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </Content>
+                                                            </cc1:AccordionPane>
+                                                        </Panes>
+                                                    </cc1:Accordion>--%>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                                <asp:Panel ID="Panel1" runat="server" Visible="False">
+                                    <input id="Button1" type="button" value="button" onclick="my_onkeydown_handler()" /></asp:Panel>
+                            </td>
+                            <td class="td1">
+                                <div id="test123">
+                                    <pnlhelp:pnlhelp ID="pnlhelp" runat="server" />
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    <asp:Panel ID="Panel3" runat="server" BackColor="White" BorderColor="White" Width="300px">
+                                        <table id="Table1" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="subinnertblfc">
+                                                    <asp:Label ID="Label5" runat="server" ForeColor="White" Text="Message:"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    <asp:Label ID="Label3" runat="server" ForeColor="White">Sorry !! This page is restricted in this plan.</asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    <asp:LinkButton ID="Lnkbtn1" runat="Server" BorderColor="White" ForeColor="White"
+                                                        PostBackUrl="http://license.busiwiz.com/viewpriceplan.aspx" Text="Upgrade You Plan Now!!!"></asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <asp:ImageButton ID="ImageButton2" runat="server" AlternateText="submit" ImageUrl="~/ShoppingCart/images/ok.png"
+                                                        OnClick="ImageButton51_Click" Visible="False" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </asp:Panel>
+                                    <asp:Button ID="HiddenButton222" runat="server" Style="display: none" />
+                                    <cc1:ModalPopupExtender ID="ModalPopupExtender1222" runat="server" BackgroundCssClass="modalPopup"
+                                        PopupControlID="Panel3" TargetControlID="HiddenButton222">
+                                    </cc1:ModalPopupExtender>
+                                    <asp:Panel ID="Panel2" runat="server" BackColor="White" BorderColor="White" Width="300px">
+                                        <table id="Table2" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="subinnertblfc">
+                                                    &nbsp;<asp:Label ID="Label4" runat="server" ForeColor="White" Text="Message:"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    <asp:Label ID="Label1" runat="server" ForeColor="White">Sorry !! This user is not allowed to access this page.</asp:Label>
+                                                </td>
+                                            </tr>
+                                             <tr>
+                                            <td class="label">
+                                                <asp:LinkButton runat="Server" ID="LinkButton15" Text="Upgrade Now!!!" 
+                                                PostBackUrl="http://license.busiwiz.com/viewpriceplan.aspx?id=42"></asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <asp:ImageButton ID="ImageButton3" runat="server" AlternateText="submit" ImageUrl="~/ShoppingCart/images/ok.png"
+                                                        OnClick="ImageButton511_Click" Visible="False" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </asp:Panel>
+                                    <asp:Button ID="Button2" runat="server" Style="display: none" />
+                                    <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" BackgroundCssClass="modalPopup"
+                                        PopupControlID="Panel2" TargetControlID="Button2">
+                                    </cc1:ModalPopupExtender>
+                                    &nbsp;
+                                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                                        <ProgressTemplate>
+                                            <div id="IMGDIV" runat="server" align="center" style="border: 2px solid black; left: 43%;
+                                                visibility: visible; vertical-align: middle; width: 259px; position: absolute;
+                                                top: 4%; height: 61px; background-color: lavender" valign="middle">
+                                                <asp:Image ID="Image156565656" runat="server" Height="32px" ImageUrl="~/ShoppingCart/images/loading1.gif" />
+                                                <span style="color: #3366cc; font-family: Tahoma"><strong><em>Please Wait...</em></strong></span>
+                                            </div>
+                                        </ProgressTemplate>
+                                    </asp:UpdateProgress>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="footerdiv">
+                    <table id="footertbl" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="lefttxt">
+                                Privacy Policy | Terms &amp; Conditions | Sitemap | Contact us
+                            </td>
+                            <td class="righttxt">
+                                Copyright © 2010 Busiwiz.com
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+       <%-- </ContentTemplate>
+    </asp:UpdatePanel>--%>
+    </form>
+</body>
+</html>

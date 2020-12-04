@@ -1,0 +1,99 @@
+/* HTML TAGS */
+
+body
+{
+	margin: 0;
+	margin-bottom: 2em;
+	padding: 0;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+body *
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+form
+{
+	margin-bottom: 3em;
+}
+
+h2
+{
+	clear: both;
+	margin: 0;
+	font-size: 150%;
+}
+
+p
+{
+	padding-bottom: 1em;
+}
+
+
+
+
+/* IDs */
+
+#content
+{
+	padding: 0 2em;
+}
+
+#pages
+{
+	list-style-type: none;
+	margin: 0 0 2em 0;
+	padding: 0;
+}
+
+#pages li
+{
+	display: inline;
+	margin-right: 1em;
+	border-right: 1px solid #000000;
+	padding-right: 1em;
+}
+
+#pages li.last
+{
+	border: none;
+}
+
+#pages li.on a
+{
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+
+
+/* CLASSES */
+
+.clearer
+{
+	clear: both;
+	height: 1px;
+}
+
+.hidden
+{
+	position: absolute;
+	left: -10000px;
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}

@@ -1,0 +1,212 @@
+﻿#subinnertbl .subinnertblfc
+{
+	background-color:#ffffff;
+	padding-left: 11px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	text-align: left;
+	height: 14px;
+}
+#subinnertbl .col1
+{
+	text-align: right;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+	vertical-align: top;
+	padding: 3px 0px 0px 40px;
+	
+}
+#subinnertbl .col2
+{
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+	vertical-align: top;
+	padding: 3px 0px 0px 15px;
+	
+}
+#subinnertbl .col4
+{
+	text-align: left;
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333;
+	padding: 0px 0px 0px 12px;
+}
+Label
+{
+	height: 15px;
+	width: 40px;
+	font-size: 11px;
+	color: #333333;
+	font-family: Arial;
+	background-color: #fff;
+	border: 1px #303074 solid;
+}
+.label
+{
+	text-align: center;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	color: Red;
+}
+.GridBack
+{
+	background-color: White;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	border: solid 1px Black;
+	}
+	
+	.GridBack tr td
+{
+	border: solid 1px #000000;
+	text-align: left;
+}
+
+.GridBack a:link
+{
+	color: #000000;
+	text-decoration: Underline;
+}
+.GridBack a:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+.GridBack a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+.GridBack th a:link
+{
+	color: #000000;
+	text-decoration: none;
+}
+.GridBack th a:hover
+{
+	color: #000000;
+	text-decoration: underline;
+}
+.GridBack th a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+	
+	.GridPager
+{
+	background-color: #fff;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+.GridHeader
+{
+	color: Black;
+	height: 25px;
+	background-color: #aaaaaa;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+.GridHeader th
+{
+	padding: 2px 2px;
+	text-align: left;
+}
+
+.GridHeader a
+{
+	color: white;
+	padding: 2px 2px;
+	text-decoration: none;
+}
+.GridHeader a:hover
+{
+	color: white;
+	text-decoration: underline;
+}
+.GridHeader a:visited
+{
+	color: white;
+	text-decoration: none;
+}
+.GridAlternateRow
+{
+	height: 25px;
+	background-color: #ffffff;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	border: solid 1px #000000;
+}
+.GridFooter
+{
+	background-color: #4b4b4b;
+	height: 25px;
+}
+.GridRowStyle
+{
+	height: 25px;
+	background-color: #efefef;
+	text-align: left;
+	font-family: Arial;
+	font-size: 12px;
+	border: solid 1px #000000;
+	width: 60%;
+}
+.GridRowStyle1
+{
+	height: 25px;
+	background-color: #ffffff;
+	text-align: left;
+	font-family: Arial;
+	font-size: 10px;
+	border: solid 1px #000000;
+	width: 60%;
+}
+.GridFtrTxt
+{
+	height: 25px;
+	background-color: #fff;
+	text-align: left;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+}
+.GridPager a
+{
+	color: #303074;
+	text-decoration: none;
+}
+.GridPager a:visited
+{
+	color: #303074;
+	text-decoration: none;
+}
+.GridPager a:hover
+{
+	color: black;
+	text-decoration: none;
+}
+.theHeader
+{
+	width: 20px;
+	padding: 2px 2px;
+	text-align: left;
+}

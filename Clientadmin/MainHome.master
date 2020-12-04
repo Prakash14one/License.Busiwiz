@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainHome.master.cs" Inherits="master_MainHome" %>
+
+<%@ Register Src="~/UserControls/UC_Header_Navigationmilan.ascx" TagPrefix="UC" TagName="HEADERNAVIGATION" %>
+<%@ Register Src="~/UserControls/UC_Headermilan.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserControls/UC_Bannermilan.ascx" TagPrefix="UC" TagName="BANNER" %>
+<%@ Register Src="~/UserControls/UC_Footermilan.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="headMain">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ITime Keeper</title>
+    <link href="Style1.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="content_slider_style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidateforms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidatefieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidateinfo.css" media="screen" />
+    <script type="text/javascript" src="js/jquery.1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#featured > ul").tabs({ fx: { opacity: "toggle"} }).tabs("rotate", 5000, true);
+        });
+    </script>
+</head>
+<body>
+    <form id="horizontalForm" runat="server" class="horizontalForm">
+    <div class="Header_container">
+        <div class="Header_BG">
+            <div class="Header_content">
+                <div class="header_content_upper">
+                    <!--linkz_ends-->
+                    <div class="header_upper">
+                        <UC:HEADER runat="server" ID="ucHeader" />
+                    </div>
+                    <%--<UC:BANNER runat="server" ID="ucBanner" />--%>
+                    <div class="clear">
+                    </div>
+                </div>
+                <!--header_content_upper_ends-->
+                <div class="clear">
+                </div>
+                <UC:HEADERNAVIGATION runat="server" ID="ucHeaderNavigation" />
+                <%--<UC:HEADERNAVIGATION runat="server" ID="HEADERNAVIGATION1" />--%>
+            </div>
+            <!--Header_content_ends-->
+            <div class="clear">
+            </div>
+        </div>
+        <!--Header_BG_ends-->
+    </div>
+    <!--Header_Container_ends-->
+    <div class="clear">
+    </div>
+    <div class="container_middle_main_content_bg">
+        <asp:ContentPlaceHolder runat="server" ID="cphMain">
+        </asp:ContentPlaceHolder>
+        <div class="clear">
+        </div>
+    </div>
+    <!--container_middle_main_content_bg_ends-->
+    <div class="footer_container">
+        <UC:FOOTER runat="server" ID="ucFooter" />
+        <!--footer_BG_ends-->
+    </div>
+    </form>
+    <!--footer_Container_ends-->
+</body>
+</html>

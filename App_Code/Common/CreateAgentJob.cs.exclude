@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.SqlServer.Management.Smo;
+using Microsoft.SqlServer.Management.Smo.Agent;
+
+namespace SQLAgentJobs
+{
+    class CreateAgentJob
+    {
+        static void Main(string[] args)
+        {
+            Server server = new Server(".");
+
+            // Get instance of SQL Agent SMO object 
+            JobServer jobServer = server.JobServer;
+            Job job = null;
+            JobStep step = null;
+            JobSchedule schedule = null;
+
+            // Create a schedule 
+            schedule = new JobSchedule(jobServer, "Schedule_1");
+            schedule.FrequencyTypes = FrequencyTypes.OneTime;
+            schedule.ActiveStartDate = DateTime.Today;
+            schedule.ActiveStartTimeOfDay = new TimeSpan(DateTime.Now.Hour, (DateTime.Now.Minute + 2), 0);
+            schedule.Create();
+
+            // Create Job 
+            job = new Job(jobServer, "Job_1");
+            job.Create();
+            job.AddSharedSchedule(schedule.ID);
+            job.ApplyToTargetServer(server.Name);
+
+            // Create JobStep 
+            step = new JobStep(job, "Step_1");
+            step.Command = "SELECT 1";
+            step.SubSystem = AgentSubSystem.TransactSql;
+            step.Create();
+        }
+    }
+}

@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LicenseMaster.master.cs"
+    Inherits="customer_CustomerMaster" %>
+
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<%@ Register Src="~/UserControls/UcontrolHelpPanel.ascx" TagPrefix="UC" TagName="TITLE" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/customeradmin_style.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customercss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/info.css" media="screen" />
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <browsers>
+    <browser refID="Safari1Plus">
+        <controlAdapters>
+                <adapter controlType="System.Web.UI.WebControls.Menu"
+                                 adapterType="" />
+        </controlAdapters>
+    </browser>
+    </browsers>
+</head>
+  
+   
+<body>
+    <form id="form1" runat="server" class="horizontalForm">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div id="admin_wrapper">
+            <div id="admin_header">
+                <div id="headerInfo">
+                    <span>
+                        
+                        <asp:Label
+                            runat="server" ID="Label6" Text="Capman Ltd."></asp:Label></span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        
+                        <asp:Label
+                            runat="server" ID="Label7" Text="510-24thStreet, PORT HURON, MI 48060, USA"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        
+                        <asp:Label runat="server" ID="Label8" Text="810-320-6715"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        
+                        <asp:Label runat="server" ID="Label9" Text="support@busiwiz.com "></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        
+                        <asp:Label runat="server" ID="Label10" Text="www.busiwiz.com"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                </div>
+                <div id="site_title">
+                    <h1>
+                        <asp:ImageButton runat="server" ID="mainloginlogo" Visible="false" Width="176px"
+                            Height="106px" />
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/home-icon.jpg"
+                            PostBackUrl="#" Height="40px" Width="40px" Visible="false" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" Visible="false" ImageUrl="~/images/contact-icon.jpg"
+                            Height="40px" Width="40px" PostBackUrl="~/shoppingcart/default.aspx" />
+                        <img src="../ShoppingCart/images/poweredby.jpg" visible="false" />
+                        <asp:Label ID="Label1" runat="server" Visible="false"></asp:Label>
+                    </h1>
+                </div>
+            </div>
+            <!-- end of header -->
+            <div id="admin_menu_container">
+                <asp:Label ID="lblclientname" runat="server"></asp:Label>
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="Menu" Font-Size="12px"
+                    Font-Names="Verdana" ForeColor="White" Width="100%" StaticEnableDefaultPopOutImage="False">
+                    <StaticMenuItemStyle Font-Size="12px" Height="30px" />
+                    <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="30px" HorizontalPadding="12px" />
+                    <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                    <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                </asp:Menu>
+                <!--nav_container_ends-->
+            </div>
+            <!-- end of admin_menu_container -->
+            <div id="admin_main">
+             <UC:TITLE runat="server" ID="ucTitle" />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                            <ProgressTemplate >
+                                <div id="IMGDIV" runat="server" align="center" style="border: 0px solid blue; left: 42%;
+                                    visibility: visible; vertical-align: middle; width: 159px; position:absolute;
+                                    top: 50%; height: 50px; background-color: White" valign="middle" >
+                                    <div id="temp" runat="server">
+                                        <asp:Image ID="Image11234" runat="server" Height="32px" ImageUrl="~/images/loading1.gif" />
+                                    </div>
+                                    <span style="color: #3366cc; font-family: Tahoma"><strong><em>Please Wait...</em></strong></span>
+                                </div>
+                            </ProgressTemplate>
+                        </asp:UpdateProgress>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <!--admin_main_ends-->
+            <div class="cleaner">
+            </div>
+        </div>
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,222 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Windows;
+using System.Windows.Forms;
+using System.Collections;
+//using Microsoft.SqlServer.Management.Smo;
+//using Microsoft.SqlServer.Management.Nmo;
+//using Microsoft.SqlServer.Management.Smo.Agent;
+namespace FoxPro_2_SQL_Synchroniser
+{
+    class SQLScriptGenerater
+    {
+	//This class generates the SQL Scripts of a table from SQL Table
+	// these are global variables
+	//DesTableName this is destination table name for which script will be
+	//generated like qry=insert into
+	//DesTableName(id,name)value('1','idrees')
+	// I have destination table name as "Tableee"
+	//source table name is TableName name as " Tab "; this of SQL
+	//Table
+
+	string primaryKey, updateqry, Insertqry,DesTableName="Tableee",
+	TableName = "Tab";
+	string updateAdd = "";
+	public SQLScriptGenerater()
+         {
+         }
+         public void Run(string cnString)
+         {
+            string  values, IDValues = "",  insqry, upqry ;
+            int i = 0;
+            SqlDataReader myReader;
+            SqlConnection mySqlConnection = new SqlConnection();
+            SqlConnection mSqlConnection = new SqlConnection();
+            SqlCommand mySqlCommand = new SqlCommand();
+            SqlCommand msqlCommand = new SqlCommand();
+            string cnnString = " cnnString ";
+            mSqlConnection = new SqlConnection(cnnString);
+            mySqlConnection = new SqlConnection(cnnString);
+            mySqlCommand = new SqlCommand("select * from Tab", mySqlConnection);
+            TableName = "Tab";
+            primaryKey = GetprimaryKey(TableName);
+            insqry = "";
+            mySqlConnection.Open();
+
+            myReader = mySqlCommand.ExecuteReader();
+            if(myReader != null)
+            {
+                while(myReader.Read())
+                {// i this variable counts the total number of record
+                    i = i + 1;// once a query is written, next it is available
+				// should be empty to build query again
+                    updateAdd = "";
+                    insqry = "";
+
+                    string celldata = "", coulmenName = "";
+                    for(int j = 0; j < myReader.FieldCount; j++)
+                    {			
+                           if (j > 0)
+                           {			  
+                              {
+                                  coulmenName += "," + myReader.GetName(j).ToString();
+                                  celldata += ",'" + myReader[j].ToString() + "'";
+                              }
+                           }
+                           else
+                           {
+                              coulmenName += myReader.GetName(j).ToString();
+                              celldata += "'" + myReader[j].ToString() + "'";
+                           }
+                           if (primaryKey == myReader.GetName(j).ToString())
+                           {
+                              IDValues = myReader[j].ToString();
+                           }
+                           if (IDValues != null)
+                           {
+                              //Generates the update Query
+                              upqry = UpdateQuery(coulmenName, celldata, primaryKey, IDValues);
+                              updateAdd += upqry;
+                              //Generates the Insert Query
+                              insqry = InsertQuery(coulmenName, celldata, DesTableName);
+                           }
+                       }
+                       WriteScripts(DesTableName, insqry, updateAdd, IDValues, primaryKey, i);
+                   }
+                   //MessageBox.Show("Total number of record in database are="+ i);
+               }
+           }
+	  #region this Methods return ID column of table which table we pass to
+
+           public string GetprimaryKey(string tableName ,string cnnString)
+           {
+              string names, ID = "";
+              SqlDataReader mReader;
+              SqlConnection mSqlConnection = new SqlConnection();
+              SqlCommand mSqlCommand = new SqlCommand();
+              string cnString = cnnString;
+              mSqlConnection = new SqlConnection(cnString);
+              mSqlConnection.Open();	// sp_pkeys is SQL server default store procedure
+          			// you just pass it only table Name it will return
+          			// primary key column
+              mSqlCommand = new SqlCommand("sp_pkeys", mSqlConnection);
+              mSqlCommand.CommandType = CommandType.StoredProcedure;
+              mSqlCommand.Parameters.Add("@table_name", 
+              				SqlDbType.NVarChar).Value = tableName;
+              mReader = mSqlCommand.ExecuteReader();
+              while(mReader.Read())
+              {// the primary key column reside at 4 index
+                ID = mReader[3].ToString();
+              }
+              return ID;
+           }
+           #endregion
+
+           #region this methods return  ID values to compare for insert or Update
+           public void WriteScripts(string tableName, string insertqry, string updateqry, string IDvalues, string PrimaryKey, int i)
+           {
+              string script = "";
+              updateqry = "update " + DesTableName + "set " + 
+              					updateqry + " Where "
+				+ PrimaryKey + " = '" + IDvalues + "'";
+              int index = updateqry.LastIndexOf(",");
+              string updatqry = updateqry.Remove(index, 1);
+              if(i == 1)
+              {
+            	//if will be first time executed and all 
+		//required variables are declared and next all times else
+            	//condition will be executed
+                script += "DECLARE @updateCount INT;"+Environment.NewLine;
+                script += "DECLARE @insertCount INT;"+ Environment.NewLine;
+                script += "DECLARE @count INT;"+Environment.NewLine;
+                script += "SET @updateCount = 0;"+Environment.NewLine;
+                script += "SET @insertCount = 0;"+Environment.NewLine;
+                script += "SELECT @count = COUNT(*) FROM [" + tableName + "]
+                	WHERE [" + PrimaryKey + "] =
+					'" + IDvalues + "'" + Environment.NewLine;
+                script += "IF @count = 0" + Environment.NewLine;
+                script += "BEGIN ";
+                script += insertqry + "" + Environment.NewLine;
+                script += "SET @insertCount = 
+                		@insertCount + 1 " + Environment.NewLine;
+                script += "END" + Environment.NewLine;
+                script += "ELSE" + Environment.NewLine;
+                script += "BEGIN" + Environment.NewLine;
+                script += updatqry + "" + Environment.NewLine;
+                script += "SET @updateCount = @updateCount + 1 " + Environment.NewLine;
+                script += "END" + Environment.NewLine;
+                StreamWriter sw = new StreamWriter
+			(@"d:\script1.txt", true,Encoding.UTF8);
+                sw.Write(script);
+                sw.Close();
+            }
+            else
+            {
+                script += "SELECT @count = COUNT(*) FROM [" + tableName + "]
+					WHERE [" + PrimaryKey + "] =
+					'" + IDvalues + "'" + Environment.NewLine;
+                script += "IF @count = 0" + Environment.NewLine;
+                script += "BEGIN " + Environment.NewLine;
+                script += insertqry + "" + Environment.NewLine;
+                script += "SET @insertCount = 
+                		@insertCount + 1 " + Environment.NewLine;
+                script += "END" + Environment.NewLine;
+                script += "ELSE" + Environment.NewLine;
+                script += "BEGIN " + Environment.NewLine;
+                script += updatqry + "" + Environment.NewLine;
+                script += "SET @updateCount = 
+                		@updateCount + 1 " + Environment.NewLine;
+                script += "END" + Environment.NewLine;
+                StreamWriter sw = new StreamWriter
+                		(@"d:\script1.txt", true, Encoding.UTF8);
+                sw.Write(script);
+                sw.Close();
+            }
+        }
+        #endregion
+
+        #region this methods return insert query and update query
+        public string InsertQuery(string coulmenName, string celldata,string TableName)
+        {
+            return Insertqry = "insert into " + TableName + 
+			"(" + coulmenName + ")values(" + celldata + ")";
+        }
+        public string UpdateQuery(string coulmenName, string celldata, string Name, string Value)
+        {
+            string IDName, IDValue, Ud = "", name = "", values = "";
+            IDName = Name;
+            IDValue = Value;
+            if(IDName != null)
+            {
+                int indexcolumn = coulmenName.LastIndexOf(",");
+                int indexValues = celldata.LastIndexOf(",");
+                if(indexcolumn > 0 && indexValues > 0)
+                {
+                    coulmenName = coulmenName.Substring(indexcolumn);
+                    celldata = celldata.Substring(indexValues);
+                    name = coulmenName.Replace(",", "");
+                    values = celldata.Replace(",", "");
+                    if(name != IDName && values != IDValue)
+                    {
+                        Ud = name + "=" + values + ",";
+                    }
+                }
+                else
+                {
+                    name = coulmenName;
+                    values = celldata;
+                    if(name != IDName && values != IDValue)
+                    {
+                        Ud = name + "=" + values + ",";
+                    }
+                }
+            }
+            return Ud;
+        }
+        #endregion
+    }
+}

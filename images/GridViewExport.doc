@@ -1,0 +1,98 @@
+<div id="ctl00_ContentPlaceHolder1_pnlgrid" style="width:100%;overflow:scroll;">
+	
+                                <table width="100%">
+                                    <tr align="center">
+                                        <td colspan="6">
+                                            <div id="mydiv" class="closed">
+                                                <table width="850Px">
+                                                    <tr>
+                                                        <td align="center" style="text-align: center; font-size: 20px; font-weight: bold;">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-size: 18px; font-weight: bold; color: #000000" colspan="6">
+                                                            <span id="ctl00_ContentPlaceHolder1_sdf" style="font-size:20px;font-style:italic;">Business : </span>
+                                                            <span id="ctl00_ContentPlaceHolder1_lblBusiness" style="color:Black;font-size:20px;font-style:italic;">Acharya Associates</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="font-size: 18px; font-weight: bold; color: #000000" colspan="6">
+                                                            <span id="ctl00_ContentPlaceHolder1_lblreport" style="font-style:italic;">Communnication Report by Date - 08/12/2016 To 08/12/2016</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="vertical-align: top; height: 80%">
+                                        <td colspan="6">
+                                            <div>
+		<table class="mGrid" cellspacing="0" cellpadding="4" rules="all" border="1" id="ctl00_ContentPlaceHolder1_griedviewperiodwise" style="width:100%;border-collapse:collapse;">
+			<tr>
+				<th align="left" scope="col" style="width:2%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$Date&#39;)">Comm Date</a></th><th align="left" scope="col" style="width:18%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$PartyName&#39;)">User Name</a></th><th align="left" scope="col" style="width:10%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$Smallmesstype&#39;)">CommType</a></th><th align="left" scope="col" style="width:10%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$EmployeeName&#39;)">Comm By</a></th><th align="left" scope="col" style="width:50%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$Description&#39;)">Communication Description</a></th><th align="left" scope="col" style="width:3%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise&#39;,&#39;Sort$DocumentId&#39;)">Docs</a></th>
+			</tr><tr>
+				<td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_lblDate">08/12/2016</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_lblPartyName">Cand : Milan_Cand : Milan </span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_lblSmallmesstype">In Phone</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_lblEmployeeName">Pankti Pankti Pankti</span>
+                                                        </td><td>
+                                                            
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_LinkButton2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl02$LinkButton2&#39;,&#39;&#39;)" style="color:Black;">A candidate of Web Developer and Web Designer name Milan is coming for interview today in </a>
+                                                            
+                                                            
+                                                        </td><td>
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl02_LinkButton1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl02$LinkButton1&#39;,&#39;&#39;)" style="color:Black;">0</a>
+                                                            
+                                                            
+                                                        </td>
+			</tr><tr class="alt">
+				<td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_lblDate">08/12/2016</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_lblPartyName">Cand : Darshi Sha : Darshi Sha</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_lblSmallmesstype">In Phone</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_lblEmployeeName">Pankti Pankti Pankti</span>
+                                                        </td><td>
+                                                            
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_LinkButton2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl03$LinkButton2&#39;,&#39;&#39;)" style="color:Black;">Darshi Shah candidate of Accounts and financial Analyst will be coming today for interview</a>
+                                                            
+                                                            
+                                                        </td><td>
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl03_LinkButton1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl03$LinkButton1&#39;,&#39;&#39;)" style="color:Black;">0</a>
+                                                            
+                                                            
+                                                        </td>
+			</tr><tr>
+				<td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_lblDate">08/12/2016</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_lblPartyName">Vend : Bharatbhai : Bharat Dav</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_lblSmallmesstype">In Visit</span>
+                                                        </td><td>
+                                                            <span id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_lblEmployeeName">Pankti Pankti Pankti</span>
+                                                        </td><td>
+                                                            
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_LinkButton2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl04$LinkButton2&#39;,&#39;&#39;)" style="color:Black;">Bharatbhai Dave visited office for meeting of Carpenter </a>
+                                                            
+                                                            
+                                                        </td><td>
+                                                            <a id="ctl00_ContentPlaceHolder1_griedviewperiodwise_ctl04_LinkButton1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$griedviewperiodwise$ctl04$LinkButton1&#39;,&#39;&#39;)" style="color:Black;">0</a>
+                                                            
+                                                            
+                                                        </td>
+			</tr>
+		</table>
+	</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            
+</div>

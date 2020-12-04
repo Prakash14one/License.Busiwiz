@@ -1,0 +1,47 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:GridView runat="server"  
+    BackColor="White" 
+    EmptyDataRowStyle-Font-Bold="true" 
+    CellPadding="5" 
+    CellSpacing="0" 
+    Width="100%"  
+    Font-Bold="True"
+    EmptyDataRowStyle-HorizontalAlign="Center"
+    EmptyDataRowStyle-BackColor="red"
+    HeaderStyle-Wrap="true"
+     AllowSorting="false"
+   >
+            <HeaderStyle BackColor="#E0E0E0" BorderColor="Silver" BorderStyle="Solid" BorderWidth="1px"
+               Height="28px" HorizontalAlign="Center" Width="100px" />
+
+            <EditRowStyle BackColor="#E0E0E0" />
+            <SelectedRowStyle BackColor="#E0E0E0" />
+ 
+</asp:GridView> 
+
+<asp:Label SkinId="lblerr" runat="server" Font-Names="ArialBlack" Font-Size="10pt" ForeColor="MidnightBlue">
+</asp:Label>
+
+<asp:Label SkinId="lblnormal" runat="server" Font-Names="ArialBlack" Font-Size="10pt" ForeColor="MidnightBlue">
+</asp:Label>
+
+<asp:Button  runat="server" CssClass="buttons">
+</asp:Button>
+
+<asp:LinkButton  runat="server" CssClass="buttons">
+</asp:LinkButton>

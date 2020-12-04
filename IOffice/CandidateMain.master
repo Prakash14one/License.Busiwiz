@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CandidateMain.master.cs"
+    Inherits="CandidateMain" %>
+
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Party Admin</title>
+    <link href="./Candidateadmin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidateforms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidatefieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/Candidateinfo.css" media="screen" />
+</head>
+<body id="Body" runat="server">
+    <form id="form1" runat="server" class="horizontalForm">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="admin_wrapper">
+        <div id="Div1">
+            <%--<div id="admin_header">
+                <div id="headerInfo">
+                    <span>
+                        <asp:Label runat="server" ID="Label6" Text="Capman Ltd."></asp:Label></span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <asp:Label runat="server" ID="Label7" Text="510-24thStreet, PORT HURON, MI 48060, USA"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <asp:Label runat="server" ID="Label8" Text="810-320-6715"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <asp:Label runat="server" ID="Label9" Text="support@busiwiz.com "></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                    <span>
+                        <asp:Label runat="server" ID="Label10" Text="www.busiwiz.com"></asp:Label>
+                    </span>
+                    <div style="clear: both;">
+                    </div>
+                </div>
+                <div id="site_title">
+                    <h1>
+                        <asp:ImageButton ID="mainloginlogo" runat="server" Width="176px" Height="106px" />
+                        <a href="#" target="_parent">ADMIN LAYOUT</a></h1>
+                </div>
+            </div>--%>
+            <div id="admin_main">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                            <ProgressTemplate>
+                                <div id="IMGDIV" runat="server" align="center" style="border: 0px solid black; left: 42%;
+                                    visibility: visible; vertical-align: middle; position: fixed; top: 50%; height: 60px;
+                                    background-color: White" valign="middle">
+                                    <div id="Div2" runat="server">
+                                        <asp:Image ID="Image11234" runat="server" Height="100" Width="200" ImageUrl="~/ShoppingCart/images/loading1.gif" />
+                                    </div>
+                                </div>
+                            </ProgressTemplate>
+                        </asp:UpdateProgress>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" EnableViewState="true" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <div class="cleaner">
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

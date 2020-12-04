@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Master_Login" %>
+
+<%@ Register Src="~/UserControls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserControls/UC_Navigation.ascx" TagPrefix="UC" TagName="MENU" %>
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admin Login</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../ShoppingCart/Admin/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Logincss/style.css" />
+
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href="../css/Registretion.css" rel="stylesheet" type="text/css" media="all" />
+
+
+ <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../ShoppingCart/Admin/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../ShoppingCart/Admin/css/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../ShoppingCart/Admin/css/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../ShoppingCart/Admin/css/info.css" media="screen" />
+    <style type="text/css">
+        .style1 {
+            height: 130px;
+        }
+
+        .style2 {
+            width: 50%;
+            height: 130px;
+        }
+        
+        
+        .modalBackground
+        {
+            background-color: Black;
+            filter: alpha(opacity=90);
+            opacity: 0.8;
+        }
+        .modalPopup
+        {
+            background-color: #FFFFFF;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            padding-top: 10px;
+            padding-left: 30px;
+            width: 600px;
+            height: 140px;
+        }
+    
+     .BTNTorder{
+     background-color:#FDB53C;
+          font: bold 14px Arial;
+  text-decoration: none;
+  color: #333333;
+  padding: 1px 6px 1px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+    }
+    </style>
+</head>
+<body>
+
+
+
+    <div id="admin_wrapper">
+
+        <div>
+
+            <table width="100%" style="margin-top: 10px; height: 140px;">
+                <tr>
+                    <td  valign="top">
+                        <asp:Image ID="mainloginlogo" Width="250px" Height="100px"
+                            runat="server" />
+                    </td>
+                    <td align="right"  valign="top">
+                        <table cellpadding="0" cellspacing="0" width="100%" style="height: 140px;">
+                            <tr>
+                                <td align="right"  valign="top">
+
+                                    <asp:Label ID="busn" runat="server" Font-Size="16px"></asp:Label>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td align="right"  valign="top">
+                                    <asp:Image ID="imgsitel" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+           
+           
+</asp:Panel>
+
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div id="admin_menu_container">
+        </div>
+        <!-- end of admin_menu_container -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <UC:FOOTER runat="server" ID="ucFooter" />
+        <div class="cleaner">
+        </div>
+    </div>
+
+   
+    
+        <asp:Label ID="lbladdr" runat="server" Text="" ForeColor="White" Visible="false"></asp:Label>
+   
+    
+</body>
+</html>

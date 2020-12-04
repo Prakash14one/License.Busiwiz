@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Developermaster.master.cs"
+    Inherits="Developermaster" %>
+
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Header.ascx" TagPrefix="UC"
+    TagName="HEADER" %>
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Navigation.ascx" TagPrefix="UC"
+    TagName="MENU" %>
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Footer.ascx" TagPrefix="UC"
+    TagName="FOOTER" %>
+<%--<%@ Register Src="~/ShoppingCart/Admin/UserControls/UcontrolHelpPanel.ascx" TagPrefix="UC"
+    TagName="TITLE" %>--%>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Online Account Admin</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/info.css" media="screen" />
+
+    <script type="text/javascript" language="javascript">
+        function pri() {
+
+
+
+            var w = window.open('');
+
+
+
+            w.document.write("<html><head><style type='text/css' media='print'>.test{display:none}</style>");
+            w.document.write("<script language='javascript' type='text/javascript'>function printS(){window.print();}");
+            w.document.write("<\/script> <link href='../../css/main.css' rel='stylesheet' type='text/css' /><link href='../css/main.css' rel='stylesheet' type='text/css' />");
+            w.document.write("</head><body>");
+            w.document.write(test123.innerHTML);
+            w.document.write("<a href='abcpqr'></body></html>");
+        }
+
+    </script>
+
+    <script language="javascript" type="text/javascript">
+
+
+        function my_onkeydown_handler() {
+            // alert(document.getElementById('hd').value);
+            var versionid = document.getElementById('hd').value;
+            var sPath = window.location.pathname;
+            //var sPage = sPath.substring(sPath.lastIndexOf('\\') + 1);
+            var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+            //alert(sPage);
+
+            var d = document.URL.toString();
+
+
+            switch (event.keyCode) {
+
+                case 112: // 'F1'
+
+                    document.onhelp = function() { return (false); }
+                    window.onhelp = function() { return (false); }
+
+                    event.returnValue = true;
+
+                    window.open('http://help.busiwiz.com/HelpF1.aspx?verid=' + versionid + '&PageName=' + sPage, 'mywin', 'left=0,top=0,width=1000,height=700,toolbar=0,resizable=0,scrollbars=no, location=no, dependent=0, directories=no');
+
+                    event.keyCode = 1; //BRJ: required to disable stubborn key strokes
+                    window.status = "You have just disabled F1 - truly.";
+                    break;
+            }
+        }
+
+        document.attachEvent("onkeydown", my_onkeydown_handler);
+        function navigation_onclick() {
+
+        }
+
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            height: 4px;
+        }
+    </style>
+</head>
+<body id="Body" runat="server">
+    <form id="form1" runat="server" class="horizontalForm">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="admin_wrapper">
+        <div id="Div1">
+            <div id="admin_header" style="height: 135px">
+                <table width="100%" style="vertical-align: top">
+                    <tr>
+                        <td>
+                            <asp:ImageButton ID="mainloginlogo" runat="server" Width="250px" Height="100px" />
+                            <input id="hd" type="hidden" value="<%=verid %>" />
+                        </td>
+                        <td align="right" valign="bottom">
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td colspan="2" align="right">
+                                        <asp:Label ID="busn" runat="server" Font-Size="16px" Font-Bold="true"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <asp:Label ID="Label2" runat="server" Font-Size="16px" Font-Bold="true"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="bottom" align="right">
+                                        <asp:Image ID="imgsitel" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- end of header -->
+            <%--<div id="admin_menu_container" style="float: left">--%>
+            <div id="admin_menu_container" style="float: left">
+                <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Orientation="Horizontal" CssClass="Menu"
+                    Font-Size="12px" Font-Names="Verdana" ForeColor="White" Width="100%" OnMenuItemClick="Menu1_MenuItemClick1">
+                    <StaticMenuItemStyle Font-Size="12px" Height="35px" />
+                    <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="40px" HorizontalPadding="10px" />
+                    <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                    <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                    <Items>
+                        <asp:MenuItem Text="Master" Value="1">
+                            <asp:MenuItem Text="Associate SiteMaster" Value="1" NavigateUrl="~/ShoppingCart/Developer/AssociateSiteMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="City - Add/Manage" Value="2" NavigateUrl="~/ShoppingCart/Developer/citymaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="State - Add/Manage" Value="3" NavigateUrl="~/ShoppingCart/Developer/state.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="CountryMaster - Add/Manage" Value="4" NavigateUrl="~/ShoppingCart/Developer/CountryMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="999_UserAccessLevel" Value="5" NavigateUrl="~/ShoppingCart/Developer/UserAccessLevel.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Email Management" Value="2">
+                            <asp:MenuItem Text="Email ContentMaster" Value="1" NavigateUrl="~/ShoppingCart/Developer/EmailContentMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Web ContentEntry" Value="2" NavigateUrl="~/ShoppingCart/Developer/WebContentEntry.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="TimeSchedule Master" Value="3" NavigateUrl="~/ShoppingCart/Developer/TimeSchedule.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="TimeZone Master - Add/Manage" Value="4" NavigateUrl="~/ShoppingCart/Developer/TimeZoneAddMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="ServerTimeZone - Add/Manage" Value="5" NavigateUrl="~/ShoppingCart/Developer/ServerTimeZone.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Period Management" Value="3">
+                            <asp:MenuItem Text="Period Master" Value="1" NavigateUrl="~/ShoppingCart/Developer/PeriodMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Payperiod Type" Value="2" NavigateUrl="~/ShoppingCart/Developer/PayperiodType.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="TaxYear Master" Value="3" NavigateUrl="~/ShoppingCart/Developer/TaxYearMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Payperiod Type - Add/Manage" Value="4" NavigateUrl="~/ShoppingCart/Developer/PayperiodType.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Tax Management" Value="4">
+                            <asp:MenuItem Text="PayrollTaxMaster - Add/Manage" Value="1" NavigateUrl="~/ShoppingCart/Developer/PayrollTaxMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="ayrollTax Formula - Add/Manage" Value="2" NavigateUrl="~/ShoppingCart/Developer/PayrollTaxFormula.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="PayrollTaxFormula Variable Priority" Value="3" NavigateUrl="~/ShoppingCart/Developer/PayrollTaxFormulaPriority.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Taxpayer type" Value="4" NavigateUrl="~/ShoppingCart/Developer/Taxpayertype.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="TaxExemption Master - Add/Manage" Value="5" NavigateUrl="~/ShoppingCart/Developer/TaxExemptionMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="TaxExemption FormInfo - Add/Manage" Value="6" NavigateUrl="~/ShoppingCart/Developer/TaxExemptionFormInfo.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="PayrollTax Detail - Add/Manage" Value="7" NavigateUrl="~/ShoppingCart/Developer/PayrollTaxDetail.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="PayrollTax DetailDetail - Add/Manage" Value="8" NavigateUrl="~/ShoppingCart/Developer/PayrollTaxDetailDetail.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <!--nav_container_ends-->
+            </div>
+            <!-- end of admin_menu_container -->
+            <%--  <table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;">
+                <tr>
+                    <td style="width: 15%;">
+                    </td>
+                    <td>--%>
+            <div id="admin_main">
+                <%-- <UC:TITLE runat="server" ID="ucTitle" />--%>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                            <ProgressTemplate>
+                                <div id="IMGDIV" runat="server" align="center" style="border: 0px solid black; left: 42%;
+                                    visibility: visible; vertical-align: middle; position: fixed; top: 50%; height: 60px;
+                                    background-color: White" valign="middle">
+                                    <div id="Div3" runat="server">
+                                        <asp:Image ID="Image11234" runat="server" Height="100" Width="200" ImageUrl="~/ShoppingCart/images/loading1.gif" />
+                                    </div>
+                                </div>
+                            </ProgressTemplate>
+                        </asp:UpdateProgress>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" EnableViewState="true" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <%--   </td>
+                    <td style="width: 15%;">
+                    </td>
+                </tr>--%>
+            <UC:FOOTER runat="server" ID="ucFooter" />
+            <!--admin_main_ends-->
+        </div>
+    </div>
+    <div id="admin_menu_container">
+        <asp:Label ID="lbladdr" runat="server" Text="" ForeColor="White"></asp:Label>
+    </div>
+    </form>
+</body>
+</html>

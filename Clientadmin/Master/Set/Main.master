@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="~/UserContorls/UC_Header.ascx" TagPrefix="UC" TagName="HEADER" %>
+<%@ Register Src="~/UserContorls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google-translate-customization" content="9cb0fcf0a227ef43-740593521db70c96-g9b19dd259561e7d3-16" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Registrationstyle.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Registrationcss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Registrationcss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Registrationcss/info.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Registrationcss/main.css" media="screen" />
+</head>
+<body>
+    <form id="horizontalForm" runat="server" class="horizontalForm">
+    <div id="main_container">
+        <div id="header">
+            <div id="headerInfo">
+                <span>
+                    <asp:Label runat="server" Font-Size="22px" Font-Bold="true" ID="lblportalname">
+                    </asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <asp:Label runat="server" Text="" ID="lblcompanyname">
+                    </asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <asp:Label runat="server" ID="lblphoneno" Text=""></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <asp:Label runat="server" ID="lbltollfree" Text=""></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <span>
+                    <asp:Label runat="server" ID="lblemail" Text=""></asp:Label>
+                </span>
+            </div>
+            <div id="logo">
+                <asp:ImageButton ID="ImageButton1" ImageUrl="~/images/e1.PNG" runat="server" Height="100"
+                    Width="300" />
+            </div>
+        </div>
+        <!--end of green box-->
+        <div id="main_content">
+            <!--end of left content-->
+            <asp:ContentPlaceHolder runat="server" ID="cphMain">
+            </asp:ContentPlaceHolder>
+            <!--end of main content-->
+            <div id="footer">
+                <%--<UC:FOOTER runat="server" ID="ucFooter" />--%>
+                <span>
+                    <asp:Label runat="server" ID="lbladresss" Text=""></asp:Label>
+                </span><span>
+                    <asp:Label runat="server" ID="lblcity" Text=""></asp:Label>
+                </span><span>
+                    <asp:Label runat="server" ID="lblstate" Text=""></asp:Label>
+                </span><span>
+                    <asp:Label runat="server" ID="lblcountry" Text=""></asp:Label>
+                </span>
+                <div style="clear: both;">
+                </div>
+                <label>
+                    
+                    <asp:LinkButton ID="LinkButton1" ForeColor="#0080ff" runat="server" 
+                    onclick="LinkButton1_Click"></asp:LinkButton>
+                </label>
+                <div style="clear: both;">
+                </div>
+                <label>
+                 Copyright © 2013, busiwiz.com. All Rights Reserved.
+                </label>
+            </div>
+        </div>
+    </div>
+    </form>
+    <!--end of main container-->
+</body>
+</html>

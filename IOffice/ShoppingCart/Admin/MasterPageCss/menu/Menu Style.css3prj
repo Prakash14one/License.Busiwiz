@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Css3Menu>
+    <project version="1.1">
+        <params>
+            <HasChanges>false</HasChanges>
+            <EmbandImg>false</EmbandImg>
+            <Data>
+var menuStyle={
+	&quot;menu&quot;:{
+		&quot;smMaxRows&quot;:-1,
+		&quot;fontStyle&quot;:[&quot;bold 12px Arial&quot;,&quot;bold 12px Arial&quot;],
+		&quot;fontColor&quot;:[&quot;#cccccc&quot;,&quot;#ffffff&quot;],
+		&quot;menuBackColor&quot;:&quot;#000&quot;,
+		&quot;menuBackImage&quot;:&quot;images/mainbk.png&quot;,
+		&quot;menuBorderColor&quot;:&quot;#999999&quot;,
+		&quot;menuBorderWidth&quot;:&quot;0px&quot;,
+		&quot;menuBorderStyle&quot;:&quot;solid&quot;,
+		&quot;menuBorderRadius&quot;:&quot;4px&quot;,
+		&quot;itemBackColor&quot;:[&quot;#333&quot;,&quot;#00c4ff&quot;],
+		&quot;itemBackImage&quot;:[&quot;images/mainbk.png&quot;,&quot;images/mainbk.png&quot;],
+		&quot;itemBackPosY&quot;:[&quot;200px&quot;,&quot;100px&quot;],
+		&quot;itemSpacing&quot;:1,
+		&quot;itemPadding&quot;:&quot;10px&quot;,
+		&quot;arrowImageSub&quot;:[&quot;images/arrowsub.gif&quot;,&quot;images/arrowsub.gif&quot;],
+		&quot;arrowWidthSub&quot;:7,
+		&quot;separatorPadding&quot;:&quot;0px&quot;,
+		&quot;shadowLen&quot;:1,
+		&quot;shadowColor&quot;:&quot;#777777&quot;
+		},
+	&quot;topmenu&quot;:{
+		&quot;textShadow&quot;:[&quot;#000000 0px -1px 1px&quot;,&quot;#3d3d3d 0px -1px 1px&quot;]
+		},
+	&quot;topfirst&quot;:{
+		&quot;itemBorderRadius&quot;:&quot;4px 0 0 4px&quot;
+		},
+	&quot;toplast&quot;:{
+		&quot;itemBorderRadius&quot;:&quot;0 4px 4px 0&quot;
+		},
+	&quot;submenu&quot;:{
+		&quot;itemBackImage&quot;:[&quot;none&quot;,&quot;none&quot;],
+		&quot;itemBackColor&quot;:[&quot;#333&quot;,&quot;#333&quot;],
+		&quot;fontColor&quot;:[&quot;#cccccc&quot;,&quot;#1F80AE&quot;],
+		&quot;fontDecoration&quot;:[&quot;none&quot;,&quot;none&quot;],
+		&quot;fontStyle&quot;:[&quot;normal 13px Arial&quot;,&quot;normal 13px Arial&quot;],
+		&quot;itemPadding&quot;:&quot;8px 0 0 0&quot;,
+		&quot;itemBorderWidth&quot;:&quot;1px 0 0 0&quot;,
+		&quot;itemBorderColor&quot;:[&quot;#262626&quot;,&quot;#262626&quot;],
+		&quot;itemBorderStyle&quot;:[&quot;solid&quot;,&quot;solid&quot;],
+		&quot;menuBackImage&quot;:&quot;none&quot;,
+		&quot;menuBackColor&quot;:&quot;#333&quot;,
+		&quot;menuBorderColor&quot;:&quot;#5A5E60&quot;,
+		&quot;menuBorderWidth&quot;:&quot;1px&quot;,
+		&quot;menuBorderStyle&quot;:&quot;solid&quot;,
+		&quot;itemSpacing&quot;:&quot;9&quot;
+		},
+	&quot;subfirst&quot;:{
+		&quot;itemPadding&quot;:&quot;0&quot;,
+		&quot;itemBorderWidth&quot;:&quot;0&quot;,
+		&quot;itemBorderStyle&quot;:[&quot;none&quot;,&quot;none&quot;]
+		}
+	};</Data>
+            <isHorizontal>1</isHorizontal>
+            <smMaxRows>0</smMaxRows>
+            <FontFamily>Arial</FontFamily>
+            <FontSize>12</FontSize>
+            <Bold>true</Bold>
+            <Italic>false</Italic>
+            <Underline>false</Underline>
+            <OverUnderline>false</OverUnderline>
+            <FontFamily1>Arial</FontFamily1>
+            <FontSize1>12</FontSize1>
+            <Bold1>true</Bold1>
+            <Italic1>false</Italic1>
+            <Underline1>false</Underline1>
+            <OverUnderline1>false</OverUnderline1>
+            <TextColor0>#cccccc</TextColor0>
+            <TextColor1>#cccccc</TextColor1>
+            <SubTextColor0>#cccccc</SubTextColor0>
+            <SubTextColor1>#0b0b0b</SubTextColor1>
+            <ItemBackColor0>#353535</ItemBackColor0>
+            <ItemBackColor1>#cccccc</ItemBackColor1>
+            <SubitemBackColor0>#333</SubitemBackColor0>
+            <SubitemBackColor1>#cccccc</SubitemBackColor1>
+            <itemBorderRadius0>4</itemBorderRadius0>
+            <itemBorderRadius1>0</itemBorderRadius1>
+            <menuBorderRadius0>4</menuBorderRadius0>
+            <menuBorderRadius1>4</menuBorderRadius1>
+            <itemAlign>left</itemAlign>
+            <itemAlignTop>left</itemAlignTop>
+            <smOpacity>100</smOpacity>
+            <menuWidth>0</menuWidth>
+            <menuHeight>0</menuHeight>
+            <topCrossover>false</topCrossover>
+            <subCrossover>false</subCrossover>
+            <effect>0</effect>
+            <rtl>false</rtl>
+        </params>
+        <items>
+            <item>
+                <text>Home</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+            </item>
+            <item>
+                <text>Setup Wizard</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Company Information</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Create Store</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Tax Rate</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Payment Options</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Department</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Assign Designation</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Parties</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Manage Accounts</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Manage Inventory</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Individually</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Categorically</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Accounts</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Class Type</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Class Master</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Group Master</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Balance Limit Types</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Account Master</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Opening Balance</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Parties</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Inventory</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Main Category</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sub Category</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sub Sub Category</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Inventory Items</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Insert Rates</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Individually</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Categorically</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Recievables</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Create Invoice</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Enter Debit Note</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Enter Receipts</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Customer's Details</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Customer's Balance</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Individually</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Rate Categorically</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Stock Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Payment Option</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Parties</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Payables</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Enter  Invoice</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Enter Credit Note</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Pay Vendor's</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Enter Credit Expenses</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Vendor's Details</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Purchase report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Vendor's Balance</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Stock Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Parties</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Account's Corner</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Make Journal Entry</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Opening Balace</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>General Ledger</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Purchase Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sales Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Stock Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Financial Statement</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Add Parties</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Cash &amp; Banking</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Enter Cash Reciepts</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Enter Cash Payments</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>View Balance</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Cash &amp; Bank Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Reports</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Sales Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Purchase Report</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>General Ledger</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Stock Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Financial Statement</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Trial Balance</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Cash Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Credit/Debit Note Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Journal Entries</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>List Of Accounts</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Party Register</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+            <item>
+                <text>Message</text>
+                <link></link>
+                <hint></hint>
+                <target></target>
+                <pressed>0</pressed>
+                <items>
+                    <item>
+                        <text>Compose</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Inbox</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Sent</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Drafts</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                    <item>
+                        <text>Trash</text>
+                        <link></link>
+                        <hint></hint>
+                        <target></target>
+                        <pressed>0</pressed>
+                    </item>
+                </items>
+            </item>
+        </items>
+        <media>
+            <img src=""></img>
+            <img src="arrow.gif">R0lGODlhBwAMAKIFAL6+vtra2ry8vL29vcjIyP///wAAAAAAACH5BAEAAAUALAAAAAAHAAwAAAMZWLoVZoyMFwVdEkaglREWxmETZmlZ53RFAgA7</img>
+            <img src="arrowsub.gif">R0lGODlh6AMMAMIFAL6+vtra2ry8vL29vcjIyP///wAAAP///yH5BAEAAAcALAAAAADoAwwAAAPEeLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM+0ZRhBre987//AoHBILBqPyKTyE7g9bgPCckqtWq/YrHbL7Xq/FcLAybgJpOC0es1uu9/wuBxOEJAVhuh8z+/7/4CBgoNUYgYLBgBohIyNjo+QkZKTWwQAhwYCdpScnZ6foKGinJmbiYujqaqrrK2urzGWh3h6sLa3uLm6u5SGZZmovMLDxMXGx0F1d3h5wcjP0NHS09QHhrMNNznV3N3e3+CTTdgHCQA7</img>
+            <img src="mainbk.png">iVBORw0KGgoAAAANSUhEUgAAAAEAAAK8CAYAAAAu3tULAAAAAXNSR0IArs4c6QAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9oJGA0jIR3UfIQAAACiSURBVEjH7ZbNCgMhDIS//LxB3/8Ve+iph6XpqRaDC4V1S5C9DImBMZlREeCmAA2kT4+AzaOSQg1JNXFQQEv6ZsuxTKTyau6XG2v2Jakpu695SRY93na92f8bUEuKrZU+NhYRDwW2Bs9vREQ4n42sgbbI+zUfFHxQTWkiTan0kSrwOuNtr/mhOgXurUkZ6Kw92I+++Z6XvkeVzlXq5bJ7GrwBxcIVRiNdtAgAAAAASUVORK5CYII=</img>
+        </media>
+    </project>
+</Css3Menu>

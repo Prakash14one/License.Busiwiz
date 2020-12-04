@@ -1,0 +1,403 @@
+/* HTML TAGS */
+
+
+
+
+/* IDs */
+
+.horizontalForm fieldset
+{
+	display: block;
+	margin: 0 10px 5px 10px;
+	padding: 0 5px 5px 5px;
+}
+
+.horizontalForm fieldset.radio
+{
+	margin: 1em 0 2em 0;
+}
+
+.horizontalForm fieldset.radio input
+{
+	float: left;
+	width: auto;
+}
+.btnSubmit
+{
+	width: auto !important;
+	font-size: 12px;
+	height: 30px;
+}
+.horizontalForm fieldset.radio label
+{
+	font-weight: normal;
+}
+
+.horizontalForm input[type="text"]
+{
+	display: block;
+	width: 15em;
+}
+.ddList
+{
+	display: block;
+	width: 31.3em !important;
+}
+.products_box a
+{
+	color: Gray;
+	text-decoration: none;
+}
+.products_box a:hover
+{
+	color: Blue;
+}
+.horizontalForm input[type="checkbox"]
+{
+	margin-top: 20px !important;
+	width: 10px !important;
+	float: left !important;
+}
+.horizontalForm input[type="radio"]
+{
+	margin-top: 20px !important;
+	width: 20px !important;
+	float: left !important;
+}
+
+/*Added By Virat S Shukla 17/09/2012 5.59PM*/
+.horizontalForm p
+{
+	font-size: 11px;
+	font-weight: normal;
+	color: Gray;
+}
+.txtInputLarge
+{
+	width: 47.3em !important;
+}
+.txtInputMedium
+{
+	width: 31.3em !important;
+}
+.txtInputSmall
+{
+	width: 3em !important;
+	display: inline !important;
+}
+.txtInputMed
+{
+	width: 10.8em !important;
+	display: inline !important;
+	margin-left: 3px;
+}
+.lblSuggestion
+{
+	width: 204px;
+	display: block;
+	color: #457cec;
+}
+.lblMessages
+{
+	width: 400px;
+	display: block;
+	color: Green;
+}
+.lblInfoMsg
+{
+	font-size: 11px;
+	color: Brown;
+}
+.formSpan
+{
+	width: 204px;
+	display: block;
+}
+
+.horizontalForm input.submit
+{
+	clear: both;
+}
+
+.horizontalForm label
+{
+	float: left;
+	display: block;
+	margin: 1em 1em 0 0;
+	font-weight: bold;
+	font-size: 14px; /*Edited By Virat Shukla*/ /*min-width: 149px;*/
+	color: #416271;
+}
+
+.horizontalForm select
+{
+	display: block;
+	width: 15.3em;
+}
+
+#marginForm fieldset
+{
+	display: block;
+	margin: 0 0 1em 0;
+	border: 0 solid #FFFFFF;
+	border-top: 1px solid #000000;
+	padding: 0 1em 1em 1em;
+}
+
+#marginForm fieldset.radio
+{
+	margin: 0 0 0 -1em;
+	border: 0 solid #FFFFFF;
+}
+
+#marginForm fieldset.radio input
+{
+	position: static;
+	clear: both;
+	float: left;
+}
+
+#marginForm fieldset.radio label
+{
+	position: relative;
+	top: -1.25em;
+	display: inline;
+	width: auto;
+	margin: 0 0 0 8em;
+	font-weight: bold;
+	font-weight: normal;
+}
+
+#marginForm fieldset.radio legend
+{
+	float: left;
+	font-weight: bold;
+}
+
+#marginForm input
+{
+	position: relative;
+	top: -1.4em;
+	left: 8em;
+	display: block;
+}
+
+#marginForm input.submit
+{
+	clear: both;
+	top: 0;
+}
+
+#marginForm label
+{
+	clear: both;
+	float: left;
+	display: block;
+	width: 8em;
+	margin-top: -1em;
+	font-weight: bold;
+}
+
+#marginForm label.first
+{
+	margin-top: 1em;
+}
+
+#marginForm select
+{
+	position: relative;
+	top: -1.4em;
+	left: 8em;
+	display: block;
+}
+
+#verticalForm fieldset
+{
+	display: block;
+	width: 17em;
+	margin: 0 0 3em 0;
+	padding: 0 1em 1em 1em;
+}
+
+#verticalForm fieldset.radio
+{
+	width: 15em;
+	margin: 1em 0 2em 0;
+}
+
+#verticalForm fieldset.radio input
+{
+	clear: both;
+	float: left;
+	width: auto;
+}
+
+#verticalForm fieldset.radio label
+{
+	font-weight: normal;
+}
+
+#verticalForm input
+{
+	display: block;
+	width: 15em;
+}
+
+#verticalForm label
+{
+	display: block;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+#verticalForm label.first
+{
+	padding-top: 1em;
+}
+
+#verticalForm select
+{
+	display: block;
+}
+
+
+
+
+/*GRID CLASSES */
+.mGrid
+{
+	width: 100%;
+	background-color: #fff;
+	margin: 5px 0 10px 0;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+	font-size: 13px !important;
+
+}
+.mGrid a
+{
+	font-size: 15px !important;
+	color:White;
+}
+.mGrid a:hover
+{
+	font-size: 15px !important;
+	color:White;
+	text-decoration:underline;
+}
+.mGrid td
+{
+	padding: 2px;
+	border: solid 1px #c1c1c1;
+	color: #717171;
+}
+.mGrid th
+{
+	padding: 4px 2px;
+	color: #fff;
+	background-color: #416271;
+	border-left: solid 1px #525252;
+	font-size: 14px !important;
+}
+.mGrid .alt
+{
+	background: #fcfcfc url(grd_alt.png) repeat-x top;
+}
+.mGrid .pgr
+{
+	background-color: #416271;
+}
+.mGrid .ftr
+{
+	background-color: #416271;
+	font-size: 15px !important;
+	color:White;
+	border: solid 1px #525252;
+}
+.mGrid .pgr table
+{
+	margin: 5px 0;
+}
+.mGrid .pgr td
+{
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #666;
+	font-weight: bold;
+	color: #fff;
+	line-height: 12px;
+}
+.mGrid .pgr a
+{
+	color: Gray;
+	text-decoration: none;
+}
+.mGrid .pgr a:hover
+{
+	color: #000;
+	text-decoration: none;
+}
+.mGrid input[type="checkbox"]
+{
+	margin-top: 5px !important;
+	width: 10px !important;
+	float: left !important;
+}
+.mGrid input[type="radio"]
+{
+	margin-top: 5px !important;
+	width: 100px !important;
+	float: left !important;
+}
+
+/*Ravi Patel  Start 26th Sep 2012*/
+.Attend input[type="checkbox"]
+{
+	margin: 0px 5px 5px 5px !important;
+	width: 20px !important;
+	float: none !important;
+}
+
+.WorkingDay
+{
+	width: 200px;
+}
+.WorkingDay input[type="checkbox"]
+{
+	margin: 0px 5px 5px 5px !important;
+	width: 20px !important;
+	float: none !important;
+}
+
+.Attend input[type="text"]
+{
+	width: 50px;
+}
+
+.radiobuttonlabel
+{
+	margin: -10px 0px 0px 20px !important;
+}
+/*Ravi Patel End 26th Sep 2012*/
+
+/*Ravi Patel Start 27th Sep 2012*/
+.radiobuttonlabelEmployePayroll
+{
+	margin: -2px 0px 0px 20px !important;
+}
+
+.InventoryCheckbox
+{
+	padding-top:9px;
+}
+.InventoryCheckbox input[type="checkbox"]
+{
+	margin: 5px 5px 0px 5px !important;
+	width: 20px !important;
+	float: none !important;
+}
+/*Ravi Patel End 27th Sep 2012*/
+.labelstar
+{
+    color:Red;
+}

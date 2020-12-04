@@ -1,0 +1,32 @@
+﻿ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: Times New Roman;
+    font-size: larger;
+    background-color: #416271;
+}
+
+a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: Black;
+    background-color: #416271;
+    padding: 0.2em 0.6em;
+    border-right: 1px solid white;
+    font-family: Times New Roman;
+    font-size: larger;
+}
+
+a:hover {
+    background-color: #416271;
+    color: Gray;
+    
+}
+
+li {
+    display: inline;
+}

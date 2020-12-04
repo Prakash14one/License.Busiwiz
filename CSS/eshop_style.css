@@ -1,0 +1,750 @@
+A
+{
+	COLOR: #006699; 
+	TEXT-DECORATION: none;
+	font-family: Arial, Verdana;
+    font-size: 10px; 
+}
+
+A:hover 
+{
+	TEXT-DECORATION: underline;
+}
+
+.incl_gst 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #1971D5; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+}
+
+a.incl_gst
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #1971D5; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+}
+
+a:hover.incl_gst 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #1971D5; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+	TEXT-DECORATION: underline
+}
+
+.Drop
+{
+	width:140px;
+	height:18px;
+	Font-Family:Arial;
+	Font-size:8pt;
+	color: Black;
+}
+
+.CartListHead
+{
+    background-color: #E5E5E5;
+    color: black;
+    font-family: Arial, Verdana;
+    font-size: 12px; 
+    font-weight: 700;
+}
+
+.TextBox
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    width: 125px;
+}
+
+.CartListItem
+{
+    background-color: #ffffff;
+	color: black;
+    font-family:Arial,Verdana;
+    font-size: 8pt;
+}
+
+.CartListItemAlt
+{
+    background-color: #f2f2f2;
+    color: black;
+    font-family:Arial,Verdana;
+    font-size: 11px;
+    padding-left: 5px
+}
+
+.CartListFooter
+{
+    background-color: #dddca3;
+    line-height: 10pt
+}
+
+BODY 
+{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: verdana, arial, helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+
+P
+{
+	FONT-SIZE: 10px; COLOR: #000000; LINE-HEIGHT: 14px; FONT-STYLE: normal; FONT-FAMILY: verdana, arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+H1
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 26px; COLOR: #003399 ; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+a.paging 
+{
+	color: #000000;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none; 
+}
+
+a:hover.paging 
+{
+	color: #CC0000;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none; 
+}
+H2
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #27276c; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+H3
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #000000; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+H4
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #990000;font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+H5
+{
+	FONT-SIZE: 16px; MARGIN-BOTTOM: 3px; PADDING-BOTTOM: 0px; COLOR: #222269;font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+.contentname
+{
+	color: #000000;
+	font-family:Arial;
+	font-size:11px;
+	font-weight: bold;
+	text-decoration: none;
+		
+}
+
+.contentbold 
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+.contentboldred 
+{
+	color: Red;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+.Welcome 
+{
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+.headings 
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+.headingsBlack 
+{
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+}
+
+.contentnormal 
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	text-align:justify;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+
+.contentnormalright 
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+
+.contentnormalGray 
+{
+	color: #3B3B3B;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+
+.contentnormalRed 
+{
+	color: #630C0C;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+
+.contentnormalbold 
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+
+.contentnormalnobold 
+{
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Arial, sans-serif; 
+}
+	
+.textbox
+{
+	font-family: Arial; 
+	font-size: 8pt; 
+	border: 1px solid #666666;
+	height:20px;
+	width: auto;
+}
+
+.price 
+{
+	FONT-SIZE: 11px; font-weight:bold; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.cat_Title 
+{
+	FONT-SIZE: 18px; font-weight:bold; COLOR: #9C0000; FONT-FAMILY: Arial Narrow, helvetica, sans-serif
+}
+
+.legend 
+{
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: verdana, helvetica, sans-serif
+}
+
+TR
+{
+	font-size: 8pt;
+	LETTER-SPACING: 1px;
+	font-family:Arial;
+	font-weight: normal;
+	color:#000000 
+}
+
+.blacklink A 
+{
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+.blacklink A:hover 
+{
+	TEXT-DECORATION: underline
+}
+
+.content 
+{
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px
+}
+
+.content_right 
+{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 20px; PADDING-TOP: 20px
+}
+
+.most_popular_box 
+{
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+
+.pricebold1
+{
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.pricebold2
+{
+	color: #990000;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.nav 
+{
+		MARGIN-RIGHT: 4px
+}
+
+.listnav 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 11px;  COLOR: #006699; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.listnav A 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.CatNav 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 12px;   COLOR: #42516D; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.CatNav A 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.backgroundToolbar 
+{
+	background-color: #709FCC
+}
+
+.subnav 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px;  COLOR: #ffffff; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.subnav A 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.grey_header 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 0px 0px 0px 32px; COLOR: #333333; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 0px
+}
+
+.category 
+{
+	PADDING-RIGHT: 10px; PADDING-LEFT: 12px; FONT-SIZE: 10px; PADDING-BOTTOM: 0px; COLOR: #000000; PADDING-TOP: 2px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.category A 
+{
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.category2 
+{
+	PADDING-RIGHT: 10px; PADDING-LEFT: 12px; FONT-SIZE: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 2px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.table_padding 
+{
+	PADDING-RIGHT: 10px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: 0px
+}
+
+.redbar_box 
+{
+	MARGIN-BOTTOM: 3px; BORDER-BOTTOM: #cecece 2px solid
+}
+
+.red 
+{
+	COLOR: #000000
+}
+
+.redbar 
+{
+	MARGIN-BOTTOM: 2px; BACKGROUND-COLOR: #ff0000 
+}
+
+A.more  
+{
+	FONT-SIZE: 10px; COLOR: #006699; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.view_more 
+{
+	FONT-SIZE: 12px;  MARGIN: 13px 0px 0px 5px; COLOR: #006699; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.Order_email 
+{
+	FONT-SIZE: 10px; COLOR: #006699; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.view_more A 
+{
+	FONT-SIZE: 10px; COLOR: #006699; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.viewmore 
+{
+	FONT-SIZE: 10px; PADDING-BOTTOM: 10px; COLOR: #ff0000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.padding_topbottom 
+{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+
+.padding_left 
+{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+
+.padding_right 
+{
+	PADDING-RIGHT: 15px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+
+.padding_topbottom_right 
+{
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+
+.sidebox_padding 
+{
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 8px; PADDING-TOP: 3px
+}
+
+.price_big 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #990000; PADDING-TOP: 3px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.price_medium 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #990000; PADDING-TOP: 3px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.price_huge 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 24px; COLOR: #990000; FONT-FAMILY: arial, helvetica, sans-serif; border-color:#ffffff; border-width:0px
+}
+
+.price_small 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #990000; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.gst 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #990000; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.FooterLinks 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 11px; COLOR: #062F98; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.breadcrumps 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #FFFFCD; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+}
+
+.breadcrumpsNew 
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003399; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+}
+
+.product_info 
+{
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+.product_info A {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.product_info A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.small {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Arial, arial, helvetica, sans-serif
+}
+.smallest {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.small_green {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #336600; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.small_green A {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #336600; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.small_orange {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #cd3d00; PADDING-TOP: 10px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.small_orange A {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #cd3d00; PADDING-TOP: 10px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.logo {
+	MARGIN: 0px 8px
+}
+.border {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+.buy_big {
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #006699; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.buy_big A {
+	FONT-WEIGHT: normal; FONT-SIZE: 18px; COLOR: #006699; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.buy_small {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #006699; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 1px
+}
+.buy_small A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #006699; FONT-FAMILY: arial, helvetica, sans-serif; LETTER-SPACING: 1px
+}
+.new {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc0000; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.lines {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 2px; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.line_top {
+	PADDING-RIGHT: 0px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.line_bottom {
+	BORDER-BOTTOM: #666666 1px solid;
+}
+.filter_header {
+	FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+.filter_on {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #00cc00; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.filter_off A {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #ff0000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.listing_key {
+	PADDING-RIGHT: 8px; FONT-WEIGHT: normal; FONT-SIZE: 10px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.listing_header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 18px; PADDING-BOTTOM: 6px; COLOR: #333366; PADDING-TOP: 14px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.listing_header A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 18px; PADDING-BOTTOM: 6px; COLOR: #333366; PADDING-TOP: 14px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.product_listing {
+	COLOR: #000000
+}
+.product_listing A {
+	COLOR: #000000
+}
+.most_popular_header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 18px; PADDING-BOTTOM: 6px; COLOR: #990000; PADDING-TOP: 0px; FONT-FAMILY: arial, helvetica, sans-serif
+}
+.price_movement {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.price_change {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+
+
+.help {
+	COLOR: #222269; MARGIN-RIGHT: 2px; size: 10px
+}
+
+.select {
+	WIDTH: 160px
+}
+
+
+
+
+.validators
+{
+	color: red;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+.valid {
+	FONT-SIZE: 9px; COLOR: #990000
+}
+
+
+
+
+.total {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #990000; FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+
+.review {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+
+
+
+
+.faq_item {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.faq_item A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+.question {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; COLOR: #000000; PADDING-TOP: 5px
+}
+.definition {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; PADDING-BOTTOM: 15px; PADDING-TOP: 5px
+}
+.news_item {
+	FONT-WEIGHT: normal
+}
+
+.MozillaUnStrike
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY: arial, verdana, helvetica, sans-serif; border-color:#ffffff; border-width:0px; 
+}
+.MozillaStrike
+{
+	text-decoration: line-through;
+	color: #000000;
+	font-size: 10pt;
+	font-weight: normal;
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	
+}
+.ImageHeader
+{    
+    color: #9B0101;
+    font-family: Verdana, Arial;
+    font-size: 12px;
+    font-weight: bold
+}
+A.MostPopularItemText, A.MostPopularItemText:link, A.MostPopularItemText:visited
+{
+    color: #006699;
+    font-family: Verdana, Arial;
+    font-size: 11px;
+    text-decoration: none
+}
+
+.print {
+    display: inline;
+    }
+    /* Specifies how tags With these classes are printed */
+    @media print {
+            /* All the form elements under the class bellow will Not be printed */
+            .noprint {
+             display: none;
+            }
+    }
+    .buttonback
+    {
+		background-image: url('/images/front_end_site_images/place_order.gif'); 
+	}
+	#back
+{
+background: url(../images/title_bottom NoCornor.JPG) repeat-x;
+}
+#headerback
+{
+
+background: url(../images/HeaderLight_2.png) repeat-x;
+}
+#right
+{
+width: 193px;
+height: 26px;
+font-size: 14px;
+font-weight: bold;
+
+text-transform: uppercase;
+color: #ffffff;
+background: url(../images/title_2.png); background-repeat:no-repeat; 
+}
+#rightbottom
+{
+width: 193px;
+
+
+background: url(../images/title_bottom_2.png) ;background-repeat:no-repeat;
+}
+#rightbottom1
+{
+width: 193px;
+background: url(../images/title_bottom1_2.png) repeat-x
+}
+#fotterback
+{
+background: url(../images/BackRepeat_1.png) repeat-x;
+}
+#fotterback a
+{
+	color: #ffffff; font-weight:bold; font-family:Verdana; size:11px; 
+}
+#fotterback a:hover
+{
+	color: #aaaaca; font-weight:bold; font-family:Verdana; size:11px; 
+}
+#menuback
+{
+	
+	width: 100px;
+height: 20px;
+background: url(../images/Blank_2.png) ;
+padding-left:2px; 
+}
+#menuback1
+{
+	
+	width: 120px;
+height: 20px;
+background: url(../images/MainSiteHomeBlank_2.png) ;
+}
+
+#menuback2
+{
+	
+	width: 140px;
+height: 20px;
+background: url(../images/ShoppingCartHomeBlank_2.png) ;
+}
+#adminback
+{
+background: url(../images/adminback3.jpg) repeat-x;
+}

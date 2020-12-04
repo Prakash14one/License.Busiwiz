@@ -1,0 +1,120 @@
+﻿BODY
+{
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+TD
+{
+    font: 11px Verdana;
+    color: #666666;
+    line-height: 17px;
+} 
+
+#search             
+{   
+	padding:20px;
+}
+
+#navi
+{
+	background-image: url("../images/bg_navi.jpg");
+	background-repeat: no-repeat;
+}
+
+#flash
+{
+	background-image: url("../images/bg_flash.jpg");
+	background-repeat: no-repeat;
+	width: 568px;
+}
+
+#main
+{
+	background-image: url("../images/bg_page.jpg");
+	background-repeat: repeat-y;
+}
+
+#bottom
+{
+	background-image: url("../images/bg_btm.jpg");
+	background-repeat: no-repeat;
+	height: 60px; 
+	font: 10px Verdana; 
+	line-height:15px; 
+	text-align: right; 
+	padding-right:15px;
+}
+
+
+#side       
+{
+	width: 210px;
+	text-align:center;
+}
+
+#sidenavi td   
+{
+	text-align: left;
+	height:13px;
+}
+
+.subnavi
+{
+	padding-left:20px;
+}
+
+#sidenavi A 
+{
+	color : #DA251C; 
+	text-decoration:none;
+}
+
+#sidenavi A:HOVER 
+{
+	color : #666666; 
+	text-decoration:none;
+}
+
+
+.tabnavi
+{
+	padding-left: 20px;
+}
+
+INPUT				
+{	
+    border: 1px solid #666666; 
+    font-style:normal; 
+    font-variant:normal; 
+    font-weight:normal; 
+    font-size:10px; 
+    font-family:Verdana
+}
+
+A       			
+{ 	
+    color : #DA251C; 
+    font: 11px Verdana; 
+    text-decoration:none;
+} 
+
+A:HOVER 			
+{	
+    color : #666666; 
+    font: 11px Verdana; 
+    text-decoration:none;
+}
+
+
+.buttons 			{	border: 1px solid #CCCCCC;	font: 10px Verdana; color: #666666;  text-decoration: none;	background-color: #EFEFEF;	cursor: hand;}
+.buttons1 			{	border: 1px solid #CCCCCC;	font: 10px Verdana; color: #ffffff;  text-decoration: none;	background-color: #666666;	cursor: hand;}
+.buttons2 			{	border: 1px solid #666666;	font: 10px Verdana; color: #666666;  text-decoration: none;	background-color: #D3CBBE;	cursor: hand;}
+
+.form_text 			{	border: 1px solid #CCCCCC;	font: 10px Verdana;	text-decoration: none;	background-color: #FFFFFF;	cursor: none;}

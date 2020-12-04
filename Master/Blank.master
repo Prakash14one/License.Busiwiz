@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Blank.master.cs" Inherits="Master_Blank" %>
+
+<!DOCTYPE html>
+<%@ Register Src="~/UserControls/UC_Footer.ascx" TagPrefix="UC" TagName="FOOTER" %>
+<%@ Register Src="~/UserControls/UcontrolHelpPanel.ascx" TagPrefix="UC" TagName="TITLE" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/customeradmin_style.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/customercss/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/customercss/info.css" media="screen" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <browsers>
+    <browser refID="Safari1Plus">
+        <controlAdapters>
+                <adapter controlType="System.Web.UI.WebControls.Menu"
+                                 adapterType="" />
+        </controlAdapters>
+    </browser>
+    </browsers>
+</head>
+<body style="background-color:white !important">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

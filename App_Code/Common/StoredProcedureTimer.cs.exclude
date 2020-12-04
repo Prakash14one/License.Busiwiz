@@ -1,0 +1,108 @@
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.Management;
+using System.IO;
+using Microsoft.SqlServer.Server;
+using System.Net;
+using System.Security.Cryptography;
+using System.Text;
+public static class StoredProcedureTimer
+{
+    static Timer SPTimer;
+    static bool iscreated = false;
+    static bool isrunning = false;
+    static int interval = 3600;
+    static int APincriment = 10;
+    static int HPincriment = 1;
+
+
+    // Create the timer
+    static void CreateTimer()
+    {
+        // Set multiple in seconds
+        SPTimer = new Timer(1000 * interval);
+        SPTimer.Elapsed += new ElapsedEventHandler(SPTimer_Elapsed);
+
+
+        //enable
+        SPTimer.Enabled = true;
+
+
+        // Stop garbage collection being a right gay
+        GC.KeepAlive(SPTimer);
+
+
+        iscreated = true;
+    }
+
+
+    static void SPTimer_Elapsed(object sender, ElapsedEventArgs e)
+    {
+        // do stuff
+    }
+
+
+    // Start the timer
+    public static void Start()
+    {
+        if (iscreated == false)
+        {
+            // create timer
+            CreateTimer();
+        }
+        else
+        {
+            // set timer
+            SPTimer.Interval = (1000 * interval);
+            // re-enable timer
+            SPTimer.Enabled = true;
+        }
+
+
+        // Update isrunning
+        isrunning = true;
+    }
+
+
+    // Stop the timer
+    public static void Stop()
+    {
+        // only attempt to stop the timer if it exists.
+        if (iscreated == true)
+        {
+            SPTimer.Enabled = false;
+        }
+
+
+        // Update isrunning
+        isrunning = false;
+    }
+
+
+    // Check the timer is running
+    public static bool status
+    {
+        get
+        {
+            if (iscreated == true && isrunning == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+﻿
+
+/**************************************************************
+
+	Contact
+
+**************************************************************/
+
+#myForm {
+	/*border: 1px solid #cac9b9;
+	padding: 5px;*/
+}
+
+#myForm p {
+	margin-bottom: 5px;
+}
+
+#myForm label {
+	float: left;
+	width: 100px;
+}
+#myForm #sname, #email, #subject {
+	border: thin #000000 ridge;
+	width: 450px;
+	padding: 6px;
+	background-color: #FFFFFF;
+}
+#myForm #message {
+	border: thin #000000 ridge;
+	width: 450px;
+	padding: 6px;
+	height: 170px;
+}
+#myForm #send {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 11px;
+	color: #FF0000;
+	background-attachment: scroll;
+	background-image: url(../../../../private/comp1/blue/images/submit_button.gif);
+	background-position: center center;
+	border: 1px solid #FFF;
+	height: 23px;
+	width: 89px;
+	padding-left: 5px;
+	background-color: #FFFFFF;
+}
+#myForm #send:hover {
+	background: url(../../../../private/comp1/blue/images/submit_button_hover.gif);
+	background-position: center center;
+	color: #FFFFFF;
+	height: 23px;
+	width: 89px;
+	padding-left: 5px;
+}
+.errmsg {
+	color:#FF0000;
+}
+
+/*************************************************************/

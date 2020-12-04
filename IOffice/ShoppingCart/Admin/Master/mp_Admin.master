@@ -1,0 +1,358 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mp_Admin.master.cs" Inherits="Master_mp_Admin" %>
+
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Header.ascx" TagPrefix="UC"
+    TagName="HEADER" %>
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Navigation.ascx" TagPrefix="UC"
+    TagName="MENU" %>
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UC_Footer.ascx" TagPrefix="UC"
+    TagName="FOOTER" %>
+<%@ Register Src="~/ShoppingCart/Admin/UserControls/UcontrolHelpPanel.ascx" TagPrefix="UC"
+    TagName="TITLE" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ijobcenter</title>
+    <link href="../admin_style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/forms.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fieldsets.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/info.css" media="screen" />
+
+    <script type="text/javascript" language="javascript">
+        function pri() {
+
+
+
+            var w = window.open('');
+
+
+
+            w.document.write("<html><head><style type='text/css' media='print'>.test{display:none}</style>");
+            w.document.write("<script language='javascript' type='text/javascript'>function printS(){window.print();}");
+            w.document.write("<\/script> <link href='../../css/main.css' rel='stylesheet' type='text/css' /><link href='../css/main.css' rel='stylesheet' type='text/css' />");
+            w.document.write("</head><body>");
+            w.document.write(test123.innerHTML);
+            w.document.write("<a href='abcpqr'></body></html>");
+
+
+        }
+
+    </script>
+
+    <script language="javascript" type="text/javascript">
+
+
+        function my_onkeydown_handler() {
+            // alert(document.getElementById('hd').value);
+            var versionid = document.getElementById('hd').value;
+            var sPath = window.location.pathname;
+            //var sPage = sPath.substring(sPath.lastIndexOf('\\') + 1);
+            var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+            //alert(sPage);
+
+            var d = document.URL.toString();
+
+
+            switch (event.keyCode) {
+
+                case 112: // 'F1'
+
+                    document.onhelp = function() { return (false); }
+                    window.onhelp = function() { return (false); }
+
+                    event.returnValue = true;
+
+                    window.open('http://help.busiwiz.com/HelpF1.aspx?verid=' + versionid + '&PageName=' + sPage, 'mywin', 'left=0,top=0,width=1000,height=700,toolbar=0,resizable=0,scrollbars=no, location=no, dependent=0, directories=no');
+
+                    event.keyCode = 1; //BRJ: required to disable stubborn key strokes
+                    window.status = "You have just disabled F1 - truly.";
+                    break;
+            }
+        }
+
+        document.attachEvent("onkeydown", my_onkeydown_handler);
+        function navigation_onclick() {
+
+        }
+
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            height: 4px;
+        }
+    </style>
+
+</head>
+<body id="Body" runat="server">
+    <form id="form1" runat="server" class="horizontalForm">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="admin_wrapper">
+    <div id="admin_header" style="height: 135px">
+              <table width="100%" style="vertical-align:top">
+                        <tr>
+                            <td style="Height:100px">
+                              <asp:ImageButton ID="mainloginlogo" runat="server"  Height="100px" />
+                        <input id="hd" type="hidden" value="<%=verid %>" />
+                            </td>
+                            <td align="right"  valign="bottom" >
+                                <table cellpadding="0" cellspacing="0">
+                                  <tr>
+                                        <td  align="left"  >
+                                            <asp:Label ID="busn" runat="server" Font-Size="16px" Font-Bold="true"></asp:Label>
+                                         
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">  <asp:Label ID="Label2" runat="server" Font-Size="16px" Font-Bold="true"></asp:Label> </td>
+                                    </tr>
+                                    <tr>
+                                      
+                                        <td  valign="bottom" align="right" >
+                                            <asp:Image ID="imgsitel" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+            
+            
+            
+              
+            </div>
+        <div id="Div1">
+            
+            <!-- end of header -->
+            <%--<div id="admin_menu_container" style="float: left">--%>
+            <div id="admin_menu_container" style="float: left">
+                <asp:Menu ID="Menu1" runat="server" Font-Bold="true" Orientation="Horizontal" CssClass="Menu"
+                    Font-Size="12px" Font-Names="Verdana" ForeColor="White" Width="100%" OnMenuItemClick="Menu1_MenuItemClick1">
+                    <StaticMenuItemStyle Font-Size="12px" Height="35px" />
+                    <DynamicMenuItemStyle Font-Size="12px" CssClass="DynamicMenu" Height="40px" HorizontalPadding="10px" />
+                    <DynamicHoverStyle Font-Size="12px" CssClass="menuhover" />
+                    <StaticHoverStyle Font-Size="12px" CssClass="menuhover" />
+                </asp:Menu>
+                <!--nav_container_ends-->
+            </div>
+            <!-- end of admin_menu_container -->
+          <%--  <table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;">
+                <tr>
+                    <td style="width: 15%;">
+                    </td>
+                    <td>--%>
+                        <div id="admin_main">
+                            <UC:TITLE runat="server" ID="ucTitle" />
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <asp:UpdateProgress ID="UpdateProgress2" runat="server">
+                                        <ProgressTemplate>
+                                            <div id="IMGDIV" runat="server" align="center" style="border: 0px solid black; left: 42%;
+                                                visibility: visible; vertical-align: middle; position: fixed; top: 50%; height: 60px;
+                                                background-color: White" valign="middle">
+                                                <div id="Div3" runat="server">
+                                                    <asp:Image ID="Image11234" runat="server" Height="100" Width="200" ImageUrl="~/ShoppingCart/images/loading1.gif" />
+                                                </div>
+                                            </div>
+                                        </ProgressTemplate>
+                                    </asp:UpdateProgress>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" EnableViewState="true" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                 <%--   </td>
+                    <td style="width: 15%;">
+                    </td>
+                </tr>--%>
+                <UC:FOOTER runat="server" ID="ucFooter" />
+                <!--admin_main_ends-->
+                <div class="products_box">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <asp:Panel ID="Panel3" runat="server" CssClass="modalPopup">
+                                    <table id="table1" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td class="subinnertblfc">
+                                                <asp:Label ID="Label5" runat="server" ForeColor="White" Text="Message:"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">
+                                                <asp:Label ID="Label3" runat="server" ForeColor="White">Sorry !! This page is restricted in this plan.</asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label">
+                                                <asp:LinkButton ID="Lnkbtn1" runat="Server" BorderColor="White" ForeColor="White"
+                                                    PostBackUrl="http://license.busiwiz.com/viewpriceplan.aspx" Text="Upgrade You Plan Now!!!"></asp:LinkButton>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <asp:ImageButton ID="ImageButton2" runat="server" AlternateText="submit" ImageUrl="~/ShoppingCart/images/ok.png"
+                                                    OnClick="ImageButton51_Click" Visible="False" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Button ID="HiddenButton222" runat="server" Style="display: none" />
+                                <cc1:ModalPopupExtender ID="ModalPopupExtender1222" runat="server" BackgroundCssClass="modalBackground"
+                                    PopupControlID="Panel3" TargetControlID="HiddenButton222">
+                                </cc1:ModalPopupExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <asp:Panel ID="Panel2" runat="server" CssClass="modalPopup" BorderStyle="Solid" BorderWidth="5px">
+                                    <table id="Table2">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label4" runat="server" ForeColor="#CCCCCC"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <asp:Label ID="Label1" runat="server" ForeColor="Black">Sorry , You have Not 
+                                                                Right Page </asp:Label>
+                                                <br />
+                                                <asp:Label ID="lblpagemsg" runat="server" Text="Label" ForeColor="Black"></asp:Label>
+                                                <br />
+                                                <br />
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <caption>
+                                        </caption>
+                                        <tr>
+                                            <td align="center">
+                                                <asp:Button ID="ImageButton47" runat="server" Text="Ok" Width="104px" BackColor="#CCCCCC"
+                                                    Font-Bold="True" Font-Size="12px" ForeColor="Black" />
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Button ID="Button2" runat="server" Style="display: none" />
+                                <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" BackgroundCssClass="modalBackground"
+                                    PopupControlID="Panel2" TargetControlID="Button2" CancelControlID="ImageButton47">
+                                </cc1:ModalPopupExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <asp:Panel ID="Panel4" runat="server" CssClass="modalPopup">
+                                    <table>
+                                        <tr>
+                                            <td align="right">
+                                                <asp:ImageButton ID="btnc" runat="server" ImageUrl="~/images/closeicon.jpeg" Width="16px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left" style="background-color: #CCCCCC; font-weight: bold;">
+                                                List of Page version
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                                <asp:Panel ID="pnlpv" runat="server" ScrollBars="Both" Width="100%">
+                                                    <asp:GridView ID="grdpversion" runat="server" AllowSorting="True" AutoGenerateColumns="False"
+                                                        GridLines="None" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt"
+                                                        DataKeyNames="pvid" EmptyDataText="No Records Found." OnRowCommand="grdpversion_RowCommand">
+                                                        <Columns>
+                                                            <asp:TemplateField HeaderText="Date" SortExpression="Date">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lbldate" runat="server" Text='<%#Bind("Date") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Page Version Name" SortExpression="VersionName">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblpvname" runat="server" Text='<%#Bind("VersionName") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Version No" SortExpression="VersionNo">
+                                                                <ItemTemplate>
+                                                                    <asp:Label ID="lblversionname" runat="server" Text='<%#Bind("VersionNo") %>'></asp:Label>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                            <asp:TemplateField HeaderText="Page Name">
+                                                                <ItemTemplate>
+                                                                    <asp:LinkButton ID="lbladdd" runat="server" ForeColor="Black" Text='<%#Bind("PageName") %>'
+                                                                        CommandArgument='<%# Eval("PageName") %>' CommandName="view">
+
+                                                                    </asp:LinkButton>
+                                                                </ItemTemplate>
+                                                            </asp:TemplateField>
+                                                        </Columns>
+                                                    </asp:GridView>
+                                                </asp:Panel>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Button ID="Button4" runat="server" Style="display: none" />
+                                <cc1:ModalPopupExtender ID="ModalPopupExtenderdeveloper" runat="server" BackgroundCssClass="modalBackground"
+                                    PopupControlID="Panel4" TargetControlID="Button4" CancelControlID="btnc">
+                                </cc1:ModalPopupExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="style1">
+                                <asp:Panel ID="pnlsizeres" runat="server" CssClass="modalPopup" Width="50%">
+                                    <table width="100%">
+                                        <tr>
+                                            <td align="right">
+                                                <asp:ImageButton ID="imgsize" runat="server" ImageUrl="~/images/closeicon.jpeg" Width="16px"
+                                                    OnClick="imgsize_Click" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <asp:Label ID="lblsi" runat="server" Text="You have reached the limit of your data usage, please upgrade your plan  to increase your data usage."></asp:Label>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <asp:Button ID="btnsizere" runat="server" Text="Upgrade Now" OnClick="btnsizere_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Button ID="Button7" runat="server" Style="display: none" />
+                                <cc1:ModalPopupExtender ID="ModernMd1" runat="server" BackgroundCssClass="modalBackground"
+                                    PopupControlID="pnlsizeres" TargetControlID="Button7">
+                                </cc1:ModalPopupExtender>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div>
+     <div id="admin_menu_container1">
+             <asp:Label ID="lbladdr" runat="server" Text=""  ForeColor="White"></asp:Label>
+            
+             
+         <asp:Label ID="lbl_admin" runat="server" Font-Size="1px" Font-Bold="true"></asp:Label>
+            </div>    
+    </form>
+</body>
+</html>
